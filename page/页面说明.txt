@@ -1,0 +1,25 @@
+前台
+	首页		index.html
+-	课程列表	courseList.html
+-	个人资料	userInfo.html
+	消息中心(好友)	messages.html
+-	我的课程	myCourse.html
+-	课程详细信息	courseInfo.html
+-	视频列表页面	videoList.html
+	视频播放页	video.html
+-	问答		question.html
+-	好友资料	friendInfo.html
+	课程图谱	relation.html (关系图)
+
+
+	界面布局仿慕课、主题颜色偏蓝白
+
+后台用模版
+
+约定
+	命名规范化使用驼峰命名法
+	但是css命名时、需要在前面添加名字缩写
+	比如名字为base的样式、命名为hxq_base
+
+	每一天在开始编码前Update
+	每一天结束编码后Commint

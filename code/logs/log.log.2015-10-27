@@ -1,0 +1,545 @@
+2015-10-27 08:54:37 [ main ] Loading XML bean definitions from class path resource [spring.xml]
+  2015-10-27 08:54:39 [ main ] Loading XML bean definitions from class path resource [spring-hibernate.xml]
+  2015-10-27 08:54:39 [ main ] Refreshing org.springframework.context.support.GenericApplicationContext@75591da2: startup date [Tue Oct 27 08:54:39 CST 2015]; root of context hierarchy
+  2015-10-27 08:54:40 [ main ] Loading properties file from class path resource [config.properties]
+  2015-10-27 08:54:42 [ main ] {dataSource-1} inited
+  2015-10-27 08:54:43 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+  2015-10-27 08:54:43 [ main ] HHH000412: Hibernate Core {4.1.6.Final}
+  2015-10-27 08:54:43 [ main ] HHH000206: hibernate.properties not found
+  2015-10-27 08:54:43 [ main ] HHH000021: Bytecode provider name : javassist
+  2015-10-27 08:54:44 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+  2015-10-27 08:54:44 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+  2015-10-27 08:54:44 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+  2015-10-27 08:54:45 [ main ] HHH000228: Running hbm2ddl schema update
+  2015-10-27 08:54:45 [ main ] HHH000102: Fetching database metadata
+  2015-10-27 08:54:45 [ main ] HHH000396: Updating schema
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.authority
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, icon, name, parentid, url]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_role_roles]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [primary, fk_fk_role_roles]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.battle
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [createtime, id, starttime, createuserid, limittime, type]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_user_battals]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_user_battals, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.broadcast
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, title, userid, inittime, descript]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_user_posts]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_user_posts, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.competition
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [endtime, id, islimituser, title, starttime, ispublic, description, createuserid, language, type, password]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_user_competitions]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_user_competitions, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.competitionregister
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [userid, competition]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_competition_registre, fk_fk_user_register]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [primary, fk_fk_user_register]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.discuss
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, posttime, description, userid, problemid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_problem_discusses, fk_fk_user_discusses]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [primary, fk_fk_problem_discusses, fk_fk_user_discusses]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.fight
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [teamid, userteam, userid, battleid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_user_fight, fk_fk_simple_user_team, fk_fk_battel_fight]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_simple_user_team, fk_fk_battel_fight, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.friendgroup
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, userid, groupname]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_user_groups]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [primary, fk_fk_user_groups]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.hack
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, userid, respondid, type]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_user_hacks, fk_fk_response_hack]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_user_hacks, fk_fk_response_hack, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.history
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, loginarea, logintime, userid, ip]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_reference_8]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_reference_8, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.letter
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, title, posttime, description, userfromid, usertoid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_reference_9, fk_reference_10]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_reference_9, primary, fk_reference_10]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.logs
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, time, userrealname, issuccess, userid, doing, params, msg, url, ip]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.maketeam
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [teamid, userid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_team_maketeam, fk_fk_user_maketeam]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_team_maketeam, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.notice
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [createtime, content, id, title, userid, type]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_user_notices]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_user_notices, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.problem
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [testoutput, testinput, difficulty, hint, type, islock, id, createtime, title, source, description, timelimit, memorylimit]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.relation
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, userid, groupid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_group_relations, fk_fk_user_relations]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_group_relations, primary, fk_fk_user_relations]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.reply
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, discussid, replytime, userid, parentid, replycontent]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_reply_replies, fk_fk_user_repies, fk_fk_discuss_replies]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [primary, fk_fk_reply_replies, fk_fk_user_repies, fk_fk_discuss_replies]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.respond
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, selectproblemsid, respondtime, status, codelength, userid, language, costmemory, code, costtime, problemid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_user_responds, fk_fk_select_responses, fk_fk_problem_reponds]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_user_responds, fk_fk_select_responses, fk_fk_problem_reponds, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.selectproblems
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [cproblemid, id, competitionid, score, battleid, realproblemid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_battla_sproblems, fk_fk_compatetion_sproblems]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_battla_sproblems, fk_fk_compatetion_sproblems, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.solvedproblem
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, score, userid, errorcount, submitcount, selectproblemid, issolve, solvetime, problemid, punishtime]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_select_solve, fk_fk_problems_solve, fk_fk_user_solves]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_select_solve, primary, fk_fk_problems_solve, fk_fk_user_solves]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.tag
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, name, problemid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_problem_tags]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_problem_tags, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.team
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, status, name, userid, peoplelimit]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_user_teams_host]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_user_teams_host, primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.top
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [id, solvecount, rank, negativehack, competitionid, positivehack, score, userid, usetime, rating, battleid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_competition_top, fk_fk_user_tops, fk_fk_battla_top]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [fk_fk_competition_top, primary, fk_fk_user_tops, fk_fk_battla_top]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.user
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [isemail, headimg, vantages, password, lockreason, islock, id, createtime, rank, school, email, name, rating]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 08:54:45 [ main ] HHH000261: Table found: code.user_authority
+  2015-10-27 08:54:45 [ main ] HHH000037: Columns: [userid, authorityid]
+  2015-10-27 08:54:45 [ main ] HHH000108: Foreign keys: [fk_fk_private_users, fk_fk_user_privates]
+  2015-10-27 08:54:45 [ main ] HHH000126: Indexes: [primary, fk_fk_user_privates]
+  2015-10-27 08:54:45 [ main ] HHH000232: Schema update complete
+  2015-10-27 08:54:46 [ main ] Using DataSource [{
+	CreateTime:"2015-10-27 08:54:41",
+	ActiveCount:0,
+	PoolingCount:5,
+	CreateCount:5,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1512198564, ConnectTime:"2015-10-27 08:54:42", UseCount:0, LastActiveTime:"2015-10-27 08:54:42"},
+		{ID:52302903, ConnectTime:"2015-10-27 08:54:42", UseCount:0, LastActiveTime:"2015-10-27 08:54:42"},
+		{ID:734079098, ConnectTime:"2015-10-27 08:54:42", UseCount:0, LastActiveTime:"2015-10-27 08:54:42"},
+		{ID:373848071, ConnectTime:"2015-10-27 08:54:42", UseCount:0, LastActiveTime:"2015-10-27 08:54:42"},
+		{ID:1874861822, ConnectTime:"2015-10-27 08:54:42", UseCount:2, LastActiveTime:"2015-10-27 08:54:45"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+  2015-10-27 08:54:46 [ main ] Began transaction (1) for test context [DefaultTestContext@36c74ebb testClass = UserServiceTest, testInstance = com.demo.UserServiceTest@5701f315, testMethod = addTestUser@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@40fe1453 testClass = UserServiceTest, locations = '{classpath:spring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@68e8767a]; rollback [false]
+  2015-10-27 08:54:47 [ main ] Committed transaction after test execution for test context [DefaultTestContext@36c74ebb testClass = UserServiceTest, testInstance = com.demo.UserServiceTest@5701f315, testMethod = addTestUser@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@40fe1453 testClass = UserServiceTest, locations = '{classpath:spring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+  2015-10-27 08:54:47 [ Thread-1 ] Closing org.springframework.context.support.GenericApplicationContext@75591da2: startup date [Tue Oct 27 08:54:39 CST 2015]; root of context hierarchy
+  2015-10-27 08:54:47 [ Thread-1 ] {dataSource-1} closed
+  2015-10-27 08:55:41 [ main ] Loading XML bean definitions from class path resource [spring.xml]
+  2015-10-27 08:55:41 [ main ] Loading XML bean definitions from class path resource [spring-hibernate.xml]
+  2015-10-27 08:55:41 [ main ] Refreshing org.springframework.context.support.GenericApplicationContext@6ef1c8f0: startup date [Tue Oct 27 08:55:41 CST 2015]; root of context hierarchy
+  2015-10-27 08:55:42 [ main ] Loading properties file from class path resource [config.properties]
+  2015-10-27 08:55:42 [ main ] {dataSource-1} inited
+  2015-10-27 08:55:43 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+  2015-10-27 08:55:43 [ main ] HHH000412: Hibernate Core {4.1.6.Final}
+  2015-10-27 08:55:43 [ main ] HHH000206: hibernate.properties not found
+  2015-10-27 08:55:43 [ main ] HHH000021: Bytecode provider name : javassist
+  2015-10-27 08:55:43 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+  2015-10-27 08:55:43 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+  2015-10-27 08:55:43 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+  2015-10-27 08:55:44 [ main ] HHH000228: Running hbm2ddl schema update
+  2015-10-27 08:55:44 [ main ] HHH000102: Fetching database metadata
+  2015-10-27 08:55:44 [ main ] HHH000396: Updating schema
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.authority
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, icon, name, parentid, url]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_role_roles]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [primary, fk_fk_role_roles]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.battle
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [createtime, id, starttime, createuserid, limittime, type]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_battals]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_user_battals, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.broadcast
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, title, userid, inittime, descript]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_posts]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_user_posts, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.competition
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [endtime, id, islimituser, title, starttime, ispublic, description, createuserid, language, type, password]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_competitions]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_user_competitions, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.competitionregister
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [userid, competition]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_competition_registre, fk_fk_user_register]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [primary, fk_fk_user_register]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.discuss
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, posttime, description, userid, problemid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_problem_discusses, fk_fk_user_discusses]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [primary, fk_fk_problem_discusses, fk_fk_user_discusses]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.fight
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [teamid, userteam, userid, battleid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_fight, fk_fk_simple_user_team, fk_fk_battel_fight]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_simple_user_team, fk_fk_battel_fight, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.friendgroup
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, userid, groupname]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_groups]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [primary, fk_fk_user_groups]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.hack
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, userid, respondid, type]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_hacks, fk_fk_response_hack]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_user_hacks, fk_fk_response_hack, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.history
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, loginarea, logintime, userid, ip]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_reference_8]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_reference_8, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.letter
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, title, posttime, description, userfromid, usertoid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_reference_9, fk_reference_10]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_reference_9, primary, fk_reference_10]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.logs
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, time, userrealname, issuccess, userid, doing, params, msg, url, ip]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.maketeam
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [teamid, userid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_team_maketeam, fk_fk_user_maketeam]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_team_maketeam, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.notice
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [createtime, content, id, title, userid, type]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_notices]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_user_notices, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.problem
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [testoutput, testinput, difficulty, hint, type, islock, id, createtime, title, source, description, timelimit, memorylimit]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.relation
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, userid, groupid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_group_relations, fk_fk_user_relations]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_group_relations, primary, fk_fk_user_relations]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.reply
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, discussid, replytime, userid, parentid, replycontent]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_reply_replies, fk_fk_user_repies, fk_fk_discuss_replies]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [primary, fk_fk_reply_replies, fk_fk_user_repies, fk_fk_discuss_replies]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.respond
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, selectproblemsid, respondtime, status, codelength, userid, language, costmemory, code, costtime, problemid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_responds, fk_fk_select_responses, fk_fk_problem_reponds]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_user_responds, fk_fk_select_responses, fk_fk_problem_reponds, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.selectproblems
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [cproblemid, id, competitionid, score, battleid, realproblemid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_battla_sproblems, fk_fk_compatetion_sproblems]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_battla_sproblems, fk_fk_compatetion_sproblems, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.solvedproblem
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, score, userid, errorcount, submitcount, selectproblemid, issolve, solvetime, problemid, punishtime]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_select_solve, fk_fk_problems_solve, fk_fk_user_solves]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_select_solve, primary, fk_fk_problems_solve, fk_fk_user_solves]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.tag
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, name, problemid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_problem_tags]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_problem_tags, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.team
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, status, name, userid, peoplelimit]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_teams_host]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_user_teams_host, primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.top
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [id, solvecount, rank, negativehack, competitionid, positivehack, score, userid, usetime, rating, battleid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_competition_top, fk_fk_user_tops, fk_fk_battla_top]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [fk_fk_competition_top, primary, fk_fk_user_tops, fk_fk_battla_top]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.user
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [isemail, headimg, vantages, password, lockreason, islock, id, createtime, rank, school, email, name, rating]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 08:55:44 [ main ] HHH000261: Table found: code.user_authority
+  2015-10-27 08:55:44 [ main ] HHH000037: Columns: [userid, authorityid]
+  2015-10-27 08:55:44 [ main ] HHH000108: Foreign keys: [fk_fk_private_users, fk_fk_user_privates]
+  2015-10-27 08:55:44 [ main ] HHH000126: Indexes: [primary, fk_fk_user_privates]
+  2015-10-27 08:55:44 [ main ] HHH000232: Schema update complete
+  2015-10-27 08:55:44 [ main ] Using DataSource [{
+	CreateTime:"2015-10-27 08:55:42",
+	ActiveCount:0,
+	PoolingCount:5,
+	CreateCount:5,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1564316678, ConnectTime:"2015-10-27 08:55:42", UseCount:0, LastActiveTime:"2015-10-27 08:55:42"},
+		{ID:1975600572, ConnectTime:"2015-10-27 08:55:42", UseCount:0, LastActiveTime:"2015-10-27 08:55:42"},
+		{ID:1674147337, ConnectTime:"2015-10-27 08:55:42", UseCount:0, LastActiveTime:"2015-10-27 08:55:42"},
+		{ID:1063549965, ConnectTime:"2015-10-27 08:55:42", UseCount:0, LastActiveTime:"2015-10-27 08:55:42"},
+		{ID:1577867774, ConnectTime:"2015-10-27 08:55:42", UseCount:2, LastActiveTime:"2015-10-27 08:55:44"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+  2015-10-27 08:55:45 [ main ] Began transaction (1) for test context [DefaultTestContext@1039e063 testClass = UserServiceTest, testInstance = com.demo.UserServiceTest@47ba8be7, testMethod = addTestUser@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@28370f7b testClass = UserServiceTest, locations = '{classpath:spring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@36d968dd]; rollback [false]
+  2015-10-27 08:55:45 [ main ] Committed transaction after test execution for test context [DefaultTestContext@1039e063 testClass = UserServiceTest, testInstance = com.demo.UserServiceTest@47ba8be7, testMethod = addTestUser@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@28370f7b testClass = UserServiceTest, locations = '{classpath:spring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+  2015-10-27 08:55:45 [ Thread-1 ] Closing org.springframework.context.support.GenericApplicationContext@6ef1c8f0: startup date [Tue Oct 27 08:55:41 CST 2015]; root of context hierarchy
+  2015-10-27 08:55:45 [ Thread-1 ] {dataSource-1} closed
+  2015-10-27 09:19:41 [ main ] Loading XML bean definitions from class path resource [spring.xml]
+  2015-10-27 09:19:41 [ main ] Loading XML bean definitions from class path resource [spring-hibernate.xml]
+  2015-10-27 09:19:41 [ main ] Refreshing org.springframework.context.support.GenericApplicationContext@6ef1c8f0: startup date [Tue Oct 27 09:19:41 CST 2015]; root of context hierarchy
+  2015-10-27 09:19:42 [ main ] Loading properties file from class path resource [config.properties]
+  2015-10-27 09:19:42 [ main ] {dataSource-1} inited
+  2015-10-27 09:19:43 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+  2015-10-27 09:19:43 [ main ] HHH000412: Hibernate Core {4.1.6.Final}
+  2015-10-27 09:19:43 [ main ] HHH000206: hibernate.properties not found
+  2015-10-27 09:19:43 [ main ] HHH000021: Bytecode provider name : javassist
+  2015-10-27 09:19:43 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+  2015-10-27 09:19:43 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+  2015-10-27 09:19:43 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+  2015-10-27 09:19:44 [ main ] HHH000228: Running hbm2ddl schema update
+  2015-10-27 09:19:44 [ main ] HHH000102: Fetching database metadata
+  2015-10-27 09:19:44 [ main ] HHH000396: Updating schema
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.authority
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, icon, name, parentid, url]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_role_roles]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [primary, fk_fk_role_roles]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.battle
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [createtime, id, starttime, createuserid, limittime, type]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_battals]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_user_battals, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.broadcast
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, title, userid, inittime, descript]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_posts]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_user_posts, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.competition
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [endtime, id, islimituser, title, starttime, ispublic, description, createuserid, language, type, password]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_competitions]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_user_competitions, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.competitionregister
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [userid, competition]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_competition_registre, fk_fk_user_register]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [primary, fk_fk_user_register]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.discuss
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, posttime, description, userid, problemid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_problem_discusses, fk_fk_user_discusses]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [primary, fk_fk_problem_discusses, fk_fk_user_discusses]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.fight
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [teamid, userteam, userid, battleid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_fight, fk_fk_simple_user_team, fk_fk_battel_fight]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_simple_user_team, fk_fk_battel_fight, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.friendgroup
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, userid, groupname]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_groups]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [primary, fk_fk_user_groups]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.hack
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, userid, respondid, type]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_hacks, fk_fk_response_hack]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_user_hacks, fk_fk_response_hack, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.history
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, loginarea, logintime, userid, ip]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_reference_8]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_reference_8, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.letter
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, title, posttime, description, userfromid, usertoid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_reference_9, fk_reference_10]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_reference_9, primary, fk_reference_10]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.logs
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, time, userrealname, issuccess, userid, doing, params, msg, url, ip]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.maketeam
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [teamid, userid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_team_maketeam, fk_fk_user_maketeam]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_team_maketeam, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.notice
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [createtime, content, id, title, userid, type]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_notices]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_user_notices, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.problem
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [testoutput, testinput, difficulty, hint, type, islock, id, createtime, title, source, description, timelimit, memorylimit]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.relation
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, userid, groupid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_group_relations, fk_fk_user_relations]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_group_relations, primary, fk_fk_user_relations]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.reply
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, discussid, replytime, userid, parentid, replycontent]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_reply_replies, fk_fk_user_repies, fk_fk_discuss_replies]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [primary, fk_fk_reply_replies, fk_fk_user_repies, fk_fk_discuss_replies]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.respond
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, selectproblemsid, respondtime, status, codelength, userid, language, costmemory, code, costtime, problemid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_responds, fk_fk_select_responses, fk_fk_problem_reponds]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_user_responds, fk_fk_select_responses, fk_fk_problem_reponds, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.selectproblems
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [cproblemid, id, competitionid, score, battleid, realproblemid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_battla_sproblems, fk_fk_compatetion_sproblems]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_battla_sproblems, fk_fk_compatetion_sproblems, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.solvedproblem
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, score, userid, errorcount, submitcount, selectproblemid, issolve, solvetime, problemid, punishtime]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_select_solve, fk_fk_problems_solve, fk_fk_user_solves]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_select_solve, primary, fk_fk_problems_solve, fk_fk_user_solves]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.tag
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, name, problemid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_problem_tags]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_problem_tags, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.team
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, status, name, userid, peoplelimit]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_user_teams_host]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_user_teams_host, primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.top
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [id, solvecount, rank, negativehack, competitionid, positivehack, score, userid, usetime, rating, battleid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_competition_top, fk_fk_user_tops, fk_fk_battla_top]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [fk_fk_competition_top, primary, fk_fk_user_tops, fk_fk_battla_top]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.user
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [isemail, headimg, vantages, password, lockreason, islock, id, createtime, rank, school, email, name, rating]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 09:19:44 [ main ] HHH000261: Table found: code.user_authority
+  2015-10-27 09:19:44 [ main ] HHH000037: Columns: [userid, authorityid]
+  2015-10-27 09:19:44 [ main ] HHH000108: Foreign keys: [fk_fk_private_users, fk_fk_user_privates]
+  2015-10-27 09:19:44 [ main ] HHH000126: Indexes: [primary, fk_fk_user_privates]
+  2015-10-27 09:19:44 [ main ] HHH000232: Schema update complete
+  2015-10-27 09:19:44 [ main ] Using DataSource [{
+	CreateTime:"2015-10-27 09:19:42",
+	ActiveCount:0,
+	PoolingCount:5,
+	CreateCount:5,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:2002564168, ConnectTime:"2015-10-27 09:19:42", UseCount:0, LastActiveTime:"2015-10-27 09:19:42"},
+		{ID:1732255792, ConnectTime:"2015-10-27 09:19:42", UseCount:0, LastActiveTime:"2015-10-27 09:19:42"},
+		{ID:587293765, ConnectTime:"2015-10-27 09:19:42", UseCount:0, LastActiveTime:"2015-10-27 09:19:42"},
+		{ID:811466743, ConnectTime:"2015-10-27 09:19:42", UseCount:0, LastActiveTime:"2015-10-27 09:19:42"},
+		{ID:1800391151, ConnectTime:"2015-10-27 09:19:42", UseCount:2, LastActiveTime:"2015-10-27 09:19:44"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+  2015-10-27 09:19:45 [ main ] Began transaction (1) for test context [DefaultTestContext@373df488 testClass = UserServiceTest, testInstance = com.demo.UserServiceTest@4481290d, testMethod = addTestUser@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7bae379d testClass = UserServiceTest, locations = '{classpath:spring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@6ac563da]; rollback [false]
+  2015-10-27 09:19:45 [ main ] Committed transaction after test execution for test context [DefaultTestContext@373df488 testClass = UserServiceTest, testInstance = com.demo.UserServiceTest@4481290d, testMethod = addTestUser@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7bae379d testClass = UserServiceTest, locations = '{classpath:spring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+  2015-10-27 09:19:45 [ Thread-1 ] Closing org.springframework.context.support.GenericApplicationContext@6ef1c8f0: startup date [Tue Oct 27 09:19:41 CST 2015]; root of context hierarchy
+  2015-10-27 09:19:45 [ Thread-1 ] {dataSource-1} closed
+  2015-10-27 09:22:14 [ main ] Loading XML bean definitions from class path resource [spring.xml]
+  2015-10-27 09:22:14 [ main ] Loading XML bean definitions from class path resource [spring-hibernate.xml]
+  2015-10-27 09:22:14 [ main ] Refreshing org.springframework.context.support.GenericApplicationContext@405c7260: startup date [Tue Oct 27 09:22:14 CST 2015]; root of context hierarchy
+  2015-10-27 09:22:15 [ main ] Loading properties file from class path resource [config.properties]
+  2015-10-27 09:22:15 [ main ] {dataSource-1} inited
+  2015-10-27 09:22:16 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+  2015-10-27 09:22:16 [ main ] HHH000412: Hibernate Core {4.1.6.Final}
+  2015-10-27 09:22:16 [ main ] HHH000206: hibernate.properties not found
+  2015-10-27 09:22:16 [ main ] HHH000021: Bytecode provider name : javassist
+  2015-10-27 09:22:16 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+  2015-10-27 09:22:16 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+  2015-10-27 09:22:16 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+  2015-10-27 09:22:17 [ main ] HHH000228: Running hbm2ddl schema update
+  2015-10-27 09:22:17 [ main ] HHH000102: Fetching database metadata
+  2015-10-27 09:22:17 [ main ] HHH000396: Updating schema
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.authority
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, icon, name, parentid, url]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_role_roles]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [primary, fk_fk_role_roles]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.battle
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [createtime, id, starttime, createuserid, limittime, type]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_user_battals]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_user_battals, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.broadcast
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, title, userid, inittime, descript]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_user_posts]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_user_posts, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.competition
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [endtime, id, islimituser, title, starttime, ispublic, description, createuserid, language, type, password]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_user_competitions]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_user_competitions, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.competitionregister
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [userid, competition]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_competition_registre, fk_fk_user_register]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [primary, fk_fk_user_register]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.discuss
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, posttime, description, userid, problemid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_problem_discusses, fk_fk_user_discusses]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [primary, fk_fk_problem_discusses, fk_fk_user_discusses]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.fight
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [teamid, userteam, userid, battleid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_user_fight, fk_fk_simple_user_team, fk_fk_battel_fight]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_simple_user_team, fk_fk_battel_fight, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.friendgroup
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, userid, groupname]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_user_groups]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [primary, fk_fk_user_groups]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.hack
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, userid, respondid, type]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_user_hacks, fk_fk_response_hack]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_user_hacks, fk_fk_response_hack, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.history
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, loginarea, logintime, userid, ip]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_reference_8]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_reference_8, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.letter
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, title, posttime, description, userfromid, usertoid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_reference_9, fk_reference_10]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_reference_9, primary, fk_reference_10]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.logs
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, time, userrealname, issuccess, userid, doing, params, msg, url, ip]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.maketeam
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [teamid, userid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_team_maketeam, fk_fk_user_maketeam]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_team_maketeam, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.notice
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [createtime, content, id, title, userid, type]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_user_notices]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_user_notices, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.problem
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [testoutput, testinput, difficulty, hint, type, islock, id, createtime, title, source, description, timelimit, memorylimit]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.relation
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, userid, groupid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_group_relations, fk_fk_user_relations]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_group_relations, primary, fk_fk_user_relations]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.reply
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, discussid, replytime, userid, parentid, replycontent]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_reply_replies, fk_fk_user_repies, fk_fk_discuss_replies]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [primary, fk_fk_reply_replies, fk_fk_user_repies, fk_fk_discuss_replies]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.respond
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, selectproblemsid, respondtime, status, codelength, userid, language, costmemory, code, costtime, problemid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_user_responds, fk_fk_select_responses, fk_fk_problem_reponds]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_user_responds, fk_fk_select_responses, fk_fk_problem_reponds, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.selectproblems
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [cproblemid, id, competitionid, score, battleid, realproblemid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_battla_sproblems, fk_fk_compatetion_sproblems]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_battla_sproblems, fk_fk_compatetion_sproblems, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.solvedproblem
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, score, userid, errorcount, submitcount, selectproblemid, issolve, solvetime, problemid, punishtime]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_select_solve, fk_fk_problems_solve, fk_fk_user_solves]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_select_solve, primary, fk_fk_problems_solve, fk_fk_user_solves]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.tag
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, name, problemid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_problem_tags]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_problem_tags, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.team
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, status, name, userid, peoplelimit]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_user_teams_host]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_user_teams_host, primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.top
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [id, solvecount, rank, negativehack, competitionid, positivehack, score, userid, usetime, rating, battleid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_competition_top, fk_fk_user_tops, fk_fk_battla_top]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [fk_fk_competition_top, primary, fk_fk_user_tops, fk_fk_battla_top]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.user
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [isemail, headimg, vantages, password, lockreason, islock, id, createtime, rank, school, email, name, rating]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: []
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [primary]
+  2015-10-27 09:22:17 [ main ] HHH000261: Table found: code.user_authority
+  2015-10-27 09:22:17 [ main ] HHH000037: Columns: [userid, authorityid]
+  2015-10-27 09:22:17 [ main ] HHH000108: Foreign keys: [fk_fk_private_users, fk_fk_user_privates]
+  2015-10-27 09:22:17 [ main ] HHH000126: Indexes: [primary, fk_fk_user_privates]
+  2015-10-27 09:22:17 [ main ] HHH000232: Schema update complete
+  2015-10-27 09:22:17 [ main ] Using DataSource [{
+	CreateTime:"2015-10-27 09:22:15",
+	ActiveCount:0,
+	PoolingCount:5,
+	CreateCount:5,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1800391151, ConnectTime:"2015-10-27 09:22:15", UseCount:0, LastActiveTime:"2015-10-27 09:22:15"},
+		{ID:1129488627, ConnectTime:"2015-10-27 09:22:15", UseCount:0, LastActiveTime:"2015-10-27 09:22:15"},
+		{ID:1707398156, ConnectTime:"2015-10-27 09:22:15", UseCount:0, LastActiveTime:"2015-10-27 09:22:15"},
+		{ID:1564316678, ConnectTime:"2015-10-27 09:22:15", UseCount:0, LastActiveTime:"2015-10-27 09:22:15"},
+		{ID:1975600572, ConnectTime:"2015-10-27 09:22:15", UseCount:2, LastActiveTime:"2015-10-27 09:22:17"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+  2015-10-27 09:22:18 [ main ] Began transaction (1) for test context [DefaultTestContext@62b9c3e2 testClass = UserServiceTest, testInstance = com.demo.UserServiceTest@11eb5d11, testMethod = addTestUser@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@732b1047 testClass = UserServiceTest, locations = '{classpath:spring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1039e063]; rollback [false]
+  2015-10-27 09:22:18 [ main ] Committed transaction after test execution for test context [DefaultTestContext@62b9c3e2 testClass = UserServiceTest, testInstance = com.demo.UserServiceTest@11eb5d11, testMethod = addTestUser@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@732b1047 testClass = UserServiceTest, locations = '{classpath:spring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+  2015-10-27 09:22:18 [ Thread-1 ] Closing org.springframework.context.support.GenericApplicationContext@405c7260: startup date [Tue Oct 27 09:22:14 CST 2015]; root of context hierarchy
+  2015-10-27 09:22:18 [ Thread-1 ] {dataSource-1} closed
+  

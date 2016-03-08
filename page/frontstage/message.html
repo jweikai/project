@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>爱智网</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/public/message.css" />
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/global.js"></script>
+		<script type="text/javascript" src="js/public/message.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default header">
+			<div class="container-fluid container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="img/logo.png" class="img-responsive" />
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">课程 <span class="sr-only">(课程)</span></a>
+						</li>
+						<li><a href="#">问答</a>
+						</li>
+						<li><a href="#">我的课程</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" data-toggle="modal" data-target="#userLogin"><span class="fa fa-user"></span>&nbsp;登录</a>
+						</li>
+						<li><a href="#" data-toggle="modal" data-target="#userRegist"><span class="fa fa-edit"></span>&nbsp;注册</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right form-inline" role="search">
+						<div class="form-group">
+							<input type="text" width="80%" class="form-control" placeholder="搜索、我的课程">
+						</div>
+						<button type="submit" class="border-blue button border-2x">搜索</button>
+					</form>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<div id="main">
+			<div class="container clearfix">
+				<div id="left_panel">
+					<!-- 最左侧列表(消息, 好友) -->
+					<ul id="left_panel_nav">
+						<li class="active" id="msg_new"> 
+							<a href="#" title="最近"><span class="unread_num" style="display: block;">1</span></a> 
+						</li>
+						<li id="msg_friends">
+							<a href="#" title="好友"><span style="display: block;" class="unread_num">1</span></a>
+						</li>
+					</ul>					
+					<div class="left_panel_content">						
+						<div id="list_waper">
+							<!-- 显示消息 -->
+							<ul id="lastChat" class="user_list">
+								<li id="lastChat10000" uid="10000">
+									<img src="img/test/nvshen.jpg" alt="慕女神" width="40" height="40">
+									<div class="info">
+										<h5>慕女神</h5>
+										<p class="theLastMsg">各位小伙伴们，DavidChin老师出新课啦~~~本门课程是由老师精心准备的《Linux C语言指针与内存》，这也是大家期待已经的C语言指针部分的课程。小伙伴们还等什么？传送门已开： http://www.imooc.com/view/394 大家抓紧传送，吼吼~~~</p>
+									</div>
+								</li>
+								<li id="lastChat108721" uid="108721">
+									<span class="msg-close"></span>
+									<img src="img/test/friend.jpg" alt="追梦的少年" width="40" height="40">
+									<div class="info">
+										<h5>追梦的少年</h5>
+										<p class="theLastMsg">追梦的少年同意了你的好友请求，你们现在可以对话啦！</p>
+									</div>
+								</li>
+							</ul>
+							<!-- 显示好友 -->
+							<ul id="friends" style="display: none;" class="user_list">
+								<li id="friends10000" onclick="showUserInfo(this,'img/test/nvshen-big.jpg','10000','慕女神','我的私人秘书','女,北京市','这位同学很懒，什么也没有留下 - - !');" uid="10000" data-group="M">
+									<img src="img/test/nvshen.jpg" alt="慕女神" width="40" height="40">
+									<div class="info">
+										<h5>慕女神</h5>
+										<p>我的私人秘书</p>
+									</div>
+								</li>
+								<p class="groupChar">Z</p>
+								<li id="friends108721" onclick="showUserInfo(this,'img/test/user-big.jpg','108721','追梦的少年','PHP开发工程师','男,上海市','这位同学很懒，什么也没有留下 - - !');" uid="108721" data-group="Z">
+									<img src="img/test/friend.jpg" alt="追梦的少年" width="40" height="40">
+									<div class="info">
+										<h5>追梦的少年</h5>
+										<p>PHP开发工程师</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 聊天部分 -->
+				<div id="chat_container">
+					<div id="chat_content">
+						<ul id="userchatUl10000" uid="10000" class="userchatUl" style="display: none;">
+							<li>
+								<div class="timeLine"> <strong>2014-09-07</strong>
+								</div>
+							</li>
+							<li class="you">
+								<div class="chat_avata">
+									<a target="_blank" href="/space/u/uid/10000">
+										<img width="40" height="40" class="img_border_one" src="img/test/nvshen.jpg">
+									</a>
+								</div>
+								<div class="a_msg_info" id="255428">
+									<pre>Hi，亲爱的jweikai，欢迎你来到慕课网，如果你在学习的过程中有任何建议或问题，可以发消息给我！</pre>
+									<i class="arrow_left_b"></i>
+								</div>
+								<small class="time">2014-09-07 09:54</small>
+							</li>
+							<li class="me">
+								<div class="chat_avata">
+									<a>
+										<img width="40" height="40" class="img_border_one" src="img/test/my.jpg">
+									</a>
+								</div>
+								<div class="a_msg_info" id="255446">
+									<pre>zx</pre>
+									<i class="arrow_left_b"></i>
+								</div>
+								<small class="time">2014-09-07 10:03</small>
+							</li>
+							<li class="me">
+								<div class="chat_avata">
+									<a>
+										<img width="40" height="40" class="img_border_one" src="img/test/my.jpg">
+									</a>
+								</div>
+								<div class="a_msg_info" id="255451">
+									<pre>你好</pre>
+									<i class="arrow_left_b"></i>
+								</div>
+								<small class="time">2014-09-07 10:07</small>
+							</li>
+							<li class="me">
+								<div class="chat_avata">
+									<a>
+										<img width="40" height="40" class="img_border_one" src="img/test/my.jpg">
+									</a>
+								</div>
+								<div class="a_msg_info" id="255452">
+									<pre>在不在啊</pre>
+									<i class="arrow_left_b"></i>
+								</div>
+								<small class="time">2014-09-07 10:07</small>
+							</li>
+						</ul>
+						<ul id="userchatUl108721" uid="108721" class="userchatUl" style="display: none;">
+							<li>
+								<div class="timeLine"> <strong style="width:130px;">2015-06-02</strong>
+								</div>
+							</li>
+							<li class="me system">
+								<div class="chat_avata">
+									<a>
+										<img width="40" height="40" class="img_border_one" src="http://img.mukewang.com/user/5333a0c40001088802000200-80-80.jpg">
+									</a>
+								</div>
+								<div class="a_msg_info" id="2257020"><pre><a target="_blank" href="/space/u/uid/108721">追梦的少年</a>同意了你的好友请求，你们现在可以对话啦！</pre><i class="arrow_left_b"></i>
+								</div> <small class="time">2015-06-02 09:51</small> </li>
+						</ul>
+						<!-- 这里本没有数据, ajax生成的 
+						<div class="userinfo_layer">
+							<p class="headpic">
+								<img src="img/test/user-big.jpg" width="130" height="130">
+							</p>
+							<p class="name">追梦的少年</p>
+							<p class="job">PHP开发工程师</p>
+							<p>男,上海市</p>
+							<p>这位同学很懒，什么也没有留下 - - !</p>
+							<div class="btn_area"> 
+								<a href="/space/u/uid/108721" class="btn btn-primary" target="_blank">访问主页</a> 
+								<a id="gotoSend" uid="108721" class="btn btn-success" href="javascript:;">发消息</a>
+								<a id="rmfriend" class="btn btn-danger" href="javascript:;">删除好友</a>
+							</div>
+						</div>
+						数据生成结束 -->
+					</div>
+					<!-- 聊天编辑器 -->
+					<div id="chat_editor" style="display: none;">
+						<form method="post" action="/message/upload?1433378300354" enctype="multipart/form-data" id="upLoadForm" target="imageFrame">
+							<table cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<th>
+											<div class="attach">
+												<a id="sendEmojiIcon" href="javascript:void(0)" onclick="return false" title="表情" style="margin-top:0">表情</a>
+												<div id="face_panel">
+													<div id="choose_face">
+														<a title="[微笑]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/1.png">
+															<p>微笑</p>
+														</a>
+														<a title="[不]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/2.png">
+															<p>不</p>
+														</a>
+														<a title="[亲亲]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/3.png">
+															<p>亲亲</p>
+														</a>
+														<a title="[无聊]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/4.png">
+															<p>无聊</p>
+														</a>
+														<a title="[鼓掌]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/5.png">
+															<p>鼓掌</p>
+														</a>
+														<a title="[伤心]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/6.png">
+															<p>伤心</p>
+														</a>
+														<a title="[害羞]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/7.png">
+															<p>害羞</p>
+														</a>
+														<a title="[闭嘴]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/8.png">
+															<p>闭嘴</p>
+														</a>
+														<a title="[耍酷]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/9.png">
+															<p>耍酷</p>
+														</a>
+														<a title="[无语]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/10.png">
+															<p>无语</p>
+														</a>
+														<a title="[发怒]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/11.png">
+															<p>发怒</p>
+														</a>
+														<a title="[惊讶]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/12.png">
+															<p>惊讶</p>
+														</a>
+														<a title="[委屈]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/13.png">
+															<p>委屈</p>
+														</a>
+														<a title="[酷]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/14.png">
+															<p>酷</p>
+														</a>
+														<a title="[汗]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/15.png">
+															<p>汗</p>
+														</a>
+														<a title="[闪]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/16.png">
+															<p>闪</p>
+														</a>
+														<a title="[放屁]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/17.png">
+															<p>放屁</p>
+														</a>
+														<a title="[洗澡]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/18.png">
+															<p>洗澡</p>
+														</a>
+														<a title="[偶耶]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/19.png">
+															<p>偶耶</p>
+														</a>
+														<a title="[困]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/20.png">
+															<p>困</p>
+														</a>
+														<a title="[咒骂]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/21.png">
+															<p>咒骂</p>
+														</a>
+														<a title="[疑问]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/22.png">
+															<p>疑问</p>
+														</a>
+														<a title="[晕]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/23.png">
+															<p>晕</p>
+														</a>
+														<a title="[衰]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/24.png">
+															<p>衰</p>
+														</a>
+														<a title="[装鬼]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/25.png">
+															<p>装鬼</p>
+														</a>
+														<a title="[受伤]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/26.png">
+															<p>受伤</p>
+														</a>
+														<a title="[再见]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/27.png">
+															<p>再见</p>
+														</a>
+														<a title="[抠鼻]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/28.png">
+															<p>抠鼻</p>
+														</a>
+														<a title="[心寒]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/29.png">
+															<p>心寒</p>
+														</a>
+														<a title="[怒]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/30.png">
+															<p>怒</p>
+														</a>
+														<a title="[凄凉]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/31.png">
+															<p>凄凉</p>
+														</a>
+														<a title="[悄悄]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/32.png">
+															<p>悄悄</p>
+														</a>
+														<a title="[奋斗]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/33.png">
+															<p>奋斗</p>
+														</a>
+														<a title="[哭]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/34.png">
+															<p>哭</p>
+														</a>
+														<a title="[赞]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/35.png">
+															<p>赞</p>
+														</a>
+														<a title="[开心]" href="javascript:;">
+															<img class="ph_face_s" src="img/smiley/36.png">
+															<p>开心</p>
+														</a>
+													</div>
+												</div>
+											</div>
+										</th>
+										<th>
+											<div class="chat_upImg" style="text-align:center">
+												<input type="file" name="imgFile" id="msgUploadImg" accept="image/jpeg,image/gif,image/x-png" title="图片">
+											</div>
+										</th>
+										<th>
+											<div style="position:relative;width:490px; padding-top: 8px;">
+												<textarea class="chatInput" id="textInput" type="text"></textarea>
+												<div id="msg_upImg_box" style="display:none;">
+													<img id="tempViewImg" src="img/test/course1.jpg">
+												</div>
+												<span id="imgDel" style="display:none;width:10px;height:10px;background:url(img/close-1.png) no-repeat 0 0;"></span>
+											</div>
+										</th>
+										<th> <a id="chat-send" class="btn btn-success" href="javascript:;">发送</a> </th>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+						<iframe width="0" height="0" id="imageFrame" name="imageFrame" frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+				<div id="editor_msg"></div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="userRegist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">
+
+	          <span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;用户注册
+
+	        </h4>
+					</div>
+					<form id="frmUserRegist" class="form-horizontal">
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="input01" class="col-md-2 control-label">用户名</label>
+								<div class="col-md-10">
+									<input type="text" name="userName" class="form-control" id="input01" title="字母、数字、汉字皆可" placeholder="字母、数字、汉字皆可">
+									<span class="icon-ok"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="input02" class="col-md-2 control-label">邮箱</label>
+								<div class="col-md-10">
+									<input type="email" name="userEmail" class="form-control" id="input02" title="请输入你的邮箱" placeholder="请输入你的邮箱">
+									<span class="icon-remove"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="input03" class="col-md-2 control-label">密码</label>
+								<div class="col-md-10">
+									<input type="password" name="userPwd" class="form-control" id="input03" title="请输入你的密码" placeholder="请输入你的密码">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="input04" class="col-md-2 control-label">确认密码</label>
+								<div class="col-md-10">
+									<input type="password" name="confirmPassword" class="form-control" id="input04" title="请再次输入你的密码" placeholder="请再次输入你的密码">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div class="form-group">
+									<div class="col-md-10 pull-right">
+										<input type="submit" class="btn btn-primary" value="注册">
+										<input type="reset" class="btn btn-primary" value="重置">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-xs">
+				<div class="modal-content">
+					<div class="modal-body">
+						<form id="frmUserLogin" class="form-horizontal">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title">
+					              <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户登录
+					            </h4>
+							</div>
+							<div class="modal-body">
+								<div class="form-group">
+									<label for="inputuserName" class="col-md-2 control-label">用户名</label>
+									<div class="col-md-10">
+										<input type="text" name="userName" class="form-control" id="inputuserName" placeholder="用户名/手机号/邮箱账号">
+										<span class="icon-remove"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputuserPwd" class="col-md-2 control-label">密码</label>
+									<div class="col-md-10">
+										<input type="password" name="userPwd" class="form-control" id="inputuserPwd" placeholder="密码">
+										<span class="icon-remove"></span>
+									</div>
+								</div>
+								<p>
+									<label class="checkbox-inline">
+										<input type="checkbox" />十天内免登录
+									</label>
+								</p>
+							</div>
+							<div class="modal-footer">
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary" name="login">登录</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+	</body>
+
+</html>

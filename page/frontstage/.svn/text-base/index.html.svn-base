@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>爱智网</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+	    <link rel="stylesheet" href="css/global.css" />
+	    <link rel="stylesheet" href="css/public/index.css" />
+	    <script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/global.js"></script>
+	    <script type="text/javascript" src="js/public/index.js" ></script>
+	</head>
+	<body>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-responsive" /></a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">课程 <span class="sr-only">(课程)</span></a></li>
+	        <li><a href="#">问答</a></li>
+	        <li><a href="#">我的课程</a></li>	        
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#" data-toggle="modal" data-target="#userLogin"><span class="fa fa-user"></span>&nbsp;登录</a></li>
+	        <li><a href="#" data-toggle="modal" data-target="#userRegist"><span class="fa fa-edit"></span>&nbsp;注册</a></li>
+	      </ul>
+	      <form class="navbar-form navbar-right form-inline" role="search">
+	        <div class="form-group">
+	          <input type="text" width="80%" class="form-control" placeholder="搜索、我的课程">
+	        </div>
+  	        <button type="submit" class="border-blue button border-2x">搜索</button>
+	      </form>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>  
+	<div class="course-nav">
+		<ul>
+	        <li><a href="#">慕课发现</a></li>
+	        <li class="active"><a href="#" class="curr">全部课程</a></li>
+	        <li><a href="#">学习计划</a></li>
+	        <li><a href="#">顶尖分享</a></li>
+	    </ul>
+	</div>	
+
+	<div class="container" id="main">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-xs-12" style="width: 22%;" id="sidebar">
+				<ul class="list-group">
+				  <li class="list-group-item active"><a href="javascript:void(0)">全部课程</a></li>
+				  <li class="list-group-item">
+				  	<a href="javascript:void(0)">前端开发</a>
+				  	<div class="category-sort">
+                        <div class="category-sort-bg"></div>
+                        <ul>
+	                        <li><a data-id="7" href="#">HTML/CSS</a></li>
+	                        <li><a data-id="44" href="#">JavaScript</a></li>
+	                        <li><a data-id="1262" href="#">CSS3</a></li>
+	                        <li><a data-id="221" href="#">Html5</a></li>
+	                        <li><a data-id="219" href="#">jQuery</a></li>
+	                        <li><a data-id="1123" href="#">AngularJS</a></li>
+	                        <li><a data-id="222" href="#">Node.js</a></li>
+	                        <li><a data-id="1263" href="#">Bootstrap</a></li>
+	                        <li><a data-id="1260" href="#">WebApp</a></li>
+	                        <li><a data-id="1261" href="#">前端工具</a></li>
+	                    </ul>
+                	</div>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="javascript:void(0)">后端开发</a>
+				  	<div class="category-sort">
+                        <div class="category-sort-bg"></div>
+                        <ul>
+	                        <li><a data-id="1" href="#">PHP</a></li>
+	                        <li><a data-id="220" href="#">JAVA</a></li>
+	                        <li><a data-id="468" href="#">Linux</a></li>
+	                        <li><a data-id="1118" href="#">Python</a></li>
+	                        <li><a data-id="1273" href="#">C</a></li>
+	                        <li><a data-id="1331" href="#">C++</a></li>
+	                        <li><a data-id="1358" href="#">Go </a></li>
+	                    </ul>
+                    </div>
+				  </li>
+				  <li class="list-group-item"><a href="javascript:void(0)">移动开发</a></li>
+				  <li class="list-group-item"><a href="javascript:void(0)">数据处理</a></li>
+				  <li class="list-group-item"><a href="javascript:void(0)">图像处理</a></li>
+				</ul>
+				<div class="sidebar-sign" style="top:0px"></div>
+			</div>
+			<div class="col-lg-8 col-md-8 col-xs-12" id="content">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="group">
+							<span><strong>全部</strong></span>
+							<span id="filter-icon" class="pull-right fa fa-filter fa-2x">
+			                    <div class="sidebar-filter">
+			                        <div class="sidebar-filter-bg"></div>
+			                        <dl class="js-sidebar-level">
+			                            <dt class="sidebar-filter-t">难度筛选</dt>
+			                            <dd class="curr"><a data-id="0" href="javascript:void(0)">不限</a></dd>
+			                            <dd><a data-id="1" href="javascript:void(0)">初级</a></dd>
+			                            <dd><a data-id="2" href="javascript:void(0)">中级</a></dd>
+			                            <dd><a data-id="3" href="javascript:void(0)">高级</a></dd>
+			                        </dl>
+                                </div>
+							</span>
+							<ul class="pull-right">
+								<li class="active"><a href="javascript:void(0)">最新视频</a></li>
+								<li><a href="javascript:void(0)">人气最高</a></li>
+							</ul>
+						</div>
+						<div class="head-sign"></div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-xs-12">
+								<div class="list-img">
+									<img width="280" height="160" alt="Cocos2d-x游戏开发初体验-C++篇" src="img/test/1.jpg">									
+								</div>
+								<h5><span>Cocos2d-x游戏开发初体验-C++篇</span></h5>
+								<div class="intro">
+									<p>国足都出成绩了，你还不来学？</p>
+									<span class="l">更新至4-1</span> 
+									<span class="r">课程时长：1小时0分</span>
+								</div>
+								<div class="tips">
+									<span class="l">2天前更新</span> 
+									<span class="r">614人学习</span>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-xs-12">
+								<div class="list-img">
+									<img width="280" height="160" alt="Java微信公众号开发进阶" src="img/test/2.jpg">
+								</div>
+								<h5><span>Java微信公众号开发进阶</span></h5>
+								<div class="intro">
+									<p>Java微信公众号开发的进阶课程！</p>
+									<span class="l">更新至4-2</span> 
+									<span class="r">课程时长：2小时30分</span>
+								</div>
+								<div class="tips">
+									<span class="l">1天前更新</span> 
+									<span class="r">2017人学习</span>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-xs-12">
+								<div class="list-img">
+									<img width="280" height="160" alt="SVG实现Tooltip气泡效果" src="img/test/3.jpg">
+								</div>
+								<h5><span>SVG实现Tooltip气泡效果</span></h5>
+								<div class="intro">
+									<p>使用HTML5技术制作一个漂亮的SVG气泡效果！</p>
+									<span class="l new">共3章11节</span> 
+									<span class="r">课程时长：1小时35分</span>
+								</div>
+								<div class="tips">
+									<span class="l new">更新完毕</span> 
+									<span class="r">1809人学习</span>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-xs-12">
+								<div class="list-img">
+									<img width="280" height="160" alt="Sass基础入门" src="img/test/4.jpg">
+								</div>
+								<h5><span>Sass基础入门</span></h5>
+								<div class="intro">
+									<p>Sass使你摆脱重复编写样css代码劳动。</p>
+									<span class="l">更新至2-4</span> 
+									<span class="r">课程时长：5小时0分</span>
+								</div>
+								<div class="tips">
+									<span class="l">5天前更新</span> 
+									<span class="r">5093人学习</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="modal fade" id="userRegist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title">
+	          <span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;用户注册
+	        </h4>
+	      </div>
+	      <form id="frmUserRegist" class="form-horizontal">
+	        <div class="modal-body">
+	          <div class="form-group">
+	            <label for="input01" class="col-md-2 control-label">用户名</label>
+	            <div class="col-md-10">
+	              <input type="text" name="userName" class="form-control" id="input01" title="字母、数字、汉字皆可" 
+	                  placeholder="字母、数字、汉字皆可">
+	                  <span class="icon-ok"></span>
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <label for="input02" class="col-md-2 control-label">邮箱</label>
+	            <div class="col-md-10">
+	              <input type="email" name="userEmail" class="form-control" id="input02" title="请输入你的邮箱" placeholder="请输入你的邮箱" >
+	                <span class="icon-remove"></span>
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <label for="input03" class="col-md-2 control-label">密码</label>
+	            <div class="col-md-10">
+	              <input type="password" name="userPwd" class="form-control" id="input03" title="请输入你的密码"
+	                  placeholder="请输入你的密码" >
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <label for="input04" class="col-md-2 control-label">确认密码</label>
+	            <div class="col-md-10">
+	              <input type="password" name="confirmPassword" class="form-control" id="input04" title="请再次输入你的密码"
+	                placeholder="请再次输入你的密码" >
+	            </div>
+	          </div>
+	          <div class="modal-footer">
+	            <div class="form-group">
+	              <div class="col-md-10 pull-right">
+	                <input type="submit" class="btn btn-primary" value="注册">
+	                <input type="reset" class="btn btn-primary" value="重置">
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </form>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-xs">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	        <form id="frmUserLogin" class="form-horizontal">
+	          <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	            <h4 class="modal-title">
+	              <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户登录
+	            </h4>
+	          </div>
+	          <div class="modal-body">
+	            <div class="form-group">
+	              <label for="inputuserName" class="col-md-2 control-label">用户名</label>
+	              <div class="col-md-10">
+	                <input type="text" name="userName" class="form-control" id="inputuserName" placeholder="用户名/手机号/邮箱账号" >
+	                  <span class="icon-remove"></span>
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label for="inputuserPwd" class="col-md-2 control-label">密码</label>
+	              <div class="col-md-10">
+	                <input type="password" name="userPwd" class="form-control" id="inputuserPwd" placeholder="密码" >
+	                  <span class="icon-remove"></span>
+	              </div>
+	            </div>
+	            <p>
+	              <label class="checkbox-inline">
+	                <input type="checkbox" />十天内免登录
+	              </label>
+	            </p>
+	          </div>
+	          <div class="modal-footer">
+	            <div class="form-group">
+	              <button type="submit" class="btn btn-primary" name="login">登录</button>
+	            </div>
+	          </div>
+	        </form>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div style="height: 2000px;"></div>
+	<!-- 回到顶部 -->
+	<div id="goTop" class="elevator">
+	    <!-- <a class="elevator-diaocha" href="/activity/diaocha" target="_blank" id="feedBack"></a> -->
+	    <a class="elevator-weixin" href="javascript:;">
+	        <div class="elevator-weixin-box">
+	        </div>
+	    </a>
+	    <a class="elevator-msg" href="javascript:;" target="_blank" id="feedBack"></a>
+	    <a class="elevator-app" href="javascript:;">
+	        <div class="elevator-app-box">
+	        </div>
+	    </a>
+	    <a class="elevator-top" href="javascript:;" id="backTop"></a>
+	</div>
+	</body>
+</html>

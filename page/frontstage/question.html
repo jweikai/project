@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>爱智网</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+	    <link rel="stylesheet" href="css/global.css" />
+	    <link rel="stylesheet" href="css/public/question.css" />
+	    <script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/global.js"></script>
+	    <script type="text/javascript" src="js/public/question.js" ></script>
+	</head>
+	<body>
+	<nav class="navbar navbar-default header">
+	  <div class="container-fluid container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-responsive" /></a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">课程 <span class="sr-only">(课程)</span></a></li>
+	        <li><a href="#">问答</a></li>
+	        <li><a href="#">我的课程</a></li>	        
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#" data-toggle="modal" data-target="#userLogin"><span class="fa fa-user"></span>&nbsp;登录</a></li>
+	        <li><a href="#" data-toggle="modal" data-target="#userRegist"><span class="fa fa-edit"></span>&nbsp;注册</a></li>
+	      </ul>
+	      <form class="navbar-form navbar-right form-inline" role="search">
+	        <div class="form-group">
+	          <input type="text" width="80%" class="form-control" placeholder="搜索、我的课程">
+	        </div>
+  	        <button type="submit" class="border-blue button border-2x">搜索</button>
+	      </form>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>  
+
+	<div class="container" id="main">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<div class="panel panel-default" id="questionLeft">
+					<div class="panel-heading space-tabs-menu">													
+						<ul class="myspace-tab-list">
+			                <li class="active"><a href="#">全部问答</a></li>
+			                <li><a href="#">课程问答</a></li>
+			                <li><a href="#">技术问答</a></li>
+			                <li><a href="#">技术分享</a></li>
+		                </ul>
+		                <div class="dot-curr"></div>
+					</div>
+					<div class="panel-body">
+						<div class="head-newpost">
+							<div class="newpost">
+						        <a href="/wenda/0/1" class="quealltab active">最新</a>
+						        <a href="/wenda/0/3" class="quealltab">热门</a>
+				                <a href="/wenda/0/4" class="quealltab">等待回复</a>
+	          	                <a href="javascript:void(0)" class="btn-custom-wenda js-btn-custom-show pull-right">
+						            <span>
+						              <i class="fa fa-cog"></i>
+						              <em>问答定制</em>
+						            </span>
+					          	</a>
+			              	</div>
+			              	<div style="clear: both;"></div>
+			              	<div class="question-list">
+				              	<div class="media">
+								  <div class="media-left">
+								    <a href="#" title="断寒弦音">
+								      <img class="media-object img-circle" src="img/test/user2.jpg" alt="...">								      
+								    </a>
+								    <a href="#" title="断寒弦音"><span class="user-name">断寒弦音adfadsafd</span></a>
+								  </div>
+								  <div class="media-body">
+								    <h4 class="media-heading wendaquetitle">
+								    	<span class="fa fa-question-circle"></span>
+								    	<div class="wendatitlecon"><a href="#">web服务器不用配么</a></div>
+								    </h4>
+								    <div class="media-descript replycont">
+								    	<span class="fa fa-envelope-o"></span>
+								    	<div class="replydes">
+								    		<div class="replysign new">[最新回答]</div>
+								    		<a href="#" data-id="12" class="replyuserhead" title="withy">
+								    			<img class="img-circle" src="img/test/user4.jpg" />
+								    		</a>
+								    		<a href="#" target="_blank" title="withy" class="nickname">withy: </a>
+								    		<span class="replydet">
+								    			配置是比较基础的部分，建议使用phpstudy或者wampserver一键安装环境，先省去麻烦配置步骤，后面开发的时候，如果需要使用一些功能或者系统优化，在考虑相应的配置
+								    		</span>
+								    	</div>
+								    </div>
+								    <div class="media-bottom">
+								  		<time>提问时间：13小时前</time>
+								  		<div class="keyword-list">					                      
+					                      <a href="#" target="_blank" class="list-tag">HTML/CSS</a>
+					                      <a href="#" target="_blank" class="list-tag">JAVA</a>
+					                      <a href="#" target="_blank" class="list-tag">PHP</a>	
+					                    </div>
+								  	</div>
+								  </div>	
+								  <div class="ys">
+				                    <div class="number text-center">
+				                      <b class="numShow">1</b>
+				                    </div>
+				                    <div class="number">回答</div>
+				                  </div>
+				                  <div class="browsenum">
+				                    <div class="number text-center">
+				                      <b class="numShow">21</b>
+				                    </div>
+				                    <div class="number">浏览</div>
+				                  </div>
+								</div>
+								<div class="media">
+								  <div class="media-left">
+								    <a href="#" title="断寒弦音">
+								      <img class="media-object img-circle" src="img/test/user2.jpg" alt="...">								      
+								    </a>
+								    <a href="#" title="断寒弦音"><span class="user-name">断寒弦音adfadsafd</span></a>
+								  </div>
+								  <div class="media-body">
+								    <h4 class="media-heading wendaquetitle">
+								    	<span class="fa fa-check-circle"></span>
+								    	<div class="wendatitlecon"><a href="#">web服务器不用配么</a></div>
+								    </h4>
+								    <div class="media-descript replycont">
+								    	<span class="fa fa-envelope-o"></span>
+								    	<div class="replydes">
+								    		<div class="replysign adopt">[醉赞的回答]</div>
+								    		<a href="#" data-id="12" class="replyuserhead" title="withy">
+								    			<img class="img-circle" src="img/test/user4.jpg" />
+								    		</a>
+								    		<a href="#" target="_blank" title="withy" class="nickname">withy: </a>
+								    		<span class="replydet">
+								    			配置是比较基础的部分，建议使用phpstudy或者wampserver一键安装环境，先省去麻烦配置步骤，后面开发的时候，如果需要使用一些功能或者系统优化，在考虑相应的配置
+								    		</span>
+								    	</div>
+								    </div>
+								    <div class="media-bottom">
+								  		<time>提问时间：13小时前</time>
+								  		<div class="keyword-list">					                      
+					                      <a href="#" target="_blank" class="list-tag">JAVA</a>					                      
+					                    </div>
+								    	<div class="course-from">源自：6-1 基础篇总结</div>
+								    	<div class="cur-course">此课回答</div>
+								  	</div>								  	
+								  </div>	
+								  <div class="ys">
+			                    	  <div class="number text-center">
+				                      <b class="numShow">1</b>
+				                    </div>
+				                    <div class="number">回答</div>
+				                  </div>
+				                  <div class="browsenum">
+				                    <div class="number text-center">
+				                      <b class="numShow">21</b>
+				                    </div>
+				                    <div class="number">浏览</div>
+				                  </div>
+								</div>
+								<div class="media">
+								  <div class="media-left">
+								    <a href="#" title="断寒弦音">
+								      <img class="media-object img-circle" src="img/test/user2.jpg" alt="...">								      
+								    </a>
+								    <a href="#" title="断寒弦音"><span class="user-name">断寒弦音adfadsafd</span></a>
+								  </div>
+								  <div class="media-body">
+								    <h4 class="media-heading wendaquetitle">
+								    	<span class="fa fa-question-circle"></span>
+								    	<div class="wendatitlecon"><a href="#">源码请查看</a></div>
+								    </h4>
+								    <div class="media-descript replycont">
+								    	<span class="fa fa-envelope-o"></span>
+								    	<div class="replydes">
+								    		<div class="replysign">[还没有人回答]</div>								    										    	
+								    		<span class="replydet">
+								    			嗯～～，这个提问大家都在考虑......
+								    		</span>
+								    	</div>
+								    </div>
+								    <div class="media-bottom">
+								  		<time>提问时间：13小时前</time>
+								  		<div class="keyword-list">					                      
+					                      <a href="#" target="_blank" class="list-tag">JAVA</a>					                      
+					                    </div>
+								    	<div class="course-from">源自：6-1 基础篇总结</div>
+								    	<div class="cur-course">此课回答</div>
+								  	</div>
+								  </div>
+								  <div class="ys">
+				                    <div class="number text-center">
+				                      <b class="numShow">1</b>
+				                    </div>
+				                    <div class="number">回答</div>
+				                  </div>
+				                  <div class="browsenum">
+				                    <div class="number text-center">
+				                      <b class="numShow">21</b>
+				                    </div>
+				                    <div class="number">浏览</div>
+				                  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<!-- 分页开始 -->
+						<nav>
+						  <ul class="pagination">
+						  	<li class="disabled"><a href="#">首页</a></li>
+						    <li class="disabled">
+						      <a href="#" aria-label="Previous">
+						        <span aria-hidden="true">上一页</span>
+						      </a>
+						    </li>
+						    <li class="active"><a href="#">1</a></li>
+						    <li><a href="#">2</a></li>
+						    <li><a href="#">3</a></li>
+						    <li><a href="#">4</a></li>
+						    <li><a href="#">5</a></li>
+						    <li>
+						      <a href="#" aria-label="Next">
+						        <span aria-hidden="true">下一页</span>
+						      </a>
+						    </li>
+						    <li><a href="#">尾页</a></li>
+						  </ul>
+						</nav>
+						<!-- 分页结束  -->
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="question-right">
+				<a href="javascrip:;" class="btn btn-success new-problem">
+					<span class="fa fa-comment-o"></span>
+					发布问题
+				</a>
+				<div class="panel panel-default question-my">
+					<div class="panel-body">				
+						<div class="user-info">
+						  <a class="user-img" href="#">
+						    <img src="img/test/my.jpg" class="img-circle" alt="jweikai">
+						  </a>
+						  <p class="username">jweikai</p>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<ul class="user-about">
+						  <li><a href="#">提问 <i class="remind">1</i></a></li>
+						  <li><a href="#">回复 </a></li>
+						  <li><a href="#">关注 </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="panel panel-default tags-cloud">
+					<div class="panel-body">
+				        <a href="#" class="list-tag" target="_self">PHP</a>
+				        <a href="#" class="list-tag" target="_self">JAVA</a>
+				        <a href="#" class="list-tag" target="_self">Html/CSS</a>
+				        <a href="#" class="list-tag" target="_self">Maya</a>
+				        <a href="#" class="list-tag" target="_self">MongoDB</a>
+				        <a href="#" class="list-tag" target="_self">Premiere</a>
+				        <a href="#" class="list-tag" target="_self">Photoshop</a>
+				        <a href="#" class="list-tag" target="_self">Mysql</a>
+				        <a href="#" class="list-tag" target="_self">Android</a>
+				        <a href="#" class="list-tag" target="_self">Node.js</a>
+				        <a href="#" class="list-tag" target="_self">Html5</a>
+				        <a href="#" class="list-tag" target="_self">JQuery</a>
+				        <a href="#" class="list-tag" target="_self">JavaScript</a>
+				        <a href="#" class="list-tag" target="_self">Python</a>
+				        <a href="#" class="list-tag" target="_self">iOS</a>
+				        <a href="#" class="list-tag" target="_self">Linux</a>
+				        <a href="#" class="list-tag" target="_self">云计算</a>
+				        <a href="#" class="list-tag" target="_self">AngularJS</a>
+				        <a href="#" class="list-tag" target="_self">Bootstrap</a>
+				        <a href="#" class="list-tag" target="_self">CSS3</a>
+				        <a href="#" class="list-tag" target="_self">前端工具</a>
+				        <a href="#" class="list-tag" target="_self">WebApp</a>
+				        <a href="#" class="list-tag" target="_self">C</a>
+				        <a href="#" class="list-tag" target="_self">Oracle</a>
+				        <a href="#" class="list-tag" target="_self">C++</a>
+				        <a href="#" class="list-tag" target="_self">Go</a>
+				        <a href="#" class="list-tag" target="_self">Unity3D</a>
+				        <a href="#" class="list-tag" target="_self">Cocos2d-x</a>
+				      </div>
+				</div>
+				<div class="panel panel-default question-hotrank">
+					<div class="panel-heading">一周热门问题</div>
+					<div class="panel-body">
+						<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <i class="top-remind top1">热</i>
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    <h4 class="media-heading"><a href="#">【官方活动】慕课网新版上线意见征集~你敢提我就敢用！</a></h4>
+						  </div>
+						  <div class="rankingnum">
+						  	<em>42044</em>
+						  	<span>回答</span>
+						  </div>
+						</div>
+						<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <i class="top-remind top2">热</i>
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    <h4 class="media-heading"><a href="#">慕课网站变丑了</a></h4>
+						  </div>
+						  <div class="rankingnum">
+						  	<em>42044</em>
+						  	<span>回答</span>
+						  </div>
+						</div>
+						<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <i class="top-remind top3">热</i>
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    <h4 class="media-heading"><a href="#">离职 感慨</a></h4>
+						  </div>
+						  <div class="rankingnum">
+						  	<em>42044</em>
+						  	<span>回答</span>
+						  </div>
+						</div>
+						<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <i class="top-remind">热</i>
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    <h4 class="media-heading"><a href="#">php mysql 插入数据,插入失败</a></h4>
+						  </div>
+						  <div class="rankingnum">
+						  	<em>42044</em>
+						  	<span>回答</span>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default replays-hotrank">
+					<div class="panel-heading">
+						一周回答雷锋榜
+						<a href="#" class="more pull-right">更多<a>
+					</div>
+					<div class="panel-body clearfix">
+						<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+								<img src="img/test/user4.jpg" class="img-circle"/>
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    <h4 class="media-heading"><a href="#">偌颜宁</a></h4>
+						         我牛X啥都知道
+						  </div>
+						  <div class="rankingnum">
+						  	<em>42044</em>
+						  	<span>回答</span>
+						  </div>
+						</div>
+						<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+								<img src="img/test/user4.jpg" class="img-circle"/>
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    <h4 class="media-heading"><a href="#">血舞残殇</a></h4>
+						         围观你们
+						  </div>
+						  <div class="rankingnum">
+						  	<em>1561</em>
+						  	<span>回答</span>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<footer id="divFooter">
+		<div class="container">
+			<div class="row rowLinkLogo">
+				<div class="col-md-3 col-xs-4 col-sm-3 col-lg-3 leftLink">
+					<ul>
+						<li><a href="#">学院概况</a>	</li>
+						<li><a href="#">教育教学</a>	</li>
+						<li><a href="#">科学研究</a></li>
+						<li><a href="#">学生工作</a></li>
+						<li><a href="#">招生就业</a></li>
+						<li><a href="#">专业介绍</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-xs-4 col-sm-6 col-lg-6 centerLogo">
+					<center>
+						<img class="img-responsive" src="img/logoBottom.png">
+					</center>
+					<p>0744-8358630 | 0744-8202008
+						<br><a href="#">jsdxrjxy@163.com</a>
+					</p>
+				</div>
+				<div class="col-md-3 col-xs-4 col-sm-3 col-lg-3 rightLink">
+					<ul>
+						<li><a href="#">吉首大学</a></li>
+						<li><a href="#">中软国际</a></li>
+						<li><a href="#">中软国际ETC</a></li>
+						<li><a href="#">青软实训</a></li>
+						<li><a href="#">苏软实训</a></li>
+						<li><a href="#">深圳软酷</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="divCopyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+						<center>地址：湖南省张家界市子午路 | 版权所有：吉首大学软件服务外包学院</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<div class="modal fade" id="userRegist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title">
+	          <span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;用户注册
+	        </h4>
+	      </div>
+	      <form id="frmUserRegist" class="form-horizontal">
+	        <div class="modal-body">
+	          <div class="form-group">
+	            <label for="input01" class="col-md-2 control-label">用户名</label>
+	            <div class="col-md-10">
+	              <input type="text" name="userName" class="form-control" id="input01" title="字母、数字、汉字皆可" 
+	                  placeholder="字母、数字、汉字皆可">
+	                  <span class="icon-ok"></span>
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <label for="input02" class="col-md-2 control-label">邮箱</label>
+	            <div class="col-md-10">
+	              <input type="email" name="userEmail" class="form-control" id="input02" title="请输入你的邮箱" placeholder="请输入你的邮箱" >
+	                <span class="icon-remove"></span>
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <label for="input03" class="col-md-2 control-label">密码</label>
+	            <div class="col-md-10">
+	              <input type="password" name="userPwd" class="form-control" id="input03" title="请输入你的密码"
+	                  placeholder="请输入你的密码" >
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <label for="input04" class="col-md-2 control-label">确认密码</label>
+	            <div class="col-md-10">
+	              <input type="password" name="confirmPassword" class="form-control" id="input04" title="请再次输入你的密码"
+	                placeholder="请再次输入你的密码" >
+	            </div>
+	          </div>
+	          <div class="modal-footer">
+	            <div class="form-group">
+	              <div class="col-md-10 pull-right">
+	                <input type="submit" class="btn btn-primary" value="注册">
+	                <input type="reset" class="btn btn-primary" value="重置">
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </form>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-xs">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	        <form id="frmUserLogin" class="form-horizontal">
+	          <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	            <h4 class="modal-title">
+	              <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户登录
+	            </h4>
+	          </div>
+	          <div class="modal-body">
+	            <div class="form-group">
+	              <label for="inputuserName" class="col-md-2 control-label">用户名</label>
+	              <div class="col-md-10">
+	                <input type="text" name="userName" class="form-control" id="inputuserName" placeholder="用户名/手机号/邮箱账号" >
+	                  <span class="icon-remove"></span>
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label for="inputuserPwd" class="col-md-2 control-label">密码</label>
+	              <div class="col-md-10">
+	                <input type="password" name="userPwd" class="form-control" id="inputuserPwd" placeholder="密码" >
+	                  <span class="icon-remove"></span>
+	              </div>
+	            </div>
+	            <p>
+	              <label class="checkbox-inline">
+	                <input type="checkbox" />十天内免登录
+	              </label>
+	            </p>
+	          </div>
+	          <div class="modal-footer">
+	            <div class="form-group">
+	              <button type="submit" class="btn btn-primary" name="login">登录</button>
+	            </div>
+	          </div>
+	        </form>
+	      </div>
+	    
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<!-- 回到顶部 -->
+	<div id="goTop" class="elevator">
+	    <a class="elevator-diaocha" href="/activity/diaocha" target="_blank" id="feedBack"></a> 
+	    <a class="elevator-weixin" href="javascript:;">
+	        <div class="elevator-weixin-box">
+	        </div>
+	    </a>
+	    <a class="elevator-msg" href="javascript:;" target="_blank" id="feedBack"></a>
+	    <a class="elevator-app" href="javascript:;">
+	        <div class="elevator-app-box">
+	        </div>
+	    </a>
+	    <a class="elevator-top" href="javascript:;" id="backTop"></a>
+	</div>
+	</body>
+</html>

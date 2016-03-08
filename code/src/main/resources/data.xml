@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<levels>
+		<level lower="0" upper="0">0</level>
+		<level lower="1" upper="1100">1</level>
+		<level lower="1100" upper="1300">2</level>
+		<level lower="1300" upper="1500">3</level>
+		<level lower="1500" upper="1700">4</level>
+		<level lower="1700" upper="1900">5</level>
+		<level lower="1900" upper="2100">6</level>
+		<level lower="2100" upper="2300">7</level>
+		<level lower="2300" upper="2500">8</level>
+		<level lower="2500" upper="2700">9</level>							
+	</levels>	
+</data>

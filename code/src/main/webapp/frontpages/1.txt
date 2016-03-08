@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="../extends/css/bootstrap.min.css" /> <!-- public -->
+<link rel="stylesheet" href="../extends/css/font-awesome.min.css" /> <!-- public-->
+<link rel="stylesheet" href="../extends/css/nprogress.css" /> <!-- public -->
+<link rel="stylesheet" href="../extends/css/bootstrap-datetimepicker.min.css" />  <!-- date -->
+<link rel="stylesheet" href="../extends/css/lightbox.css" />  <!-- image -->
+<link rel="stylesheet" href="css/global.css" />		<!-- public -->
+<link rel="stylesheet" href="css/school.css" />     <!-- school -->
+<link rel="shortcut icon" href="../extends/images/code.png" /> <!-- public -->
+<script type="text/javascript" src="../extends/js/jquery-1.10.2.min.js" ></script> <!-- public -->
+<script type="text/javascript" src="../extends/js/bootstrap.min.js" ></script>  <!-- public -->
+<script type="text/javascript" src="../extends/js/nprogress.js" ></script>  <!-- public -->
+<script type="text/javascript" src="../extends/js/moment.min.js" ></script>  <!-- date -->
+<script type="text/javascript" src="../extends/js/zh-cn.js" ></script>  <!-- date -->
+<script type="text/javascript" src="../extends/js/bootstrap-datetimepicker.min.js" ></script>  <!-- date -->
+<script type="text/javascript" src="js/global.js" ></script>  <!-- public -->
+<script type="text/javascript" src="js/school.js" ></script> <!-- school -->

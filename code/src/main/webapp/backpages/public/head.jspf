@@ -1,0 +1,9 @@
+<title>${cAuth.name }</title>
+<link rel="shortcut icon" href="${pageContext.request.contextPath }/extends/images/code.png" /> <%--icon --%>
+<link rel="stylesheet" href="${pageContext.request.contextPath }/extends/css/bootstrap.min.css" />     
+<link rel="stylesheet" href="${pageContext.request.contextPath }/extends/css/font-awesome.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/extends/css/nprogress.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/backpages/css/global.css" />	    
+<script type="text/javascript" src="${pageContext.request.contextPath }/extends/js/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/extends/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/extends/js/nprogress.js" ></script>

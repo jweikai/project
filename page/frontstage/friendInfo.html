@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>爱智网</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+	    <link rel="stylesheet" href="css/global.css" />
+	    <link rel="stylesheet" href="css/public/index.css" />
+	    <link rel="stylesheet" href="css/friendInfo.css" />
+	    <script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/global.js"></script>
+	    <script type="text/javascript" src="js/public/index.js" ></script>
+	</head>
+	<body class="space-course">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-responsive" /></a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">课程 <span class="sr-only">(课程)</span></a></li>
+	        <li><a href="#">问答</a></li>
+	        <li><a href="#">我的课程</a></li>	        
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#" data-toggle="modal" data-target="#userLogin"><span class="fa fa-user"></span>&nbsp;登录</a></li>
+	        <li><a href="#" data-toggle="modal" data-target="#userRegist"><span class="fa fa-edit"></span>&nbsp;注册</a></li>
+	      </ul>
+	      <form class="navbar-form navbar-right form-inline" role="search">
+	        <div class="form-group">
+	          <input type="text" width="80%" class="form-control" placeholder="搜索、我的课程">
+	        </div>
+  	        <button type="submit" class="border-blue button border-2x">搜索</button>
+	      </form>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>  
+	<div class="course-nav">
+		<ul>
+	        <li><a href="#">慕课发现</a></li>
+	        <li class="active"><a href="#" class="curr">全部课程</a></li>
+	        <li><a href="#">学习计划</a></li>
+	        <li><a href="#">顶尖分享</a></li>
+	    </ul>
+	</div>
+	
+
+<div id="main">
+
+<div class="main-user">
+    <div class="container clearfix">
+        <div class="avatar l">
+            <img src="img/test/avatar.jpg" height="180" width="180">
+        </div>
+        <div class="profile r">
+            <h4 class="tadename">
+            	qq_独家记忆_1<a href="#">
+                <span class="icon-profile icon" title="更多信息"></span>
+              </a>
+            </h4>
+            <p class="aboutjob">JAVA开发工程师</p>
+            <p class="aboutme">这位童鞋很懒，什么也没有留下～～！</p>
+            <div class="mp-box" id="mp-box">
+              <div class="l mp-uspace">
+                <span class="mp-title">经验</span><span class="mp-num" data-uid="1997514">260</span>
+                <!-- <i class="line-iron"></i>
+                <span class="mp-title mp-ubadge">徽章</span><span class="mp-num">8,769</span> -->
+              </div>
+            </div>
+                <a href="javascript:void(0)" uid="1997514" class="add-frd btn btn-green" id="J_AddFrd"><span class="icon"></span>加为好友</a>
+                <!-- 进行判断用户是否添加为好有即可区分使用哪个a标签 -->
+               <!--  <a href="javascript:void(0)" uid="1997514" class="send-msg btn btn-green" id="J_SendMsg"><span class="icon"></span>发消息</a> -->
+       		</div>
+    </div>
+</div>
+<div class="main-body container clearfix">
+        <div class="main-aside l">
+          <div class="bodybg">
+            <ul class="space-data">
+                <li><span class="icon-clock icon" title="学习"></span>学习： 3小时 3分</li>
+                <li><span class="icon-tick icon" title="已学"></span>已学：<a href="#" class="nCourse"><em>9</em>门课程</a>
+                </li>
+                <li><span class="icon-ques icon" title="提问"></span>提问：<a href="#">1条</a>
+                </li>
+                <li><span class="icon-chat icon" title="回答"></span>回答：<a href="#">0条</a>
+                </li>
+                <li><span class="icon-note icon" title="笔记"></span>笔记：<a href="#">0条</a>
+                </li>
+                <li><span class="icon-code icon" title="代码"></span>代码：0条</li>
+            </ul>
+          </div>
+          <div class="bodybg panel">
+            <div class="panel-heading">
+              <h3 class="main-hd panel-title">最近访客</h3>
+            </div>
+            <ul class="space-visitors ">
+                                                                            <li>
+                                                <a href="#" target="_blank" class="avatar" title="wilimm"><img src="img/test/5407dcb9000140c209601600-40-40.jpg" height="40" width="40"></a>
+                        <a href="#" target="_blank" class="nickname" title="wilimm">wilimm</a>
+                                                <p>学生</p>
+                      </li>
+                                                                                      <li>
+                                                <a href="#" target="_blank" class="avatar" title="槑小白"><img src="img/test/533e4d850001c10602000200-40-40.jpg" height="40" width="40"></a>
+                        <a href="#" target="_blank" class="nickname" title="槑小白">槑小白</a>
+                                                <p>学生</p>
+                      </li>
+                                                                                      <li>
+                                                <a href="#" target="_blank" class="avatar" title="竹铃0712"><img src="img/test/54c9de9f000143f106400640-40-40.jpg" height="40" width="40"></a>
+                        <a href="#" target="_blank" class="nickname" title="竹铃0712">竹铃0712</a>
+                                                <p>交互设计师</p>
+                      </li>
+                                                                              </ul>
+          </div>
+        </div>
+       <div class="main-content r bodybg space-list">
+            <ul class="space-menu clearfix">
+                <li>
+                    <a href="/space/u/uid/1997514" class="active">
+                      <span>课程</span>
+                    </a>
+                </li>
+                <li>
+                  <a href="/space/question/uid/1997514">
+                    <span>问答</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/space/note/uid/1997514">笔记</a>
+                </li>
+            </ul>
+            
+ <div class="main-bd  clearfix course-list" id="J_MyClass"> 
+                          <ul class="hascourselist course-list-new">
+                                <li data-id="273" class="">
+                  <a href="/learn/273" title="微信6.0主界面">
+                    <div class="course-list-img">
+                      <img src="img/test/549d148800017fbf06000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">0%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="0" data-finishval="0"></progress>
+                    <h5>微信6.0主界面</h5>
+                          <div class="intro"><p>本课程将讲解微信6.0主界面的实现方法，包括主界面的...</p><span class="l">共1章8节</span> <span class="r">课程时长： 2小时 0分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">22546人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="107" class="">
+                  <a href="/learn/107" title="Android中常用高级控件详解汇总">
+                    <div class="course-list-img">
+                      <img src="img/test/53bf89320001073f06000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">2%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="2" data-finishval="2"></progress>
+                    <h5>Android中常用高级控件详解汇总...</h5>
+                                                <div class="intro"><p>本课程由浅入深地带您学会Android的常用控件的开发和...</p><span class="l">共15章4节</span> <span class="r">课程时长： 5小时 0分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">23911人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="179" class="nonemagright">
+                  <a href="/learn/179" title="Android中的数据存储、组件与手势">
+                    <div class="course-list-img">
+                      <img src="img/test/53fc27340001d12806000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">4%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="4" data-finishval="4"></progress>
+                    <h5>Android中的数据存储、组件与手...</h5>
+                                                <div class="intro"><p>本课程深入的讲解了Android中的手势识别原理、数据存...</p><span class="l">共9章2节</span> <span class="r">课程时长： 6小时 0分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">14238人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="142" class="">
+                  <a href="/learn/142" title="Android中的消息提示、菜单">
+                    <div class="course-list-img">
+                      <img src="img/test/course1.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">4%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="4" data-finishval="4"></progress>
+                    <h5>Android中的消息提示、菜单...</h5>
+                                                <div class="intro"><p>本课程讲带你熟悉Android开发中常用的调试方式，各种...</p><span class="l">共8章2节</span> <span class="r">课程时长： 3小时50分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">12867人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="96" class="">
+                  <a href="/learn/96" title="Android攻城狮的第一门课（入门篇）">
+                    <div class="course-list-img">
+                      <img src="img/test/53bf89100001684e06000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">0%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="0" data-finishval="0"></progress>
+                    <h5>Android攻城狮的第一门课（入门...</h5>
+                                                <div class="intro"><p>本课程涵盖全部Android应用开发的基础，根据技能点的...</p><span class="l">共21章6节</span> <span class="r">课程时长： 5小时 0分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">65016人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="73" class="nonemagright">
+                  <a href="/learn/73" title="只学有用的">
+                    <div class="course-list-img">
+                      <img src="img/test/533a98a2000147cc06000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">100%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="100" data-finishval="100"></progress>
+                    <h5>只学有用的</h5>
+                                                <div class="intro"><p>各位小伙伴在慕课网卖力鼓捣代码的时候，可曾想到有一...</p><span class="l">共1章4节</span> <span class="r">课程时长：15分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">18074人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="135" class="">
+                  <a href="/learn/135" title="Android的ListView下拉刷新">
+                    <div class="course-list-img">
+                      <img src="img/test/539fff7e000153da06000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">100%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="100" data-finishval="100"></progress>
+                    <h5>Android的ListView下拉刷新</h5>
+                                                <div class="intro"><p>ListView是Android开发中最常用的控件之一，各种应用...</p><span class="l">共1章6节</span> <span class="r">课程时长：40分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">13560人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="136" class="">
+                  <a href="/learn/136" title="Android的ListView分页功能">
+                    <div class="course-list-img">
+                      <img src="img/test/53a00cfc0001b68506000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">0%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="0" data-finishval="0"></progress>
+                    <h5>Android的ListView分页功能</h5>
+                                                <div class="intro"><p>本课程讲解一种实现ListView分页功能的方法...</p><span class="l">共1章3节</span> <span class="r">课程时长：25分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">13373人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="308" class="nonemagright">
+                  <a href="/learn/308" title="Android图案解锁">
+                    <div class="course-list-img">
+                      <img src="img/test/54c8b23d000162e906000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">23%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="23" data-finishval="23"></progress>
+                    <h5>Android图案解锁</h5>
+                                                <div class="intro"><p>本课程将带领大家通过自定义控件实现一个图案解锁的功...</p><span class="l">共4章1节</span> <span class="r">课程时长： 2小时 0分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">17709人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="304" class="">
+                  <a href="/learn/304" title="Android中的Http通信">
+                    <div class="course-list-img">
+                      <img src="img/test/54bf7e8c0001f69606000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">0%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="0" data-finishval="0"></progress>
+                    <h5>Android中的Http通信</h5>
+                                                <div class="intro"><p>本次课程将带领大家android当中网络交互处理，例如常...</p><span class="l">
+                                                        更新至1-7
+                                                    </span> <span class="r">课程时长： 1小时30分</span></div>
+                      <div class="tips"><span class="l">2015-04-14更新</span> <span class="r">8868人学习</span></div>
+                                        </a>
+                </li>
+                                <li data-id="383" class="">
+                  <a href="/learn/383" title="Android-仿微信语音聊天">
+                    <div class="course-list-img">
+                      <img src="img/test/55403cbd0001f88806000338-300-170.jpg" height="160" width="280">
+                      <div class="pro-bg"></div>
+                      <em class="dot-progress">0%</em>
+                    </div>
+                    <progress style="width: 280px;" class="studyrate" max="100" value="0" data-finishval="0"></progress>
+                    <h5>Android-仿微信语音聊天</h5>
+                                                <div class="intro"><p>本课程通过结合自定义View、媒体相关API、Dialog管理...</p><span class="l">共7章1节</span> <span class="r">课程时长： 2小时14分</span></div>
+                          <div class="tips"><span class="l">更新完毕</span> <span class="r">9269人学习</span></div>
+                                        </a>
+                </li>
+                              </ul>
+              
+                          </div>
+
+        </div>
+
+
+<div id="layer_sendmsg" class="font-colorg" style="display:none">
+    <div class="sendadd">
+      <h4>发送好友申请<span class="tipclose"></span></h4>
+      <div class="sendcon">
+        <textarea class="chatInput" id="textInput" type="text" name="说点什么吧" cols="1" rows="5"></textarea>
+      </div>
+      <div class="sendsq">
+        <a href="#" id="sendBtn" class="sendInvite btn btn-green">发送申请</a>
+      </div>
+    </div>
+</div>
+</div>
+
+</div>
+		
+</body>
+</html>

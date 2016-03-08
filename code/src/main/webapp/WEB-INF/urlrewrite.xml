@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlrewrite>    
+    
+    <!-- <rule>
+        <from>^/user/([a-z]+)/([0-9]+)$</from>
+        <to>/index.jsp?nickname=$1&amp;age=$2</to>
+　　</rule> -->	
+	<rule>
+		<from>^/admin/([a-zA-Z]+)$</from>
+		<to>/admin/$1.action</to>
+	</rule>
+	<rule>
+		<from>^/admin/([a-zA-Z]+)/([a-zA-Z]+)$</from>
+		<to>/admin/$1_$2.action</to>
+	</rule>
+	<rule>
+		<from>^/([a-zA-Z]+)/([a-zA-Z]+)$</from>
+		<to>/$1_$2.action</to>
+	</rule>
+</urlrewrite>

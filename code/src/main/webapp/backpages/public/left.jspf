@@ -1,0 +1,66 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<div id="sidebar" class="col-lg-2 col-md-2">
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h4 class="panel-title">					        
+		       	<a href="${pageContext.request.contextPath }/admin/index"><span class="fa fa-home"></span>&nbsp;首页</a>					        
+		    </h4>
+		  </div>					    
+		</div>		
+		<s:iterator value="#application.authoritiesTop" status="st">
+		<s:if test="#session.LOGIN_USER_SESSION_KEY.hasAuthorityByName(name)">
+		<div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="h-list-${st.count }">
+		      <h4 class="panel-title">
+		        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#c-list-${st.count }" aria-expanded="false" aria-controls="c-list-${st.count }">
+		          	<span class="fa fa-${icon }"></span>&nbsp;${name }<span class="fa fa-angle-right pull-right"></span>
+		       </a>
+		     </h4>
+		   </div>
+		   <div id="c-list-${st.count }" class="panel-collapse collapse" role="tabpanel" aria-labelledby="h-list-${st.count }">
+		     <div class="panel-body">
+		       	<ul class="nav navbar-default nav-stacked">
+		       		<s:iterator value="authorities">
+		       		<s:if test="#session.LOGIN_USER_SESSION_KEY.hasAuthorityByUrl(url)">
+					  	<li ${cAuth.url==url?'data-active':'' } role="presentation"><a href="${pageContext.request.contextPath }/admin/<s:property value="changeUrl()"/>"><span class="fa fa-${icon }"></span>&nbsp;${name }</a></li>
+					</s:if>		       		
+		       		</s:iterator>
+				</ul>
+		     </div>
+		   </div>
+		 </div>
+		 </s:if>
+		</s:iterator>
+		<div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">					        
+	          	<a href="${pageContext.request.contextPath }/admin/logout"><span class="fa fa-sign-out"></span>&nbsp;注销</a>					        
+		      </h4>
+		    </div>					    
+		  </div>	
+		  <div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">					        
+	          	<a href="index.html"><span class="fa fa-exclamation-triangle"></span>&nbsp;帮助</a>					        
+		      </h4>
+		    </div>					    
+		  </div>					  
+		 <div class="list-group">
+		  <a href="#" class="list-group-item">
+		    <h4 class="list-group-item-heading"><span class="fa fa-bookmark"></span>&nbsp;公告</h4>
+		    <p class="list-group-item-text">时光静好，与君语；细水流年，与君同。</p>
+		  </a>
+		  <a href="#" class="list-group-item">
+		    <h4 class="list-group-item-heading"><span class="fa fa-tag"></span>&nbsp;Tag</h4>
+		    <p class="list-group-item-text">Welcome to the Code Manage!</p>
+		  </a>
+		</div>
+	</div>											
+</div>
+<script type="text/javascript">
+$(function() {
+	$("[data-active]").parents(".collapse").addClass('in');
+});
+</script>

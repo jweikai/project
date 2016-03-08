@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>爱智网</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/public/question.css" />
+		<link rel="stylesheet" href="js/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" />
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/global.js"></script>
+		<script type="text/javascript" src="js/public/question-detail.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default header">
+			<div class="container-fluid container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="img/logo.png" class="img-responsive" />
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">课程 <span class="sr-only">(课程)</span></a>
+						</li>
+						<li><a href="#">问答</a>
+						</li>
+						<li><a href="#">我的课程</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" data-toggle="modal" data-target="#userLogin"><span class="fa fa-user"></span>&nbsp;登录</a>
+						</li>
+						<li><a href="#" data-toggle="modal" data-target="#userRegist"><span class="fa fa-edit"></span>&nbsp;注册</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right form-inline" role="search">
+						<div class="form-group">
+							<input type="text" width="80%" class="form-control" placeholder="搜索、我的课程">
+						</div>
+						<button type="submit" class="border-blue button border-2x">搜索</button>
+					</form>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<div class="container" id="main">
+			<div class="row">
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="detail-left">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<ol class="breadcrumb">
+								<li><a href="#">全部问题</a>
+								</li>
+								<li class="active">课程问答</li>
+							</ol>
+						</div>
+						<div class="panel-body">
+							<div class="user-info">
+								<a class="user-img" href="#">
+									<img src="img/test/my.jpg" class="img-circle" alt="jweikai">
+								</a>
+								<a class="username" href="#">jweikai</a>
+							</div>
+							<div class="bdsharebuttonbox">
+								<a href="#" class="bds_more" data-cmd="more"></a>
+							</div>
+							<script>
+								window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+							</script>
+							<div class="fa fa-heart-o _heart"></div>
+							<div class="qa-content" data-qid="83335">
+								<div class="qa-content-inner imgPreview">
+									<div id="js-content-main">
+										<h3 class="js-qa-wenda-title qa-wenda-title">求助（初学Java的题目）</h3>
+										<div id="js-qa-content" class="qa-disscus rich-text">
+											<p>一道初学Java的题目
+												<br>
+												<br>
+												<br>
+												<br>
+												<br>
+												<br>用类和对象的方法输出：1、1~100素数的总和。
+												<br>
+												<br>&nbsp; &nbsp;&nbsp; &nbsp; 2、输出*的镂空金字塔形状。
+												<br>
+												<br>3、输出杨辉三角。
+												<br>
+												<br>4、20！的阶层的结果、
+												<br>
+												<br>5/1+1/3+1/5+1/7。。。。1/99的和。
+												<br>要求是用一个类和五个对象的方法用一道表达出来。</p>
+										</div>
+									</div>
+								</div>
+								<div class="qa-content-addon clearfix">
+									<span class="qa-createtime pull-left">1天前</span>
+									<div class="keyword-list">
+										<a href="#" target="_blank" class="list-tag">JAVA</a>
+									</div>
+									<a href="#" class="qa-course-from"> 源自：Java入门第一季 7-4</a>
+									<span class="qa-view-num pull-right">19 浏览</span>
+									<span class="qa-total-comment pull-right">1 回答</span>
+								</div>
+							</div>
+							<div class="qa-comments">
+								<div class="qa-comment row js-qa-comment" data-cid="63270">
+									<div class="qa-comment-wrap clearfix thebest ">
+										<h3 class="the-best-answer">最佳回答</h3>
+										<span class="qa-comment-time">21小时前</span>
+
+										<div class="qa-comment-d">
+											<!-- <div class="qa-triangle-left"><i></i></div> -->
+											<div class="qa-comment-inner">
+												<div class="qa-comment-c imgPreview">
+													<div class="rich-text">
+														<p>图片背景不重复，图片背景左右居中，图片背景居顶部</p>
+													</div>
+												</div>
+												<div class="qa-comment-addon">
+													<div class="qa-comment-author" style="margin-top: 10px;">
+														<a href="/myclub/otherquestion?uid=2066732" title="weibo_萧宸裔_0">
+															<img src="img/test/user2.jpg" class="img-circle" width="24" height="24">
+															<span class="qa-comment-nick">weibo_萧宸裔_0</span>
+															<!---->
+														</a>
+													</div>
+													<div class="qa-comment-addon-r">
+														<span class="qa-total-reply js-reply-item-reply">
+															<span class="fa fa-comment-o"></span>
+															<span class="js-qa-tr-num">回复</span>
+														</span>
+														<span class="js-qa-comment-support qa-comment-support  js-qacom-supported-user" data-ids="83950-63270">
+															<span class="fa fa-thumbs-o-down fa-rotate-180"></span>
+															<span class="js-qa-support-num">0</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="qa-reply col-sm-11 col-sm-offset-1">
+										<div class="qa-reply-header"></div>
+										<div class="qa-replies">
+											<div class="qa-reply-c">
+												<!--  <p class="qa-reply-loading">
+              									     加载中...
+           										    </p>  -->
+												<!-- 默认显示三条回复的回复 -->
+
+												<div class="qa-reply-item" data-rid="63270">
+													<a class="qa-reply-item-author" href="/myclub/otherquestion?uid=1115553" title="程序爱好者11">
+														<img src="img/test/user1.jpg" class="img-circle" width="40" height="40">
+													</a>
+													<div class="qa-reply-item-inner">
+														<p>
+															<a href="/myclub/otherquestion?uid=1115553" class="qa-reply-nick">程序爱好者11</a>
+														</p>
+														<p class="q-reply-item-c">
+															非常感谢！
+														</p>
+														<div class="qa-reply-item-foot clearfix">
+															<span class="reply-item-index pull-right">#1</span>
+															<span>20小时前</span>
+															<span class="qa-reply-item-reply js-reply-item-reply" data-uid="1115553|程序爱好者11"><i class="icon-resp"></i>回复</span>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- 回复框 -->
+											<div class="js-qa-reply-ibox qa-reply-ibox hide clearfix">
+												<div class="qa-reply-iavator col-sm-1">
+													<a href="#" title="jweikai">
+														<img class="img-circle" src="img/test/user5.jpg" width="40" height="40">
+													</a>
+												</div>
+												<div class="qa-reply-iwrap col-sm-11">
+													<div class="qa-reply-iarea">
+														<form class="form-horizontal" action="#">
+															<textarea name="replyComment" id="replyComment" class="form-control" placeholder="写下你的评论..." rows="5"></textarea>
+															<div class="btn-toolbar pull-right">
+																<span class="qa-tips qa-tips-error hide"><span class="fa fa-warning"></span>&nbsp;请输入回复内容</span>
+																<button type="button" class="btn btn-default js-ipt-cancel">取消</button>
+																<button class="btn btn-success js-ipt-submit">提交</button>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="qa-comment row js-qa-comment" data-cid="">
+									<a href="javascript:void(0)" class="js-qa-comment-accept qa-comment-accept" data-ids="272259-77328">
+							            <i></i>
+							            <span>设置为最佳问答</span>
+							        </a>
+									<div class="qa-comment-wrap clearfix">
+										<div class="col-sm-1 qa-comment-author">
+											<a href="javascript:;" title="jweikai">
+												<img src="img/test/user5.jpg" class="img-circle" width="42">
+											</a>
+										</div>
+										<div class="col-sm-11 qa-comment-d hasSet">
+											<div class="rich-text">
+												asdfadsfadsfas
+											</div>
+											<div class="qa-comment-addon">
+												<span class="qa-comment-time">2天前</span>
+												<div class="qa-comment-addon-r">
+													<span class="qa-total-reply js-reply-item-reply">
+
+						                        	<span class="fa fa-comment-o"></span>
+													<span class="js-qa-replay">回复</span>
+													</span>
+													<span class="js-qa-comment-support qa-comment-support js-qacom-supported-user" data-ids="83335-62683">
+
+						                        	<span class="fa fa-thumbs-o-down fa-rotate-180"></span>
+													<span class="js-qa-support-num">0</span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="qa-reply col-sm-11 col-sm-offset-1">
+										<div class="qa-reply-header"></div>
+										<div class="qa-replies">
+											<div class="qa-reply-c">
+												<p class="qa-reply-loading hide">
+													加载中...
+												</p>
+												<!-- 默认显示三条回复的回复 -->
+												<div class="qa-reply-item" data-rid="">
+													<a class="qa-reply-item-author" href="/space/u/uid/307183" title="jweikai">
+														<img class="img-circle" src="img/test/user5.jpg">
+													</a>
+													<div class="qa-reply-item-inner">
+														<p><a href="/space/u/uid/307183" class="qa-reply-nick">jweikai</a>
+														</p>
+														<p class="q-reply-item-c">写的好</p>
+														<div class="qa-reply-item-foot">
+															<span class="reply-item-index pull-right">#1</span>
+															<span>0秒前</span>
+															<span class="qa-reply-item-reply js-reply-item-reply" data-uid="307183|jweikai">
+
+							                				回复
+
+							                			</span>
+														</div>
+													</div>
+												</div>
+												<div class="qa-reply-item" data-rid="63217">
+													<a class="qa-reply-item-author" href="/myclub/otherquestion?uid=307183" title="jweikai">
+														<img src="img/test/user5.jpg" width="40" height="40">
+													</a>
+													<div class="qa-reply-item-inner">
+														<p>
+															<a href="/myclub/otherquestion?uid=307183" class="qa-reply-nick">jweikai</a> 回复
+															<a href="/myclub/otherquestion?uid=307183" class="qa-reply-nick">jweikai</a>：
+														</p>
+														<p class="q-reply-item-c">
+															写的好
+														</p>
+														<div class="qa-reply-item-foot clearfix">
+															<span class="reply-item-index pull-right">#2</span>
+															<span>1小时前</span>
+															<span class="qa-reply-item-reply js-reply-item-reply" data-uid="307183|jweikai">
+
+							                            	回复
+
+							                            </span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- 回复框 -->
+											<div class="js-qa-reply-ibox qa-reply-ibox hide clearfix">
+												<div class="qa-reply-iavator col-sm-1">
+													<a href="#" title="jweikai">
+														<img class="img-circle" src="img/test/user5.jpg" width="40" height="40">
+													</a>
+												</div>
+												<div class="qa-reply-iwrap col-sm-11">
+													<div class="qa-reply-iarea">
+														<form class="form-horizontal" action="#">
+															<textarea name="replyComment" id="replyComment" class="form-control" placeholder="写下你的评论..." rows="5"></textarea>
+															<div class="btn-toolbar pull-right">
+																<span class="qa-tips qa-tips-error hide"><span class="fa fa-warning"></span>&nbsp;请输入回复内容</span>
+																<button type="button" class="btn btn-default js-ipt-cancel">取消</button>
+																<button class="btn btn-success js-ipt-submit">提交</button>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-sm-1">
+									<a href="javascript:;" title="jweikai">
+										<img src="img/test/user5.jpg" class="img-circle" width="42">
+									</a>
+								</div>
+								<div class="col-sm-11">
+									<!-- 加载编辑器的容器 -->
+									<script id="container" name="content" type="text/plain">
+										<span style="color: #bbb; font-size: 14px;">输入问题内容</span>
+									</script>
+									<!-- 配置文件 -->
+									<script type="text/javascript" src="js/ueditor/ueditor.config.js"></script>
+									<!-- 编辑器源码文件 -->
+									<script type="text/javascript" src="js/ueditor/ueditor.all.min.js"></script>
+									<!-- 实例化编辑器 -->
+									<script type="text/javascript">
+										var ue = UE.getEditor('container', {
+												    toolbars: [
+												    	['insertcode', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'superscript', 'underline',
+												    	'blockquote', 'blockquote', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'insertimage'
+												    	, 'preview']
+												    ],
+												    initialFrameWidth: '100%',
+												    initialFrameHeight: 180,	
+												    elementPathEnabled: false,
+												    wordCount: false,
+												    //initialContent: '随便写',			    
+												    autoClearinitialContent: true
+												});
+									</script>
+									<!-- 提交comment -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="question-right">
+					<a href="javascrip:;" class="btn btn-success new-problem">
+						<span class="fa fa-comment-o"></span> 发布问题
+					</a>
+					<div class="panel panel-default question-my">
+						<div class="panel-body">
+							<div class="user-info">
+								<a class="user-img" href="#">
+									<img src="img/test/my.jpg" class="img-circle" alt="jweikai">
+								</a>
+								<p class="username">jweikai</p>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<ul class="user-about">
+								<li><a href="#">提问 <i class="remind">1</i></a>
+								</li>
+								<li><a href="#">回复 </a>
+								</li>
+								<li><a href="#">关注 </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default tags-cloud">
+						<div class="panel-body">
+							<a href="#" class="list-tag" target="_self">PHP</a>
+							<a href="#" class="list-tag" target="_self">JAVA</a>
+							<a href="#" class="list-tag" target="_self">Html/CSS</a>
+							<a href="#" class="list-tag" target="_self">Maya</a>
+							<a href="#" class="list-tag" target="_self">MongoDB</a>
+							<a href="#" class="list-tag" target="_self">Premiere</a>
+							<a href="#" class="list-tag" target="_self">Photoshop</a>
+							<a href="#" class="list-tag" target="_self">Mysql</a>
+							<a href="#" class="list-tag" target="_self">Android</a>
+							<a href="#" class="list-tag" target="_self">Node.js</a>
+							<a href="#" class="list-tag" target="_self">Html5</a>
+							<a href="#" class="list-tag" target="_self">JQuery</a>
+							<a href="#" class="list-tag" target="_self">JavaScript</a>
+							<a href="#" class="list-tag" target="_self">Python</a>
+							<a href="#" class="list-tag" target="_self">iOS</a>
+							<a href="#" class="list-tag" target="_self">Linux</a>
+							<a href="#" class="list-tag" target="_self">云计算</a>
+							<a href="#" class="list-tag" target="_self">AngularJS</a>
+							<a href="#" class="list-tag" target="_self">Bootstrap</a>
+							<a href="#" class="list-tag" target="_self">CSS3</a>
+							<a href="#" class="list-tag" target="_self">前端工具</a>
+							<a href="#" class="list-tag" target="_self">WebApp</a>
+							<a href="#" class="list-tag" target="_self">C</a>
+							<a href="#" class="list-tag" target="_self">Oracle</a>
+							<a href="#" class="list-tag" target="_self">C++</a>
+							<a href="#" class="list-tag" target="_self">Go</a>
+							<a href="#" class="list-tag" target="_self">Unity3D</a>
+							<a href="#" class="list-tag" target="_self">Cocos2d-x</a>
+						</div>
+					</div>
+					<div class="panel panel-default question-hotrank">
+						<div class="panel-heading">相关问题</div>
+						<div class="panel-body">
+							<div class="media">
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#">直接输入项目名</a></h4>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#">这里会有一个问题啊：</a></h4>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#">问题来了</a></h4>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#">Java 入门1看完了有没有简单的编程习题</a></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default replays-hotrank">
+						<div class="panel-heading">
+							一周回答雷锋榜
+							<a href="#" class="more pull-right">更多<a>
+
+					</div>
+
+					<div class="panel-body clearfix">
+
+						<div class="media">
+
+						  <div class="media-left">
+
+						    <a href="#">
+
+								<img src="img/test/user4.jpg" class="img-circle"/>
+
+						    </a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading"><a href="#">偌颜宁</a></h4> 我牛X啥都知道
+						</div>
+						<div class="rankingnum">
+							<em>42044</em>
+							<span>回答</span>
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img src="img/test/user4.jpg" class="img-circle" />
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading"><a href="#">血舞残殇</a></h4> 围观你们
+						</div>
+						<div class="rankingnum">
+							<em>1561</em>
+							<span>回答</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+
+		<footer id="divFooter">
+			<div class="container">
+				<div class="row rowLinkLogo">
+					<div class="col-md-3 col-xs-4 col-sm-3 col-lg-3 leftLink">
+						<ul>
+							<li><a href="#">学院概况</a> </li>
+							<li><a href="#">教育教学</a> </li>
+							<li><a href="#">科学研究</a>
+							</li>
+							<li><a href="#">学生工作</a>
+							</li>
+							<li><a href="#">招生就业</a>
+							</li>
+							<li><a href="#">专业介绍</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-4 col-sm-6 col-lg-6 centerLogo">
+						<center>
+							<img class="img-responsive" src="img/logoBottom.png">
+						</center>
+						<p>0744-8358630 | 0744-8202008
+							<br><a href="#">jsdxrjxy@163.com</a>
+						</p>
+					</div>
+					<div class="col-md-3 col-xs-4 col-sm-3 col-lg-3 rightLink">
+						<ul>
+							<li><a href="#">吉首大学</a>
+							</li>
+							<li><a href="#">中软国际</a>
+							</li>
+							<li><a href="#">中软国际ETC</a>
+							</li>
+							<li><a href="#">青软实训</a>
+							</li>
+							<li><a href="#">苏软实训</a>
+							</li>
+							<li><a href="#">深圳软酷</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="divCopyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+							<center>地址：湖南省张家界市子午路 | 版权所有：吉首大学软件服务外包学院</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="modal fade" id="userRegist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">
+
+	          <span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;用户注册
+
+	        </h4>
+					</div>
+					<form id="frmUserRegist" class="form-horizontal">
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="input01" class="col-md-2 control-label">用户名</label>
+								<div class="col-md-10">
+									<input type="text" name="userName" class="form-control" id="input01" title="字母、数字、汉字皆可" placeholder="字母、数字、汉字皆可">
+									<span class="icon-ok"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="input02" class="col-md-2 control-label">邮箱</label>
+								<div class="col-md-10">
+									<input type="email" name="userEmail" class="form-control" id="input02" title="请输入你的邮箱" placeholder="请输入你的邮箱">
+									<span class="icon-remove"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="input03" class="col-md-2 control-label">密码</label>
+								<div class="col-md-10">
+									<input type="password" name="userPwd" class="form-control" id="input03" title="请输入你的密码" placeholder="请输入你的密码">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="input04" class="col-md-2 control-label">确认密码</label>
+								<div class="col-md-10">
+									<input type="password" name="confirmPassword" class="form-control" id="input04" title="请再次输入你的密码" placeholder="请再次输入你的密码">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div class="form-group">
+									<div class="col-md-10 pull-right">
+										<input type="submit" class="btn btn-primary" value="注册">
+										<input type="reset" class="btn btn-primary" value="重置">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-xs">
+				<div class="modal-content">
+					<div class="modal-body">
+						<form id="frmUserLogin" class="form-horizontal">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title">
+
+	              <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户登录
+
+	            </h4>
+							</div>
+							<div class="modal-body">
+								<div class="form-group">
+									<label for="inputuserName" class="col-md-2 control-label">用户名</label>
+									<div class="col-md-10">
+										<input type="text" name="userName" class="form-control" id="inputuserName" placeholder="用户名/手机号/邮箱账号">
+										<span class="icon-remove"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputuserPwd" class="col-md-2 control-label">密码</label>
+									<div class="col-md-10">
+										<input type="password" name="userPwd" class="form-control" id="inputuserPwd" placeholder="密码">
+										<span class="icon-remove"></span>
+									</div>
+								</div>
+								<p>
+									<label class="checkbox-inline">
+										<input type="checkbox" />十天内免登录
+									</label>
+								</p>
+							</div>
+							<div class="modal-footer">
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary" name="login">登录</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<!-- 回到顶部 -->
+		<div id="goTop" class="elevator">
+			<a class="elevator-diaocha" href="/activity/diaocha" target="_blank" id="feedBack"></a>
+			<a class="elevator-weixin" href="javascript:;">
+				<div class="elevator-weixin-box">
+				</div>
+			</a>
+			<a class="elevator-msg" href="javascript:;" target="_blank" id="feedBack"></a>
+			<a class="elevator-app" href="javascript:;">
+				<div class="elevator-app-box">
+				</div>
+			</a>
+			<a class="elevator-top" href="javascript:;" id="backTop"></a>
+		</div>
+	</body>
+
+</html>

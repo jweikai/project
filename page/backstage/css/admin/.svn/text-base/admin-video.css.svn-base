@@ -1,0 +1,25 @@
+#videoAddBtn {
+	padding: 10px 40px 10px 40px;
+}
+textarea {
+	resize: none;
+}
+.page-add-btn, .page-reduce-btn, .section-add-btn, .section-reduce-btn {
+	cursor: pointer;
+}
+.section-list {
+	padding-left: 40px;
+	margin-top: 4px;
+}
+.fa-plus-circle {
+	color: #5eb95e;
+}
+.fa-minus-circle {
+	color: #dd514c;
+}
+.page{
+	margin-top: 20px;
+}
+.page:first-child {
+	margin-top: 0;
+}

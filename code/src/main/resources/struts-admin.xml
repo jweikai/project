@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="admin" namespace="/admin" extends="common">
+		
+		<action name="user_*" class="adminUserAction" method="{1}">
+			<result name="list">/backpages/user/user-list.jsp</result>
+			<result name="lockUI">/backpages/user/user-lock.jsp</result>
+			<result name="lock" type="redirect">user/list</result>
+		</action>
+		
+		<action name="role_*" class="adminRoleAction" method="{1}">
+			<result name="list">/backpages/role/role-list.jsp</result>			
+			<result name="saveUI">/backpages/role/role-save.jsp</result>
+			<result name="toList" type="redirect">role/list</result>
+			<result name="setUI">/backpages/role/role-authority.jsp</result>
+		</action>
+		
+		<action name="authority_*" class="adminAuthorityAction" method="{1}">
+			<result name="list">/backpages/authority/authority-list.jsp</result>
+			<result name="addUI">/backpages/authority/authority-save.jsp</result>
+			<result name="toList" type="redirect">authority/list</result>
+		</action>
+		
+		<action name="problem_*" class="adminProblemsAction" method="{1}">
+			<result name="list">/backpages/problem/problem-list.jsp</result>
+			<result name="saveUI">/backpages/problem/problem-save.jsp</result>
+			<result name="toList" type="redirect">problem/list</result>	
+		</action>
+		
+		<action name="index" class="adminIndexAction" method="index">
+			<result name="index">/backpages/index.jsp</result>
+		</action>
+		
+		<action name="*" class="commonAction" method="{1}">
+			<result name="loginUI">/backpages/login.jsp</result>
+			<result name="logout" type="redirect">loginUI</result>
+		</action>
+	</package>	
+</struts>

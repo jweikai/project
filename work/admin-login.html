@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>后台登陆</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="css/admin/my.css" />	    
+		<script src="js/jquery-1.11.2.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	    <script src="js/admin/my.js"></script>
+	</head>
+	<body style="overflow: hidden;">		
+		<div class="lay_background" id="lay_bg">			
+			<img id="lay_bg_img" alt="" width="1600" height="1100" style="position: relative;" src="#">
+			<script>
+				var imgs = ["images/loginBg.jpg", "images/loginbg1.jpg"];							
+				$("#lay_bg_img").attr("src", Math.random()>0.5 ? imgs[0]:imgs[1]);
+				$("#lay_bg_img").css("display", "none").fadeIn(600);
+			</script>
+		</div>
+		
+		<div id="adm-main" class="container">
+			<div class="row">
+				<div class="login-img col-lg-4 col-md-4 col-lg-offset-1">
+					<img src="images/slogan.png" />
+				</div>	
+				<div class="col-lg-1 col-md-1"></div>
+				<div class="col-lg-5 col-md-5 panel panel-default login-main">
+					<div class="panel-heading">
+						<ul>
+							<li class="dishead"><a style="border-bottom: 0;" href="javascript:void(0)">快速登陆</a></li>
+							<li><a href="javascript:void(0)">帐号密码登录</a></li>
+						</ul>
+					</div>					
+					<div class="panel-body text-center hidden">
+						<p><strong>安全登陆, 防止被盗</strong></p>
+						<img width="120" height="120" style="margin-bottom: 10px;" /><br/>
+						<div class="badge" style="font-weight: 200;">使用QQ手机版扫描二维码</div>
+					</div>                    
+					<div class="panel-body">
+						<input class="form-control" onfocus="this.focus()" type="text" placeholder="支持QQ号/邮箱/手机号登陆" name="username" />
+						<input class="form-control" type="password" name="pwd" placeholder="密码"  />
+						<button class="btn btn-green" id="loginBtn" data-toggle="modal" data-target="#checkNum" style="padding-left: 30px; padding-right: 30px;">登&nbsp;录</button>
+					</div>
+					<div class="login-fotter pull-right">
+						<ul>
+							<li>忘记密码</li>
+							<li>注册新帐号</li>
+							<li>意见反馈</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2"></div>
+			</div>
+			<footer id="adm-footer" class="row" style="margin-top: 120px;">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="icon icon_iphone"></i>
+							<span>iPhone</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icon icon_ipad"></i>
+							<span>iPad</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icon icon_android"></i>
+							<span>Android</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icon icon_winphone"></i>
+							<span>Windows Phone</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icon icon_elsePhone"></i>
+							<span>其他手机</span>
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+				
+		<!-- model -->
+		<div class="modal fade" id="checkNum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">请选择验证码</h4>
+		      </div>
+		      <div class="modal-body text-center">
+		      	<p>请选择与其他颜色不同的文字</p>
+				<canvas id="canvas" width="200" height="100">
+					Canvas Not Suppert
+				</canvas>
+		      </div>		      
+		    </div>		    	
+		    <!-- /.modal-content -->
+		  </div>		  	
+		  <!-- /.modal-dialog -->
+		</div>
+	</body>
+</html>

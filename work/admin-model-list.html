@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>多梦后台管理</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">       
+	    <link rel="stylesheet" href="css/font-awesome.min.css">
+	    <link rel="stylesheet" href="css/admin/my.css" />
+	</head>
+	<body>
+		<!-- header start -->
+		<nav class="navbar navbar-default" role="navigation">
+	    	<div class="container">  
+	            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+	            	<!--响应时控制图标-->
+	            	<span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>                
+	            </button>    
+	            
+	        	<div class="navbar-header">
+	            	<a class="navbar-brand" href="#"><strong>More Dream</strong> <span class="hidden-xs">后台管理</span></a>
+	            </div>
+	            <div class="collapse navbar-collapse pull-right" id="navbar-main">	            	
+	                <ul class="nav navbar-nav">
+	                    <li role="presentation">	                    	
+	                    	<a href="index.html">
+	                    		<span class="fa fa-envelope-o"></span> 收件箱 
+	                    		<span class="label label-warning">5</span>
+	                    	</a>	                    	
+	                    </li>
+	                    <li>
+	                        <a id="wordPress" href="#" data-toggle="dropdown" class="dropdown-toggle" itemprop="url">
+	                        	<span class="fa fa-group"></span> 管理员
+	                        	<span class="caret"></span>
+	                        </a>                        
+	                        <!--向下箭头-->                          
+	                        <ul class="dropdown-menu" id="word-list" role="menu">	                        	
+	                            <li><a href="#" itemprop="url"><span class="fa fa-user"></span> 资料</a></li>
+	                            <li><a href="#" itemprop="url"><span class="fa fa-cog"></span> 设置</a></li>
+	                            <li><a href="admin-login.html" itemprop="url"><span class="fa fa-power-off"></span> 退出</a></li>
+	                        </ul>
+	                    </li>                    
+	                   	<li><a href="javascript:void();" onclick="requestFullScreen()" itemprop="url"><span class="fa fa-arrows-alt"></span> 开启全屏</a></li>
+	                </ul>
+	            </div>
+	        </div>
+	    </nav>
+		<!-- header end -->
+		
+		<div class="container" id="main">
+			<div class="row">
+				<div id="sidebar" class="col-lg-2 col-md-2">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="noHeadingOne">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#noOne" aria-expanded="true" aria-controls="noOne">
+					          	<a href="admin-index.html"><span class="fa fa-home"></span>&nbsp;首页</a>
+					        </a>
+					      </h4>
+					    </div>					    
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingTwo">
+					      <h4 class="panel-title">
+					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					          	<span class="fa fa-user"></span>&nbsp;个人办公<span class="fa fa-angle-right pull-right"></span>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					      <div class="panel-body">
+					        <ul class="nav navbar-default nav-stacked">
+							  <li role="presentation"><a href="#"><span class="fa fa-check"></span>&nbsp;个人考勤<span class="fa fa-star pull-right" style="color: #ffbe40;margin-top: 2px;"></span></a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-calendar"></span>&nbsp;日程安排</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-coffee"></span>&nbsp;工作计划<span class="fa fa-rect pull-right">24</span></a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-file-text-o"></span>&nbsp;工作日记</a></li>
+							</ul>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingThree">
+					      <h4 class="panel-title">
+					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					          	<span class="fa fa-puzzle-piece"></span>&nbsp;模块管理<span class="fa fa-angle-right pull-right"></span>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+					      <div class="panel-body">
+					        <ul class="nav navbar-default nav-stacked">
+							  <li role="presentation"><a href="admin-model-list.html"><span class="fa fa-list-ol"></span>&nbsp;模块列表</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-filter"></span>&nbsp;关键字过滤</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-bug"></span>&nbsp;爬虫信息</a></li>
+							</ul>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="noHeadingThree">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion" href="#noOne" aria-expanded="true" aria-controls="noThree">
+						          	<span class="fa fa-exclamation-circle"></span>&nbsp;帮助
+						        </a>
+						      </h4>
+						    </div>					    
+						  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="noHeadingTwo">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#noOne" aria-expanded="true" aria-controls="noTwo">
+					          	<span class="fa fa-sign-out"></span>&nbsp;注销
+					        </a>
+					      </h4>
+					    </div>					    
+					  </div>
+					 
+					 <div class="list-group">
+					  <a href="#" class="list-group-item">
+					    <h4 class="list-group-item-heading"><span class="fa fa-bookmark"></span>&nbsp;公告</h4>
+					    <p class="list-group-item-text">时光静好，与君语；细水流年，与君同。—— More Dream</p>
+					  </a>
+					  <a href="#" class="list-group-item">
+					    <h4 class="list-group-item-heading"><span class="fa fa-tag"></span>&nbsp;Tag</h4>
+					    <p class="list-group-item-text">Welcome to the More Dream!</p>
+					  </a>
+					</div>
+				</div>											
+			</div>
+				<div id="content" class="col-lg-10 col-md-10">
+					<!-- nav breadcrumb start -->
+					<ol class="breadcrumb">
+					  <li><a href="#"><span class="fa fa-home"></span>&nbsp;模块管理</a></li>
+					  <li class="active">模块列表</li>
+					</ol>
+					<!-- nav breadcrumb end -->		
+					<div class="row" style="padding-top: 0;">
+						<div class="panel panel-default">
+							<div class="panel-heading"><span class="fa fa-list"></span>&nbsp;模块内容列表</div>
+							<div class="panel-body">
+								<div class="btn-group form-inline" role="group">
+									<input type="button" class="button button-small checkall" name="checkall" checkfor="id" value="全选">
+									<input type="button" class="button button-small border-green" value="添加模块">
+									<input type="button" class="button button-small border-yellow" id="delAllBtn" value="批量删除">
+									<input type="button" class="button button-small border-blue" value="回收站">
+									<div class="input-group pull-right">
+									  <span class="input-group-addon" id="searchLabel">搜索</span>
+									  <input type="text" class="form-control" placeholder="输入您要搜索的模块名" aria-describedby="basic-addon1">
+									</div>
+								</div>
+								<div class="row">
+									<table class="table table-hover" id="model-tab">
+							        	<thead>
+							        		<tr>
+							        			<th>选择</th>
+							        			<th>编号</th>
+							        			<th>模块名</th>
+							        			<th>添加次数</th>
+							        			<th>操作</th>
+							        		</tr>
+							        	</thead>
+							        	<tbody>
+							        		<tr>
+									          <td><input type="checkbox" name="id" /></td>
+									          <td><strong>1</strong></td>
+									          <td>Otto</td>
+									          <td><span class="fa fa-rect badge-success">+20</span></td>
+									          <td>
+									          	<div class="dropdown">
+												  <button class="button button-small dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+												  	<span class="fa fa-cog"></span>
+												    <span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1. 编辑</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2. 修改</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3. 删除</a></li>
+												  </ul>
+												</div>
+									          </td>
+									        </tr>
+									        <tr>
+									          <td><input type="checkbox" name="id" /></td>
+									          <td><strong>2</strong></td>
+									          <td>Business management</td>
+									          <td><span class="fa fa-rect badge-danger">+2</span></td>
+									          <td>
+									          	<div class="dropdown">
+												  <button class="button button-small dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
+												  	<span class="fa fa-cog"></span>
+												    <span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1. 编辑</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2. 修改</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3. 删除</a></li>
+												  </ul>
+												</div>
+									          </td>
+									        </tr>
+									        <tr>
+									          <td><input type="checkbox" name="id" /></td>
+									          <td><strong>3</strong></td>
+									          <td>Thornton</td>
+									          <td><span class="fa fa-rect badge-warning">+10</span></td>
+									          <td>
+									          	<div class="dropdown">
+												  <button class="button button-small dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-expanded="true">
+												  	<span class="fa fa-cog"></span>
+												    <span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1. 编辑</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2. 修改</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3. 删除</a></li>
+												  </ul>
+												</div>
+									          </td>
+									        </tr>
+									        <tr>
+									          <td><input type="checkbox" name="id" /></td>
+									          <td><strong>4</strong></td>
+									          <td>the Bird</td>
+									          <td><span class="fa fa-rect badge-secondary">+50</span></td>
+									          <td>
+									          	<div class="dropdown">
+												  <button class="button button-small dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-expanded="true">
+												  	<span class="fa fa-cog"></span>
+												    <span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1. 编辑</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2. 修改</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3. 删除</a></li>
+												  </ul>
+												</div>
+									          </td>
+									        </tr>
+									        <tr>
+									          <td><input type="checkbox" name="id" /></td>
+									          <td><strong>5</strong></td>
+									          <td>Logo</td>
+									          <td><span class="fa fa-rect" style="background: #ccc;">+50</span></td>
+									          <td>
+									          	<div class="dropdown">
+												  <button class="button button-small dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-expanded="true">
+												  	<span class="fa fa-cog"></span>
+												    <span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu5">
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1. 编辑</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2. 修改</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3. 删除</a></li>
+												  </ul>
+												</div>
+									          </td>
+									        </tr>
+									        <tr>
+									          <td><input type="checkbox" name="id" /></td>
+									          <td><strong>6</strong></td>
+									          <td>CSS动画</td>
+									          <td><span class="fa fa-rect badge-warning">+10</span></td>
+									          <td>
+									          	<div class="dropdown">
+												  <button class="button button-small dropdown-toggle" type="button" id="dropdownMenu6" data-toggle="dropdown" aria-expanded="true">
+												  	<span class="fa fa-cog"></span>
+												    <span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu6">
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1. 编辑</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2. 修改</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3. 删除</a></li>
+												  </ul>
+												</div>
+									          </td>
+									        </tr>
+									        <tr>
+									          <td><input type="checkbox" name="id" /></td>
+									          <td><strong>7</strong></td>
+									          <td>第三方应用支持</td>
+									          <td><span class="fa fa-rect badge-secondary">+50</span></td>
+									          <td>
+									          	<div class="dropdown">
+												  <button class="button button-small dropdown-toggle" type="button" id="dropdownMenu7" data-toggle="dropdown" aria-expanded="true">
+												  	<span class="fa fa-cog"></span>
+												    <span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu7">
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1. 编辑</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2. 修改</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3. 删除</a></li>
+												  </ul>
+												</div>
+									          </td>
+									        </tr>
+									        <tr>
+									          <td><input type="checkbox" name="id" /></td>
+									          <td><strong>8</strong></td>
+									          <td>基本页面</td>
+									          <td><span class="fa fa-rect" style="background: #ccc;">+50</span></td>
+									          <td>
+									          	<div class="dropdown">
+												  <button class="button button-small dropdown-toggle" type="button" id="dropdownMenu8" data-toggle="dropdown" aria-expanded="true">
+												  	<span class="fa fa-cog"></span>
+												    <span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu8">
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1. 编辑</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2. 修改</a></li>
+												    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3. 删除</a></li>
+												  </ul>
+												</div>
+									          </td>
+									        </tr>									        									       
+							        	</tbody>
+									</table>
+									<!--page divide start-->
+								        <div class="text-center">
+										  <ul class="pagination">
+										    <li class="disabled">
+										      <a href="#" aria-label="Previous">
+										        <span aria-hidden="true">上一页</span>
+										      </a>
+										    </li>
+										    <li class="active"><a href="#">1</a></li>
+										    <li><a href="#">2</a></li>
+										    <li><a href="#">3</a></li>
+										    <li><a href="#">4</a></li>
+										    <li><a href="#">5</a></li>
+										    <li>
+										      <a id="nextBtn" href="javascript:void(0)" aria-label="Next">
+										        <span aria-hidden="true">下一页</span>
+										      </a>
+										    </li>
+										  </ul>
+										</div>
+								        <!-- page divide end -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</body>
+	<script src="js/jquery-1.11.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/admin/my.js"></script>
+</html>

@@ -1,0 +1,40 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<!-- header start -->
+<nav class="navbar navbar-default" role="navigation">
+   	<div class="container">  
+           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+           	<!--响应时控制图标-->
+           	<span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                
+           </button>    
+           
+       	<div class="navbar-header">
+           	<a class="navbar-brand" href="#"><strong>Code</strong> <span class="hidden-xs">后台管理</span></a>
+           </div>
+           <div class="collapse navbar-collapse pull-right" id="navbar-main">	            	
+               <ul class="nav navbar-nav">
+                   <li role="presentation">	                    	
+                   	<a href="index.html">
+                   		<span class="fa fa-envelope-o"></span> 收件箱 
+                   		<span class="label label-warning"></span>
+                   	</a>	                    	
+                   </li>
+                   <li>
+                       <a id="wordPress" href="#" data-toggle="dropdown" class="dropdown-toggle" itemprop="url">
+                       	<span class="fa fa-group"></span> 管理员
+                       	<span class="caret"></span>
+                       </a>                        
+                       <!--向下箭头-->                          
+                       <ul class="dropdown-menu" id="word-list" role="menu">	                        	
+                           <li><a href="#" itemprop="url"><span class="fa fa-user"></span> 资料</a></li>
+                           <li><a href="#" itemprop="url"><span class="fa fa-cog"></span> 系统设置</a></li>
+                           <li><a href="admin-login.html" itemprop="url"><span class="fa fa-power-off"></span> 退出</a></li>
+                       </ul>
+                   </li>                    
+                  	<li><a href="javascript:void();" onclick="requestFullScreen()" itemprop="url"><span class="fa fa-arrows-alt"></span> 开启全屏</a></li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+<!-- header end -->

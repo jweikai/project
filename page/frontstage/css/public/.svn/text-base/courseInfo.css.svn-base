@@ -1,0 +1,232 @@
+body {	
+	background-color: #edeff0;
+}
+#head {
+	background: #fff;
+}
+#main .course-heading{
+	font-family: "microsoft yahei";
+	margin-top: 20px;	
+}
+.course-heading .breadcrumb {
+	background-color: #edeff0;
+	font-size: 16px;
+}
+.course-heading .breadcrumb li a {
+	color:#999;
+	text-decoration: none;
+}
+.course-heading .breadcrumb li a:hover {
+	color: #00AAEE;
+}
+.course-heading .breadcrumb li.active {
+	color: #444;
+}
+.course-info {
+	position: relative;
+	font-family: "microsoft yahei";
+}
+
+.course-info div {
+	padding-left: 0;
+	padding-right: 0;
+}
+.course-info-img img{
+	float: right;
+	width: 100%;
+	height: 331px;
+}
+.course-info-state ul {
+	background: #364247;
+  	padding: 0 40px;
+  	overflow: hidden;  	
+}
+@media only screen and (max-width: 992px) {
+	.course-info-state .list-group {
+		margin-bottom: 0;
+	}
+}
+.course-info-state li {
+  	padding: 0;  	
+  	border:0;
+  	height: 111px;  	
+  	overflow: hidden;
+  	line-height: 111px;
+  	background: #364247;	
+}
+.course-info-state li + li {
+	border-top: 1px solid #414f55;
+}
+.course-info-state li span {
+	color: #dedede;
+  	font-size: 14px;
+  	line-height: 24px;
+  	margin-right: 15px;
+}
+.course-info-state li em {
+	font-size: 24px;
+  	color: #ffffff;
+}
+.course-info-state li em.ft-adjust {
+	font-size: 14px;
+}
+.course-info-state li em.ft-adjust span {
+	font-size: 24px;
+  	color: indianred;
+  	margin-right: 0;
+}
+.course-info-intro {
+	background: skyblue;
+	padding: 44px 0;
+	cursor: pointer;
+}
+.concerned_course a {
+	text-decoration: none;
+}
+
+.concerned_course .btn-add-follow {
+  display: block;
+  text-align: center;
+}
+.course-info-intro:hover em{
+	color: #fff;	
+}
+.btn-add-follow em {
+  display: block;
+  color: teal;
+  line-height: 1em;
+  transition: color 0.2s ease-out;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  font-style: normal;  
+}
+.btn-add-follow span {
+	
+}
+.course-info-intro:hover .btn-add-follow span {
+	color: rgba(255,0,0,0.5);	
+	animation:myheart 2s infinite ease-in;
+	-moz-animation:myheart 2s infinite ease-in;
+	-webkit-animation:myheart 2s infinite ease-in-out;
+	-o-animation:myheart 2s infinite ease-in;	
+}
+.curse_btn button, .curse_btn a {
+  height: 200px;
+  background: #c9394a;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  line-height: 200px;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.curse_btn a:hover {
+	opacity: 1;
+	line-height: 208px;
+}
+.course-list .course-left {
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	padding: 30px 40px 40px;
+	font-family: "microsoft yahei";
+}
+.chapter-introduces .chapter-title {
+	font-size: 20px;
+}
+.chapter-introduces .chapter-content {
+	font-size: 14px;
+  	line-height: 24px;
+  	word-break: break-all;
+  	white-space: normal;
+}
+.chapter-catalog-list {
+	margin-top: 20px;
+	border: 0;
+}
+.chapter-catalog-list .panel-heading {
+	font-size: 20px;
+	background: #fff;
+	padding: 0 0 12px 0;	
+}
+.chapter-catalog-list .list-group {
+	margin-bottom: 0;
+}
+.chapter-catalog-list .panel-body {
+	padding: 0;
+}
+.chapter-catalog-list .list-group-item {
+	color: #777;
+	border: 0;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.chapter-catalog-list .list-group-item:hover .media-left a{
+	color: #00AAEE;
+}
+.chapter-catalog-list .list-group-item:hover .media-heading {
+	color: #00AAEE;
+} 
+
+.chapter-catalog-list .media-descript {
+	font-size: 12px;
+}
+.chapter-catalog-list .media-left {
+	padding-right: 20px;
+}
+.chapter-catalog-list .media-left a {
+	color: #ccc;	
+	transition: 0s;
+}
+.course-right {
+	font-family: "microsoft yahei";
+	padding-right: 0;
+}
+.course-right .panel {
+	padding: 0 20px;
+	border: 0;
+	background: #fff;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.course-right .panel-heading {
+	background: #fff;
+	padding-left: 0;
+	font-size: 16px;
+}
+.course-right .panel-body {
+	padding-left: 0;
+}
+.course-right .media-body {
+  vertical-align: middle;
+  font-size: 12px;
+  color: #888;
+}
+.course-right .media-body a {
+	color: #222;
+	font-size: 16px;
+}
+.course-right .teacher-desc {
+	color:#888888;
+	font-size: 12px;
+	line-height: 25px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.course-right .panel-body {
+	color:#888888;
+	font-size: 12px;
+	line-height: 22px;
+}
+.course-right .wrd_break {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  font-family: Microsoft YaHei,​SimSun,​Arial;
+  font-size: 12px;
+}

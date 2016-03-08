@@ -1,0 +1,49 @@
+.minus-right {
+	display: block;	
+}
+.bs-callout h5 {
+    line-height: 20px;
+}
+.bs-callout .bs-callout-list {
+	border-radius: 5px;
+	border: 1px solid #CFCFCF;	
+}
+.bs-callout .bs-callout-list .checkbox {
+	display: inline-block;
+	margin-left: 20px;
+}
+.bs-callout h5.bs-callout-info {
+    color: #1B809E;    
+}
+.bs-callout h5.bs-callout-danger {
+    color: #ce4844;
+}
+.bs-callout h5.bs-callout-warning {
+    color: #aa6708;
+}
+.js-error {
+	display: block;
+	margin-top: 8px;
+	color: #CC0000;
+	display: block;
+}
+.data-file-sql + .data-file-sql {
+	display: block;
+	padding-top: 8px;
+	margin-top: 5px;
+	border-top: 1px solid #ccc;
+}
+ 
+.table td a:hover, .data-file-sql a:hover {
+	color:#222;
+}
+.data-file-sql button {
+	padding: 2px 8px;
+	font-size: 12px;
+	margin-left: 8px;
+}
+.data-help {
+	font-size: 12px;
+	color: #ce4844;
+	margin-left: 5px;
+}

@@ -1,0 +1,37 @@
+2015-11-03 11:19:57 [ main ] 执行cmd命令: cmd /c echo 1
+  2015-11-03 11:20:58 [ main ] 执行cmd命令: cmd /c echo 1
+  2015-11-03 11:21:10 [ main ] 执行cmd命令: cmd /c echo 1
+  2015-11-03 11:21:22 [ main ] 执行cmd命令: cmd /c echo 1
+  2015-11-03 11:21:23 [ main ] 执行cmd命令: cmd /c echo 1
+  2015-11-03 11:22:40 [ main ] 执行cmd命令: cmd /c echo 1
+  2015-11-03 11:23:02 [ main ] 执行cmd命令: cmd /c echo 1
+  2015-11-03 11:23:06 [ main ] 执行cmd命令: cmd /c echo 1
+  2015-11-03 11:27:57 [ main ] 执行cmd命令: cmd /c pause
+  2015-11-03 11:28:21 [ main ] 执行cmd命令: cmd /c echo 123123
+
+  2015-11-03 11:28:46 [ main ] 执行cmd命令: cmd /c echo 123123
+1231
+  2015-11-03 11:29:18 [ main ] 执行cmd命令: cmd /c echo 1231231231
+  2015-11-03 11:29:22 [ main ] 执行cmd命令: cmd /c echo 123123
+1231
+  2015-11-03 11:29:25 [ main ] 执行cmd命令: cmd /c echo 1231231231
+  2015-11-03 11:29:53 [ main ] 执行cmd命令: cmd /c echo 1231231231
+  2015-11-03 13:48:49 [ main ] 执行cmd命令: cmd /c pause
+  2015-11-03 13:49:32 [ main ] 执行cmd命令: cmd /c pause
+  2015-11-03 13:50:50 [ main ] 执行cmd命令: cmd /c echo 123123
+1231
+  2015-11-03 13:50:57 [ main ] 执行cmd命令: cmd /c echo 123123
+1231
+  2015-11-03 13:51:30 [ main ] 执行cmd命令: cmd /c echo 123123
+1231
+  2015-11-03 13:52:17 [ main ] 执行cmd命令: cmd /c mysql -uroot -ps
+  2015-11-03 13:52:40 [ main ] 执行cmd命令: cmd /c mysql -uroot -ps
+  2015-11-03 13:53:33 [ main ] 执行cmd命令: cmd /c mysql -uroot -ps
+  2015-11-03 13:53:45 [ main ] 执行cmd命令: cmd /c mysql -uroot -ps
+  2015-11-03 13:55:12 [ main ] 执行cmd命令: cmd /c mysql -uroot -ps
+  2015-11-03 13:57:38 [ main ] 执行cmd命令: cmd /c mysql -uroot -ps
+  2015-11-03 13:58:49 [ main ] 执行cmd命令: cmd /c mysql -uroot -ps
+  2015-11-03 13:58:56 [ main ] 执行cmd命令: cmd /c mysql -uroot -ps
+  2015-11-03 13:58:56 [ main ] 命令行出错
+  2015-11-03 13:59:09 [ main ] 执行cmd命令: cmd /c mysql -uroot -ps
+  

@@ -1,0 +1,417 @@
+@charset "utf-8";
+/* CSS Document */
+/*--------------header start-------------*/
+
+/*--------------header end-------------*/
+
+/*------------------public start--------------------*/
+.panel-title,.media-title {
+	font-size:14px;
+}
+.panel-heading, .list-group, input[type=text],input[type=password] {
+	font-size:13px;
+}
+.media-heading {
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+}
+.media-body p {
+	font-size:14px;
+}
+a, nav a{
+	color: #666;
+	transition:color 0.25s;
+}
+a:hover, nav a:hover{
+	color: #61c2d0;
+	text-decoration:none;
+}
+.panel-title a {
+	color: #fff;
+}
+a:visited {
+	text-decoration:none;
+}
+button, input[type=button] {
+	border: 2px solid #61c2d0;
+	color: #61c2d0;
+	padding: 8px 15px;
+	display: inline-block;
+	opacity: 1;
+	border-radius: 4px;
+	font-size: 12px;
+	background-color:transparent;
+	transition:all 0.25s ease-in;
+	box-shadow: 0 0 0 1px #ededed;
+}
+button:hover, input[type=button]:hover {
+	background: #61c2d0;
+	color: #fff;
+}
+.panel-primary>.panel-heading{
+	color:#fff !important;
+	background-color:#61c2d0 !important;	
+	border-color:#61c2d0 !important;	
+}
+.panel-primary ul.nav li {
+	color:#fff !important;
+	background-color:#61c2d0 !important;	
+	border:none;
+	box-shadow: 0 0 0 1px #ededed;
+}
+.panel-primary ul.nav li a{
+	border-color:#61c2d0 !important;
+	box-shadow: 0 0 0 1px #ededed;
+	border-bottom-color:#fff !important;
+}
+.panel-primary ul.nav li a:hover {
+	background-color:#fff !important;
+}
+.panel-primary {
+	border-color: #61c2d0 !important;
+}
+/*---------------------public end-----------------------*/
+
+/*---------slide start---------*/
+ul.slides li img{
+	max-height:329px;	
+}
+.flexslider { position:relative;}
+.carousel-caption {
+	background:#000;
+	color:#fff;
+	filter:alpha(opacity=50);
+	font: 12px "Microsoft YaHei";
+	width:100%;
+	left:0;
+	bottom:0;
+	padding:0 5px;
+	text-align:left;
+	opacity:0;
+}
+/*----------slide end--------*/
+
+
+/*------------list group start 列表组-----------*/
+.list-group-item a {
+	white-space:nowrap;
+	word-break: keep-all;/*设置文本只能在半角空格或连字符处换行*/
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display:block;
+}
+/*------------list group end-----------*/
+
+/*------------login start-----------*/
+#userLoginModal .input-label {
+	display:inline-block;
+	width:20%;
+	text-align:right;
+	padding-right:5px;
+	font:bold 15px "Microsoft YaHei";
+	vertical-align:top;	
+}
+#userLoginModal .input-text {
+	display:inline-block;
+	width:70%;	
+	margin-bottom:10px;
+}
+#userLoginModal .input-notice {
+	font:15px "Microsoft YaHei";
+	color:#444;
+	padding:8px 0;
+}
+#userLoginModal .input-checkbox {
+	display:inline-block;
+	font:14px "Microsoft YaHei";
+	color:#444;
+}
+/*------------login end-----------*/
+
+/*-------picture list start--------*/
+
+/*--------picture list end------------*/
+
+/*-------pictureLogo list start--------*/
+
+/*--------pictureLogo list end------------*/
+#divChannelLink .panel-body .row{
+	margin-bottom:15px;
+}
+
+/*------------footer start------------*/
+#colophon .widget, #colophon #link_menu {
+	margin: 0 0 15px;
+}
+.widget ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.widget li:before, .widget li:after {
+	display:table;
+	content:" ";
+}
+#colophon .widget.widget_analytics li {
+	margin-right: 5px;
+	padding: 0 15px;
+	line-height: 44px;
+}
+#colophon .widget li {
+	display: inline-block;
+	border: 0;
+	border-bottom: 1px solid #ddd;
+	
+}
+#colophon a {
+	color: #337ab7;
+}
+a {
+	font-family:'微软雅黑';
+}
+div {
+	font-family:'微软雅黑';
+}
+.footer-widget .textwidget {
+	padding:0;
+	font-size:14px;
+	font-family:'微软雅黑';
+}
+/*--------------footer end-------------*/
+
+/*  head info start */
+.author-avatar {
+	float:left;
+}
+.author-description {
+	float:left;
+	margin-left:30px;
+	position:relative;
+}
+.scrollNotice {
+	height:40px;
+	overflow:hidden;
+}
+.scrollNotice ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.scrollNotice ul li a {
+	white-space:nowrap;
+}
+
+/*  head info end */
+
+/*  artichle start  */
+article .panel-body {
+	padding-top:0;
+}
+article .panel-archive .panel-archive-title {
+	padding-bottom: 20px;
+}
+article .page-header {
+	margin-top:20px;
+	margin:10px 0;
+	border-bottom: 1px solid #eee;
+}
+/*  artichle end  */
+
+/* archive start */
+.panel-archive article.panel {
+	border: 0;
+	box-shadow: none;
+	border-radius: 0;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 10px;
+}
+article .has_post_thumbnail {
+	overflow: hidden;
+}
+.panel-archive article.archive>.panel-body {
+	padding: 0 0 10px 0;
+	position: relative;
+}
+
+article .entry-thumbnail a {
+	position: absolute;
+	left: 0;
+	top: 59px;
+	width: 220px;
+	height: 146px;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	overflow: hidden;
+}
+article.archive .entry-header .entry-meta {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	color: #999;
+	font-size: 12px;
+}
+@media (min-width: 1200px) {
+	article .has_post_thumbnail .entry-meta, article .has_post_thumbnail .entry-content {
+		margin-left: 240px;
+		padding-bottom:30px;
+	}
+}
+@media (max-width: 992px) {	
+	article .has_post_thumbnail .entry-meta, article .has_post_thumbnail .entry-content {
+		margin-left: 240px;
+		padding-bottom:30px;
+	}
+}
+@media (max-width: 767px) {
+	article .has_post_thumbnail .entry-meta, article .has_post_thumbnail .entry-content {
+		margin-left: 0px;
+	}
+}
+.panel-archive article .entry-header {
+	border-bottom: 1px dashed #eee;
+	margin:10px 0;
+}
+article.archive .entry-header .entry-title {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+article .entry-header .entry-title {
+	margin: 10px 0 15px;
+	line-height: 34px;
+}
+article .entry-content, .wp-editor {
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	overflow: hidden;
+}
+/* archive end */
+
+/* right start */
+.panel-group {
+	margin: 6px 2px;
+}
+.textwidget {
+	margin-top:20px;
+}
+ul.recent_user {
+	margin:6px 10px 10px 6px;
+	padding:0;
+	list-style:none;
+}
+ul.recent_user li {
+	border:0;
+	display:inline-block;
+	margin:4px 0 0 4px;
+	padding:3px;
+}
+ul.top-user {
+	margin:6px 10px 10px 6px;
+	padding:0;
+	list-style:none;
+}
+ul.top-user li {
+	display:block;
+	padding:10px 15px;
+	border-top:1px solid #ddd;
+}
+.widget .textwidget, .widget .tagcloud, .widget #calendar_wrap {
+	padding: 15px;
+	overflow: hidden;
+}
+/* right end */
+
+/* article start */
+article .entry-header .entry-title {
+	margin: 10px 0 15px;
+	line-height: 34px;
+}
+article .entry-header .entry-meta {
+	color: #999;
+	font-size: 12px;
+}
+article .entry-header .entry-set-font {
+	float: right;
+}
+article .entry-header .entry-set-font span.disabled {
+	cursor: auto;
+	color: #999;
+}
+article .entry-header .entry-set-font span {
+	cursor: pointer;
+	font-size: 18px;
+	margin: 0 10px;
+	color: #333;
+}
+article .entry-content, .wp-editor {
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	overflow: hidden;
+}
+.article_index {
+	background: #f1f1f1;
+	border: 1px solid #dadada;
+	border-left-width: 3px;
+	float: right;
+	padding: 8px 16px;
+	margin: 0 0 12px 16px;
+	font-size: 14px;
+	line-height: 26px;
+	max-width: 30%;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.article_index h5 {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px dashed #dadada;
+	color: #666;
+	cursor: pointer;
+}
+.article_index ul {
+	padding: 0;
+	margin: 0 0 0 15px;
+	list-style-type: octal;
+	list-style-position: outside;
+	color: #666;
+	display: block;
+}
+.article_index li {
+	list-style-type: decimal;
+}
+h2, .h2 {
+	border-bottom: 1px solid #dadada;
+	padding-bottom: 5px;
+	font-size: 21px;
+}
+ol, ul {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+/* article end*/
+
+/* comment start */
+#comments .panel-title, #comments .panel-body{
+	color:#666;
+	font-family:'微软雅黑';	
+}
+#comments .media-heading a{
+	color:#337ab7;
+}
+#comments .panel-body > .media{
+	padding-bottom:10px;
+	border-bottom:1px solid #ddd;
+}
+#editor {overflow:scroll; max-height:300px; height:150px; margin:8px 0; }
+/* comment end */

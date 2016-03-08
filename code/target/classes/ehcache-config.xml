@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ehcache>
+<!-- 缺省缓存配置。CacheManager 会把这些配置应用到程序中。
+
+        下列属性是 defaultCache 必须的：
+
+        maxInMemory           - 设定内存中创建对象的最大值。
+        eternal                        - 设置元素（译注：内存中对象）是否永久驻留。如果是，将忽略超
+                                              时限制且元素永不消亡。
+        timeToIdleSeconds  - 设置某个元素消亡前的停顿时间。
+                                              也就是在一个元素消亡之前，两次访问时间的最大时间间隔值。
+                                              这只能在元素不是永久驻留时有效（译注：如果对象永恒不灭，则
+                                              设置该属性也无用）。
+                                              如果该值是 0 就意味着元素可以停顿无穷长的时间。
+        timeToLiveSeconds - 为元素设置消亡前的生存时间。
+                                               也就是一个元素从构建到消亡的最大时间间隔值。
+                                               这只能在元素不是永久驻留时有效。
+        overflowToDisk        - 设置当内存中缓存达到 maxInMemory 限制时元素是否可写到磁盘
+                                               上。
+                                               
+                                               
+ maxElementsInMemory ：cache 中最多可以存放的元素的数量。如果放入cache中的元素超过这个数值，有两种情况：
+1. 若overflowToDisk的属性值为true，会将cache中多出的元素放入磁盘文件中。
+2. 若overflowToDisk的属性值为false，会根据memoryStoreEvictionPolicy的策略替换cache中原有的元素。
+
+eternal ：是否永驻内存。如果值是true，cache中的元素将一直保存在内存中，不会因为时间超时而丢失，所以在这个值为true的时候，timeToIdleSeconds和timeToLiveSeconds两个属性的值就不起作用了。
+
+
+ 3. timeToIdleSeconds ：访问这个cache中元素的最大间隔时间。如果超过这个时间没有访问这个cache中的某个元素，那么这个元素将被从cache中清除。
+
+
+4. timeToLiveSeconds : cache中元素的生存时间。意思是从cache中的某个元素从创建到消亡的时间，从创建开始计时，当超过这个时间，这个元素将被从cache中清除。
+
+
+5. overflowToDisk ：溢出是否写入磁盘。系统会根据标签<diskStore path="java.io.tmpdir"/> 中path的值查找对应的属性值，如果系统的java.io.tmpdir的值是 D:\temp，写入磁盘的文件就会放在这个文件夹下。文件的名称是cache的名称，后缀名的data。如：CACHE_FUNC.data。
+
+
+6. diskExpiryThreadIntervalSeconds  ：磁盘缓存的清理线程运行间隔.
+
+
+7. memoryStoreEvictionPolicy ：内存存储与释放策略。有三个值：
+LRU －least recently used
+LFU －least frequently used
+FIFO－first in first out, the oldest element by creation time
+
+
+diskPersistent ： 是否持久化磁盘缓存。当这个属性的值为true时，系统在初始化的时候会在磁盘中查找文件名为cache名称，后缀名为index的的文件，如CACHE_FUNC.index 。这个文件中存放了已经持久化在磁盘中的cache的index，找到后把cache加载到内存。要想把cache真正持久化到磁盘，写程序时必须注意，在是用net.sf.ehcache.Cache的void put (Element element)方法后要使用void flush()方法。
+ 更多说明可看ehcache自带的ehcache.xml的注释说明.
+ -->
+    <!-- 定义默认的缓存区，如果在未指定缓存区时，默认使用该缓存区 -->
+    <defaultCache maxElementsInMemory="512" eternal="false"
+        overflowToDisk="false" memoryStoreEvictionPolicy="LFU" timeToIdleSeconds="15" timeToLiveSeconds="30"/>
+
+    <!-- 较短时间的缓冲的缓存区 -->
+    <cache name="c01" maxElementsInMemory="512" eternal="false"
+        overflowToDisk="false" memoryStoreEvictionPolicy="LFU" timeToIdleSeconds="15" timeToLiveSeconds="30"/>
+    
+    <!-- 较长时间的缓冲的缓存区 -->
+    <cache name="c02" maxElementsInMemory="1024" eternal="false"
+        overflowToDisk="false" memoryStoreEvictionPolicy="LFU" timeToIdleSeconds="60" timeToLiveSeconds="300"/>
+    
+    <!-- 永久缓冲的缓存区 -->
+    <cache name="c99" maxElementsInMemory="1024" eternal="true" overflowToDisk="false" />
+</ehcache>

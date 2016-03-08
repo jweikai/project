@@ -1,0 +1,8 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<ol class="breadcrumb">
+	<s:if test="#cAuth.parent != null">		
+  		<li><a href="<s:property value="#cAuth.parent.changeUrl()" />"><span class="fa fa-${cAuth.parent.icon }"></span>&nbsp;${cAuth.parent.name }</a></li>
+  	</s:if>
+  	<li class="active"><span class="fa fa-${cAuth.icon }"></span>&nbsp;${cAuth.name }</li>
+</ol>

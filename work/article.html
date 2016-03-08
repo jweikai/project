@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>多梦网站</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">       
+    <link href="css/my.css" rel="stylesheet">
+    <link href="css/bootstrapValidator.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    
+  </head>
+  <body>
+  	<!--share start-->
+  	<div class="side hidden-xs">
+        <ul>
+            <li><a href="#"><div class="sidebox"><img src="images/side_icon01.png">客服中心</div></a></li>
+            <li><a href="#"><div class="sidebox"><img src="images/side_icon02.png">客户案例</div></a></li>
+            <li><a href="javascript:void(0);" ><div class="sidebox"><img src="images/side_icon04.png">QQ客服</div></a></li>
+            <li><a href="javascript:void(0);" ><div class="sidebox"><img src="images/side_icon03.png">新浪微博</div></a></li>
+            <li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="images/side_icon05.png"></a></li>
+        </ul>
+    </div>
+	<!--share end-->
+    
+	<header class="container">
+    	<div class="row">
+        	<div class="col-sm-5 col-xs-6">
+            	<img src="images/logo.png" alt="多梦网站" class="img-responsive">
+            </div>        
+            <div class="col-sm-7 col-xs-6" style="padding-top:2.5%;">
+                <form id="frmSearch" class="form-inline pull-right" action="#">
+                    <div class="input-group">
+                        <input type="text" id="search" class="form-control" placeholder="请输入关键字进行站内检索">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default">搜索</button>                            
+                        </span>                        
+                    </div>
+                    <div class="btn-group hidden-xs">
+                        <button type="button" class="" data-toggle="modal" data-target="#userLoginModal">登陆</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-default" role="navigation">
+    	<div class="container">  
+            <div class="navbar-btn pull-right">
+            <button type="button" class="visible-xs" data-toggle="modal" data-target="#userLoginModal">登陆</button>
+            </div>        
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            	<!--响应时控制图标-->
+            	<span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                
+            </button>    
+            
+        	<div class="navbar-header">
+            	<a class="navbar-brand" href="#">多梦网站</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-main">
+            	<div class="col-xs-3 hidden-xs"></div>
+                <ul class="nav navbar-nav">
+                    <li role="presentation"><a href="index.html">首页</a></li>
+                    <li class="active"><a href="section.html"><span class="glyphicon glyphicon-th-large"></span> 多梦主题2.0</a></li>
+                    <li>
+                        <a id="wordPress" href="#" data-toggle="dropdown" class="dropdown-toggle" itemprop="url"><span class="glyphicon glyphicon-book"></span> WordPress 开发 <span class="caret"></span></a>                        
+                        <!--向下箭头-->                          
+                        <ul class="dropdown-menu" id="word-list" role="menu">
+                        	<li role="presentation" class="dropdown-header">一起来学习WordPress</li>
+                            <li class="divider"></li>
+                            <li><a href="#" itemprop="url">WordPress全局变量</a></li>
+                            <li><a href="#" itemprop="url">WordPress模板标签</a></li>
+                            <li><a href="#" itemprop="url">WordPress条件标签</a></li>
+                            <li><a href="#" itemprop="url">WordPress函数参考</a></li>
+                            <li role="presentation" class="dropdown-header">系统化学习写一个主题</li>
+                            <li class="divider"></li><li><a href="#" itemprop="url">WordPress主题教程</a></li></ul>
+                    </li>                    
+                   	<li><a href="#" itemprop="url"><span class="glyphicon glyphicon-gift"></span> 积分换礼</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <article id="main" class="container" role="main">
+    	<div class="row">
+        	<div class="col-lg-8 col-md-8">
+            	<!-- article start -->
+				<div class="panel panel-default" style="margin-bottom:0;">
+                	<!-- head start -->
+                	<div class="panel-body">
+                    	<div class="entry-header page-header">
+                            <h1 class="entry-title h3" itemprop="name">DMENG 2.1 初计划</h1>
+                            <div class="entry-meta">
+                                <div class="entry-set-font">
+                                    <span id="set-font-small" class="disabled">A<sup>-</sup>
+                                    </span>
+                                    <span id="set-font-big">A<sup>+</sup></span>
+                                </div>
+                                <span class="glyphicon glyphicon-user"></span>
+                                <a href="#">多梦</a>
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                <time class="entry-date" title="发布于 2015-01-29 06:39:30 最后编辑于 2015-03-03 11:02:04 " datetime="2015-01-29T06:39:30+00:00" itemprop="datePublished">2015年1月29日</time>
+                                <span class="glyphicon glyphicon-comment"></span>
+                                <a href="#">
+                                    <span>69</span>
+                                </a>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span data-num-views="true">2667</span> 次浏览
+                                <span class="glyphicon glyphicon-folder-open"></span>
+                                <a href="#" rel="category">多梦主题</a>
+                            </div>					
+                    	</div>                    
+                        <!-- head end -->
+                        <div class="entry-content">
+                            <div class="article_index">
+                                <h5>文章目录
+                                    <span class="caret"></span>
+                                </h5>
+                                <ul>
+                                    <li><a href="#1">模板样式</a></li><li><a href="#2">互动交流</a></li>
+                                    <li><a href="#3">丰富内容</a></li><li><a href="#4">移动优化</a></li>
+                                    <li><a href="#5">还有更多</a></li>
+                                </ul>
+                            </div>
+                            <p style="margin:0 0 10px; display:block;">经过一段时间的探索和众筹，已经基本确定多梦主题2.1版本的功能以及设计规划，本文公布2.1初计划的具体细节，以及继续深入征求意见，进一步改进完善免费好用的多梦主题。
+                            <span id="more-2197"></span>
+                            </p>
+                            <h2 id="1">模板样式</h2>
+                            <ol>
+                            <li>新增页面全宽模板</li>
+                            <li>新增无顶部无底部纯内容模板</li>
+                            <li>新增一套一体化样式（现在主内容与侧边栏以模块形式分开，一体化样式则是统一在一个背景下）</li>
+                            </ol>
+                            <h2 id="2">互动交流</h2>
+                            <ol>
+                            <li>添加微博关注、转发、分享赚积分（需要申请及使用微博开放平台）</li>
+                            <li>添加签到、抽奖积分应用</li>
+                            <li>引入支付宝购买积分（担保交易）</li>
+                            <li>新增手机号码验证（需要使用短信接口）</li>
+                            <li>新增微信登录方式（不在首发功能，2.1后期版本跟上）</li>
+                            </ol>
+                            <h2 id="3">丰富内容</h2>
+                            <ol>
+                            <li>内置豆瓣API，可以轻松获取图书、音乐、电影详细信息插入文章之中</li>
+                            <li>礼品共享计划（可将在多梦网络兑换的礼品同步到自己的网站以供用户兑换）</li>
+                            </ol>
+                            <h2 id="4">移动优化</h2>
+                            <ol>
+                            <li>推出简洁快速的独立配套手机主题（不在首发功能，与微信登录一样在2.1后期版本跟上）</li>
+                            </ol>
+                            <h2 id="5">还有更多</h2>
+                            <p>初步定于3月15日发布2.1第一个版本（<a href="#1" target="_blank">已延迟至2015清明节</a>），然后持续更新，基本完善后推出独立的配套手机主题以及微信登录方式。值得一提的是，2.1版本依然是免费的，任何个人或组织都可以无条件使用。</p>
+                            <p>2.1众筹还在继续，<a href="#" target="_blank">点击这里参加众筹</a>，同时也感谢
+                            <a href="#" target="_blank">这些童鞋</a>的支持。
+                            </p>
+                            <p><img class="size-full wp-image-2184 alignnone img-responsive" src="images/article-big.png" alt="DMENG 2.1 PLAY A" width="750" height="365"></p>
+                            <p style="text-align: center;"></p>
+                        </div>
+                    </div>
+                </div>                
+                <div class="panel-footer profile clearfix" style="border:1px solid #ddd; font-size:13px; color:#666; margin-bottom:20px;">
+					<a class="author-avatar" href="#">
+						<img src="images/work.jpg" class="avatar" width="50" height="50" style="display: inline;">					
+                    </a>
+					<div class="author-description">
+						<div class="author-name"> 作者 : <span itemprop="name"><a href="http://duomeng.me/" title="访问多梦的站点" rel="author external">多梦</a></span> </div>
+						<div itemprop="description">DMENG 2.0 WORDPRESS THEME 作者</div>
+					</div>
+				</div>
+                <!-- article end -->
+                <!-- comment start -->
+                <div class="panel panel-default" id="comments">
+                	<div class="panel-heading">
+                    	<h3 class="panel-title">
+                        	<span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;用户评论
+                        </h3>
+                    </div>
+                    <div class="panel-body" style="padding-top:15px;">
+                    	<div class="media">
+                          <div class="media-left">
+                            <a href="#">
+                              <img class="media-object img-circle" src="images/user9.jpg" width="60" height="60">
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <h4 class="media-heading"><a href="#">狮子吴de设计</a></h4>
+                            文章置顶怎么弄？就是想要一篇文章一直在第一位。<img src="images/kelian.gif">
+                          </div>
+                        </div>
+                        
+                        <div class="media">
+                          <div class="media-left">
+                            <a href="#">
+                              <img class="media-object img-circle" src="images/user3.jpg" width="60" height="60">
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <h4 class="media-heading"><a href="#">多梦</a></h4>
+                            这主题真的很不错。虽然还没用到。等2.1出来试试。<img src="images/aini.gif">
+                          </div>
+                        </div>
+                        
+                        <div class="media">
+                          <div class="media-left">
+                            <a href="#">
+                              <img class="media-object img-circle" src="images/user4.jpg" width="60" height="60">
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <h4 class="media-heading"><a href="#">NowSun</a></h4>
+                            大神求助，我用的是你们最新版的”多梦主题“，发现”邮箱验证“的链接无法正常打开，是404的页面。需要什么特殊的配置么，求指导~！
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img class="media-object img-circle" src="images/user3.jpg" width="60" height="60">
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading"><a href="#">多梦</a></h4>
+                                很简单多看看API。<img src="images/aini.gif">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                <!-- comment end -->
+                <!-- send comment start -->
+                <div class="panel panel-default">
+                	<div class="panel-heading">
+                        <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-hand-right"></span>
+                      	  &nbsp;&nbsp;发表评论
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <h1>
+                            	<div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                                	<div class="btn-group">
+                                        <a id="d1" class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="字体大小">
+                                        <i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                                          <ul class="dropdown-menu">
+                                          <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
+                                          <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
+                                          <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
+                                          </ul>
+                                      </div>
+                                    <div class="btn-group">                                    	
+                                        <a class="btn btn-default" data-edit="italic" title="斜体">
+                               			 	<i class="fa fa-italic"></i>
+                                         </a>
+                                        <a class="btn btn-default" data-edit="bold" title="粗体">
+			                                <i class="fa fa-bold"></i>
+                                        </a>
+        	                            <a class="btn btn-default" data-edit="strikethrough" title="删除线">
+		        	                        <i class="fa fa-strikethrough"></i>
+                                        </a>
+            	                        <a class="btn btn-default" data-edit="underline" title="下划线">
+			                                <i class="fa fa-underline"></i>
+                                        </a>
+                                    </div>
+                                    <div class="btn-group">
+                                        <a class="btn btn-default" data-edit="justifyleft" title="左对齐">
+                                            <i class="fa fa-align-left"></i>
+                                        </a>
+                                        <a class="btn btn-default" data-edit="justifycenter" title="居中对齐">
+                                            <i class="fa fa-align-center"></i>
+                                        </a>
+                                        <a class="btn btn-default" data-edit="justifyright" title="右对齐">
+                                            <i class="fa fa-align-right"></i>
+                                        </a>
+                                        <a class="btn btn-default" data-edit="justifyfull" title="两端对齐">
+                                            <i class="fa fa-align-justify"></i>
+                                        </a>
+                                    </div>
+                                    <div class="btn-group" style="position:relative;">
+                                        <a class="btn btn-default" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                                        <input style="position:absolute; left:0; top:0; opacity:0; width:0;" type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+                                      </div>
+                                    <div class="btn-group">
+                                        <a class="btn btn-default" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                                        <a class="btn btn-default" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                                      </div>
+                                 </div>
+                            </h1>
+                            <h1>
+                            	<div id="editor" class="form-control">请文明发表评论</div>
+                                
+								<button class="btn btn-default">发表评论</button>
+                            </h1>
+                        </form>
+                    </div>
+                </div>
+                <!-- send comment end -->
+            </div>               
+            
+            <div id="sidebar" class="col-lg-4 col-md-4" role="complementary">
+                <!-- first -->
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="fa fa-bicycle fa-1x"></span>&nbsp;&nbsp;我们都在学习路上
+                        </h3>
+                    </div>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    	<div class="panel panel-default">
+                        	<div class="panel-heading" role="tab" id="headingOne">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:#000;">
+                                  多梦主题发布
+                                </a>                                
+                              </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                <div class="textwidget">
+                                    <div class="text-danger">主题教程恢复更新，逐步发布模板制作部分。</div>
+                                    <hr>                                
+                                    <p>多梦主题2.0版本开放半年以来已有13466次激活，静态资源月均请求1399万次（86.04GB流量），多梦网络也已有超过60万次访问。2.1版本势必做得更好。奈何多梦个人能力有限，偶有延迟，请童鞋们谅解。</p>                                
+                                    <span class="text-muted">—— 多梦 at 2015.04.05</span>
+                                </div>
+                              </div>
+                            </div>
+                        </div>  
+                        <!--start-->                    
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="color:#000;">
+                                  多梦主题发布
+                                </a>                                
+                              </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseTwo">
+                              <div class="panel-body">
+                                <div class="textwidget">
+                                    <div class="text-danger">主题教程恢复更新，逐步发布模板制作部分。</div>
+                                    <hr>                                
+                                    <p>多梦主题2.0版本开放半年以来已有13466次激活，静态资源月均请求1399万次（86.04GB流量），多梦网络也已有超过60万次访问。2.1版本势必做得更好。奈何多梦个人能力有限，偶有延迟，请童鞋们谅解。</p>                                
+                                    <span class="text-muted">—— 多梦 at 2015.04.05</span>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <!--end-->
+                    </div>
+                </div>
+                <!-- first end -->
+                <!-- second -->                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><span class="fa fa-users"></span>&nbsp;&nbsp;最近登录用户</div>
+                  <div class="panel-body" style="margin:0; padding:0;">
+                    <ul class="recent_user">
+                    	<li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user0.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user1.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user2.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user3.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user4.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user5.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li><li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user6.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user7.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user8.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user9.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user10.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user11.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user12.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user13.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" target="_blank" title="dà róng shù">
+                            	<img src="images/user14.jpg" class="avatar" width="55" height="55" style="display: inline;">
+                            </a>
+                        </li>                        
+                    </ul>
+                  </div>
+                </div>
+                <!-- second end -->
+                <!-- third -->
+                <div class="panel panel-default">
+                  <div class="panel-heading"><span class="fa fa-trophy"></span>&nbsp;&nbsp;积分排行榜</div>
+                  <div class="panel-body" style="margin:0; padding:0;">
+                    <ul class="top-user">
+                    	<li>
+                        	<span class="pull-right">7656</span>
+                            <a href="#">
+                            	<img src="images/topuser0.jpg" class="avatar" width="20" height="20" style="display: inline;">
+                            </a> 
+                            <a href="#" target="_blank" rel="external">洛熙|ApkDemo.com</a>
+                        </li>
+                        <li>
+                        	<span class="pull-right">6655</span>
+                        	<a href="#">
+                            <img src="images/topuser1.jpg" class="avatar" width="20" height="20" style="display: inline;">
+                           	</a> Tangck
+                        </li>
+                        <li>
+                        	<span class="pull-right">5265</span>
+                            <a href="#">
+                            <img src="images/topuser2.jpg" class="avatar" width="20" height="20" style="display: inline;">
+                            </a> ZoXo²º¹³
+                        </li>
+                        <li>
+                        	<span class="pull-right">2765</span>
+                            <a href="#">
+                            	<img src="images/topuser3.jpg" class="avatar" width="20" height="20" style="display: inline;"></a> 
+                                <a href="#" target="_blank" rel="external">300度|300DU.COM
+                            </a>
+                        </li>
+                        <li>	
+                        	<span class="pull-right">1895</span>
+                            <a href="#">
+                            <img src="images/topuser4.jpg" class="avatar" width="20" height="20" style="display: inline;">
+                            </a> 
+                            <a href="#" target="_blank" rel="external">松果</a>
+                        </li>
+                        <li>
+                        	<span class="pull-right">1796</span>
+                            <a href="#">
+                            <img src="images/topuser5.jpg" class="avatar" width="20" height="20" style="display: inline;">
+                            </a> 
+                            <a href="#" target="_blank" rel="external">淡然|DanRan.Me</a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- third end-->
+                <!-- four -->
+                <aside id="text-4" class="panel panel-default widget clearfix widget_text" data-offset-top="1472">			
+                	<div class="textwidget">
+                        <div class="well">
+                            <p style="font-size:32px;margin:5px 0 25px 0;color:#31708f;">写，你的主题</p>
+                            <p>授人以鱼，不如授之以渔！</p>
+                            <p>多梦网络从12月12日开始不间断连载 WordPress 主题开发教程！</p>
+                            <div class="text-muted">赞助商软件下载：
+                                <a href="#" rel="external nofollow" target="_blank">2345王牌浏览器</a>
+                            </div>
+                        </div>
+                    <div class="btn-group btn-group-justified">
+                        <div class="btn-group">
+                        	<a class="btn btn-default" href="#">开始学习</a>
+                        </div>
+                        <div class="btn-group">
+                       	 	<a class="btn btn-default" href="#">QQ 交流群</a>
+                        </div>
+                        <div class="btn-group">
+                        	<a class="btn btn-default" href="#" target="_blank">社区问答</a>
+                        </div>
+                    </div>
+                    <p style="margin:15px 0 0 0;color:#888">本教程以多梦个人经验为基础编写，主要面向初学者；如有错漏，欢迎批评指正；转载请署名</p>
+                 </div>
+                </aside>
+                <!-- four end-->
+            </div>
+            </div>
+        </div>
+    </article>    
+    
+    <footer id="colophon" class="container" role="contentinfo">
+        <div class="panel panel-default text-muted">
+            <div class="panel-body">
+			    <aside id="analytics-2" class="widget clearfix footer-widget widget_analytics">
+                	<ul>
+                    	<li class="update">统计时间 : <time title="统计数据最后更新时间：2015-04-26 13:47:49 ">04-26 13:47</time></li>
+                        <li>文章 : 231</li>
+                        <li>分类 : 16</li>
+                        <li>标签 : 67</li>
+                        <li>用户 : 3310</li>
+                        <li>评论 : 7941</li>
+                        <li>浏览总数 : 655967</li>
+                        <li>搜索次数 : 7709</li>
+                   </ul>
+               </aside>
+               <!-- cached 2015-04-26 13:47:49 -->
+               <aside id="text-2" class="widget clearfix footer-widget widget_text">
+               		<div class="textwidget">网站声明：多梦主题是一款基于Bootstrap的响应式免费WordPress主题，所有版本（BETA/2014/2.0）皆由多梦创作并发布在多梦网络，任何人都可以免费使用和分享多梦主题。多梦网络专注于分享WordPress建站以及相关的网站运营知识，转载本站内容请注明来源。网站运行在<a href="#" target="_blank">阿里云</a>，并使用了<a href="#" rel="external nofollow" target="_blank">七牛云存储</a>加速静态资源。
+                   	</div>
+	           </aside>
+               <ul id="link_menu" class="breadcrumb">
+                    <li class="active">
+                        <span class="glyphicon glyphicon-list-alt"></span> 链接
+                    </li> 
+                    <li><a target="_blank" href="#" itemprop="url">超级外链工具</a></li>
+                    <li><a target="_blank" href="#" itemprop="url">中国之声</a></li>
+                    <li><a target="_blank" href="#" itemprop="url">HTML参考手册</a></li>
+                    <li><a target="_blank" href="#" itemprop="url">英语作文大全</a></li>
+                    <li><a target="_blank" href="#" itemprop="url">周公解梦大全</a></li>
+                    <li><a target="_blank" href="#" itemprop="url">笑话数据库</a></li>
+                    <li><a target="_blank" href="#" itemprop="url">SEO指南</a></li>
+             	</ul>		
+          </div>
+            <div class="panel-footer clearfix">
+                © 2015 <a href="#">多梦网络</a> 版权所有 <a href="#" rel="nofollow" target="_blank" class="text-muted">粤ICP备13073792号</a> 
+                <span class="pull-right copyright">本站由 <a href="#" rel="generator" target="_blank">多梦</a> 运营维护 · <a href="#">关于</a></span>		
+            </div>
+        </div>
+    </footer>
+     
+    <!--登陆-->
+    <div class="modal fade" id="userLoginModal" role="dialog" aria-hidden="true">	           	
+        <div class="modal-dialog">
+        	<div class="modal-content">
+            	<div class="modal-header">
+                    <input type="button" value="&times;" class="close" data-dismiss="modal" aria-hidden="true">
+                    <h4 class="modal-title"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户登陆</h4>
+                </div>            
+                <div class="modal-body">
+                	<div class="row">
+                    	<div class="input-label">用户名</div>
+                        <div class="input-text">
+                        	<input type="text" class="form-control" name="username" placeholder="请输入您的用户名">              
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="input-label">密码</div>
+                    	<div class="input-text">
+                    		<input type="password" class="form-control" name="password" placeholder="请输入您的密码">              		
+                    	</div>
+                    </div>
+                    <div class="row">
+                    	<div class="input-label"><input id="readpwd" type="checkbox"></div>
+                        <label for="readpwd"  class="input-checkbox">记住密码</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" value="确定">
+                    <input type="button" class="btn btn-success" value="注册" id="registerBtn">
+                </div>            
+	        </div>
+        </div>                 	
+    </div>
+    
+    <!--注册-->
+    <div class="modal fade" id="userRegisterModal" role="dialog" aria-hidden="true">    	    	
+        <div class="modal-dialog">
+        	<div class="modal-content">
+            	<div class="modal-header">
+                    <input type="button" value="&times;" class="close" data-dismiss="modal" aria-hidden="true">
+                    <h4 class="modal-title"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;用户注册</h4>
+                </div>            
+                <div class="modal-body">
+                <form id="registerForm" role="form" class="form-horizontal">
+                	<div class="form-group">                    	
+                        <label class="control-label col-lg-3">用户名</label>                        
+                        <div class="col-lg-5">
+                          <input type="text" class="form-control" name="username" placeholder="请输入您的用户名">
+                            
+                    	</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-3">密码</label>
+                        <div class="col-lg-5">
+                            <input type="password" class="form-control" name="password" placeholder="请输入您的密码">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-3">确认密码</label>
+                        <div class="col-lg-5">
+                            <input type="password" class="form-control" name="rePassword" placeholder="请再次输入您的密码">            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-3">Email</label>
+                        <div class="col-lg-5">
+                            <input type="email" class="form-control" name="email" placeholder="请输入您的邮箱">
+                            
+                        </div>
+                    </div>
+               </form>
+               </div>
+               <div class="modal-footer">
+                    <input type="button" class="btn btn-success" value="立即注册">
+                </div>
+       	    </div>
+        </div>        
+    </div>
+    
+	<script src="js/jquery-1.11.2.js"></script>
+    <script src="bootstrap-wysiwyg-master/external/jquery.hotkeys.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="bootstrap-wysiwyg-master/bootstrap-wysiwyg.js"></script> 
+    <script src="js/bootstrap.autocomplete.js"></script>
+    <script src="js/bootstrapValidator.min.js"></script>
+    <script src="js/language/zh_CN.js"></script>       
+	<script>
+        $(function() {			
+			$(document).off('click.bs.dropdown.data-api'); 
+			//hover 
+            $("#wordPress").hover(function() {
+                $(this).next().stop(true).slideDown();
+            }, function() {
+                $(this).next().stop(true).slideUp();
+            });
+			$("#word-list").hover(function() {
+                $(this).stop(true).slideDown();
+            }, function() {
+                $(this).stop(true).slideUp();
+            });
+			
+			//登陆注册
+			var rbtn = false;
+			$("#registerBtn").on("click", function() {
+				rbtn = true;
+				$("#userLoginModal").modal("hide");
+			});	
+			$("#userLoginModal").on("hidden.bs.modal", function() {
+				if ( rbtn ) {
+					$("#userRegisterModal").modal("show");	
+					rbtn = false;
+				}
+			});
+			
+			//accomplate
+			var a = false;			
+			$("#search").autocomplete({
+				source: function(query, process) {
+					var result = [
+						{regionName: '北京', regionNameEn: 'Beijing', regionShortnameEn:'BJ', regionCode: '123123'},
+						{regionName: '河北省', regionNameEn: 'Heibei', regionShortnameEn:'HE', regionCode: '130000'},
+						{regionName: '上海', regionNameEn: 'Shanghai', regionShortnameEn:'SH', regionCode: '310000'},
+						{regionName: '浙江省', regionNameEn: 'Zhejiang', regionShortnameEn:'ZJ', regionCode: '340000'},
+						{regionName: '福建省', regionNameEn: 'Fujiang Sheng', regionShortnameEn:'FJ', regionCode: '350000'},
+					];		
+					var filter = [];						
+					for (i in result) {
+						var b = false;
+						for (obj in result[i]) {														
+							if ( result[i][obj].toLowerCase().indexOf(query.toLowerCase()) > -1) {
+								b = true;
+								break;
+							}
+						}
+						if ( b ) {
+							filter.push(result[i]);
+						}
+					}
+					process(filter);
+				},
+				formatItem:function(item){
+					return item["regionName"]+"("+item["regionNameEn"]+"，"+item["regionShortnameEn"]+") - "+item["regionCode"];
+				},
+				setValue:function(item){
+					return {'data-value':item["regionName"],'real-value':item["regionCode"]};
+				}
+			});
+			
+			//validate
+			$("#registerForm").bootstrapValidator({
+				feedbackIcons: {
+					valid: 'glyphicon glyphicon-ok',
+					invalid: 'glyphicon glyphicon-remove',
+					validating: 'glyphicon glyphicon-refresh'
+				},
+				fields: {
+					username: {
+						message: '用户名输入不合法',
+						validators: {
+							notEmpty: {},
+							stringLength: {
+								min: 6,
+								max: 20
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9_\.]+$/
+							},
+							different: {
+								field: 'password',
+								message: '用户名密码不能相同'
+							}
+						}
+					},
+					password: {
+						validators: {
+							notEmpty: {},
+							identical: {
+								field: 'rePassword',
+								message: '密码要一致'
+							},
+							different: {
+								field: 'username',
+								message: '用户名密码不能一样'
+							}
+						}
+					},
+					rePassword: {
+						validators: {
+							notEmpty: {},
+							identical: {
+								field: 'password'
+							},
+							different: {
+								field: 'username',
+								message: 'The password cannot be the same as username'
+							}
+						}
+					}
+				}
+			});
+			
+			//scroll head
+			var timer;
+			$(".scrollNotice").hover(function() {
+				clearInterval(timer);	
+			}, function() {
+				timer = setInterval(function() {
+					var $ul = $(".scrollNotice ul:first");
+					var $liList = $ul.children("li");
+					var height = $liList.first().height();
+					$ul.animate({
+						top: -height
+					}, 600, function() {
+						$ul.css({top: 0}).find("li:first").appendTo($ul);							
+					});
+				}, 3000);
+			}).trigger("mouseleave");;
+			
+			//style=""
+			var textTop = $("#text-4").offset().top;
+			var footTop = $("footer").offset().top;
+			$(window).resize(function() {
+				textTop = $("#text-4").offset().top;
+				footTop = $("footer").offset().top;
+			});
+			$(window).scroll(function() {			
+				var headHeight = $("header").height();
+				var winTop = $(this).scrollTop();
+				
+				if ( winTop > headHeight ) {
+					$("nav").css({
+						position: 'fixed',
+						top: 0,
+						zIndex: 99999,
+						width: '100%',
+						opacity: 0.9
+					});
+				}else {
+					$("nav").css({
+						position: 'static'	
+					});
+				}
+				
+			});
+			
+			//article
+			$(".article_index h5").click(function() {
+				$(this).parent().find("ul").toggle();	
+			});
+			$("#set-font-small").click(function() {
+				var sf = parseInt($(".entry-content").css("font-size"));
+				if ( sf - 2 < 14 ) {
+					return ;
+				}
+				$(".entry-content").css({
+					fontSize: "-=2"
+				});	
+				$("#set-font-big").removeClass("disabled");
+				$(this).addClass('disabled');
+			});
+			$("#set-font-big").click(function() {
+				var sf = parseInt($(".entry-content").css("font-size"));
+				if ( sf + 2 > 16 ) {					
+					return ;
+				}
+				$(".entry-content").css({
+					fontSize: "+=2"
+				});	
+				$("#set-font-small").removeClass("disabled");
+				$(this).addClass('disabled');
+			});															
+			
+			//share
+			$(".side ul li").hover(function(){
+				$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})	
+			},function(){
+				$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+			});			
+										
+        });
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+    </script>     
+    <script>
+		$('#editor').wysiwyg();
+		$('a[title]').tooltip({	 container: 'body' });
+		$("#d1").dropdown();
+		$("#d1").parent().find("ul").click(function() {
+			$("#d1").dropdown('toggle');
+		});
+	</script>     
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在线编程模块</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- codemirror-5.3 -->
+    <link rel="stylesheet" href="codemirror/codemirror.css">
+    <link rel="stylesheet" href="codemirror/show-hint.css">
+    <link rel="stylesheet" href="codemirror/simplescrollbars.css">
+    <script src="codemirror/codemirror.js"></script>
+    <script src="codemirror/clike.js"></script>
+    <script src="codemirror/matchbrackets.js"></script>
+    <script src="codemirror/show-hint.js"></script>
+    <script src="codemirror/simplescrollbars.js"></script>
+
+    <link rel="stylesheet" href="css/code.css"></head>
+<body>
+    <div class="top">
+        <div class="lang-disp">在线编程</div>
+    </div>
+
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#codeJava" data-toggle="tab">Java</a>
+        </li>
+        <li>
+            <a href="#codeHTML" data-toggle="tab">HTML</a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="codeJava">
+            <div class="mPanel">
+                <textarea id="java-code">
+import com.demo.util.MyType;
+import com.demo.util.MyInterface;
+
+public enum Enum {
+  VAL1, VAL2, VAL3
+}
+
+public class Class<T, V> implements MyInterface {
+  public static final MyType<T, V> member;
+  
+  private class InnerClass {
+    public int zero() {
+      return 0;
+    }
+  }
+
+  @Override
+  public MyType method() {
+    return member;
+  }
+
+  public void method2(MyType<T, V> value) {
+    method();
+    value.method3();
+    member = value;
+  }
+}
+
+                </textarea>
+                <div id="id_group_options">
+                    <label for="id_mainClass" class="mainClass args">主类</label>
+                    <input id="id_mainClass" name="mainClass" value="Hello" class="classArgsInput" type="textfield">
+                    <label for="id_args" class="args">运行时参数</label>
+                    <input id="id_args" name="args" value="aadd dd ddd" class="argsInput" type="textfield"></div>
+                    <button class="btn btn-primary" style="float:right;margin-right: 10px;">保存</button>
+                    <button class="btn btn-primary" style="float:right;margin-right: 10px;">运行</button>
+                </div>
+            <div class="right mPanel">
+                <h4>在线编程</h4>
+                <p>在左边编写你的代码，点击左边运行按钮即可在右边查看代码运行结果。^_^</p>
+                <div id="view_status" class="well well-sm">
+                   <span class="label label-primary marginRight10px">status</span>
+                   <span id="status"></span>
+                </div>
+                <p class="border_bottom">编译资讯</p>
+                <textarea id="compileInfo">
+                  
+                </textarea>
+                <p class="border_bottom">输出信息</p>
+                <textarea id="compileInfo">
+                    
+                </textarea>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="codeHTML">
+            <p>
+              HTML待开发..........
+            </p>
+        </div>
+    </div>
+
+</body>
+    <script type="text/javascript">
+     var javaEditor = CodeMirror.fromTextArea(document.getElementById("java-code"), {
+        lineNumbers: true,
+        lineWrapping: true,
+        matchBrackets: true,
+        mode: "text/x-java",
+        scrollbarStyle: "simple"
+      });
+</script>
+</html>

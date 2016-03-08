@@ -1,0 +1,9 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<div class="panel-heading">
+	<span class="fa fa-${cAuth.icon }"></span>&nbsp;${cAuth.name }
+	<span class="pull-right label label-danger load-label js-loading-success">								
+	</span>
+	<span class="pull-right label label-primary load-label js-loading">
+		<i class="fa fa-spinner fa-pulse"></i>&nbsp;Loading
+	</span>
+</div>

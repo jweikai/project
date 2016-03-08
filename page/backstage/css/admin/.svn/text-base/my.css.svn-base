@@ -1,0 +1,347 @@
+*:focus {
+	outline: 0;
+}
+a, span, .btn, .icon,.alert {
+	-webkit-transition: all 200ms ease-out;
+	-moz-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
+	transition: all 200ms ease-out;
+}
+/*样式*/
+p, ul, ol,dt,dl,dd {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.nopadding {
+	padding: 0 !important;
+}
+.panel {
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+	-o-box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+.navbar {
+	margin-bottom: 0;
+}
+nav .container {
+	padding-right: 20px;
+	width: 100%;
+}
+nav .row {
+	width: 100%;
+}
+nav {
+	font-family: "微软雅黑";
+}
+#main.container {
+	width: 100%;
+}
+#sidebar {
+	padding: 0;
+}
+#sidebar .panel-group {
+	padding-bottom: 10px;
+}
+#sidebar .panel-group,
+#sidebar .panel-body {
+	background: #eee;
+}
+#sidebar .panel-group .panel {
+	border-top: 0;
+	margin-top: 0;
+}
+#sidebar .panel > .panel-heading {
+	background-color: #fff;
+}
+#sidebar .panel-body {
+	padding-right: 0;
+}
+#sidebar div.panel-body {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 22px;
+}
+#sidebar .panel-heading {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 22px;
+	cursor: pointer;
+}
+#sidebar .panel-heading a {
+	text-decoration: none;
+}
+#sidebar ul.navbar-default > li > a,
+#sidebar .panel-heading {
+	font-family: "微软雅黑";
+	color: #5c5c5c;
+}
+#sidebar ul.nav-stacked.navbar-default > li {
+	position: relative;
+	display: block;
+	margin-bottom: -1px;
+	background-color: #fff;
+	border-width: 1px 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-left: 1px solid #dedede;
+}
+#sidebar ul.nav-stacked.navbar-default > li + li {
+	border-top: 1px solid #dedede;
+}
+#sidebar .list-group {
+	margin: 10px;
+}
+#sidebar .list-group a {
+	margin-bottom: 10px;
+	font-family: "微软雅黑";
+}
+#sidebar .list-group a > h4,
+#sidebar .list-group a > p {
+	margin: 15px 0;
+}
+.fa-rect {
+	background-color: #3bb4f2;
+	color: #fff;
+	padding: 2px 5px;
+}
+#content .breadcrumb {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#content .breadcrumb {
+	font-family: "微软雅黑";
+	background: #fff;
+}
+#content .breadcrumb > li > a {
+	font-size: 16px;
+}
+#content .row {
+	margin: 0 15px;
+	padding: 20px 0 0 0;
+}
+#content .list-info {
+	border: 1px solid #DEDEDE;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+#content .list-info a:hover {
+	text-decoration: none;
+	color: #0e90d2;
+}
+#content .list-info span.fa {
+	width: 52px;
+	height: 52px;
+	line-height: 52px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	background: #eee;
+}
+#content .list-info > div + div {
+	border-left: 1px solid #DEDEDE;
+}
+@media only screen and (max-width: 767px) {
+	#content .list-info > div + div {
+		border-top: 1px solid #DEDEDE;
+		padding-top: 20px;
+		border-left: 0;
+	}
+}
+#content .row > div {
+	font-family: "微软雅黑";
+}
+.alert-yellow {
+	color: #f60;
+	background-color: #ffd;
+}
+.alert-yellow:hover {
+	color: #f60;
+	border-color: #fec;
+	background-color: #fec;
+}
+.alert-yellow a {
+	color: #222;
+}
+.alert-yellow a:hover {
+	text-decoration: none;
+	color: #09c;
+}
+.alert .fa-close {
+	cursor: pointer;
+}
+.btn-green {
+	color: #fff;
+	border-color: #5d8;
+	background-color: #5d8;
+	transition: all ease 0.5s;
+}
+.btn-green:hover {
+	background-color: #2c7;
+	color: #fff;
+	border-color: #2c7;
+}
+.btn-yellow {
+	background-color: #f60;
+	color: #fff;
+	border-color: #f60;
+	transition: all ease 0.5s;
+}
+.btn-yellow:hover {
+	color: #fff;
+	border-color: #f00;
+	background-color: #f00;
+}
+.btn-white {
+	background-color: #09c;
+	color: #fff;
+	border-color: #09c;
+	transition: all ease 0.5s;
+}
+.btn-white:hover {
+	color: #fff;
+	border-color: #0ae;
+	background-color: #0ae;
+}
+.btn:focus {
+	color: #fff;
+}
+#content .row .panel {
+	margin-bottom: 0;
+}
+#cnter .panel .panel-body,
+#cnter .panel-body .list-group,
+#cnter .table {
+	padding: 0;
+	margin: 0;
+}
+#cnter .panel-body .list-group li {
+	border: 0;
+}
+#cnter .panel-body .list-group li+li {
+	border-top: 1px solid #DEDEDE;
+}
+.button {
+	border: solid 1px #ddd;
+	background: transparent;
+	border-radius: 4px;
+	font-size: 14px;
+	padding: 6px 15px;
+	margin: 0;
+	display: inline-block;
+	line-height: 20px;
+	transition: all 0.8s ease-out 0s;
+	cursor: pointer;
+}
+.button-small {
+	padding: 5px 10px;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+}
+.border-green {
+	border-color: #2c7;
+	color: #2c7;
+}
+.button.border-green:hover {
+	color: #fff;
+	border-color: #5d8;
+	background-color: #5d8;
+}
+.border-yellow {
+	border-color: #f60;
+	color: #f60;
+}
+.button.border-yellow:hover {
+	color: #fff;
+	border-color: #f90;
+	background-color: #f90;
+}
+.border-blue {
+	border-color: #0ae;
+	color: #0ae;
+}
+.button.border-blue:hover {
+	color: #fff;
+	border-color: #3bd;
+	background-color: #3bd;
+}
+.button:hover {
+	background-color: #eee;
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1) 0s;
+}
+#content .panel-body {
+	padding: 20px;
+}
+#content .btn-group {
+	width: 100%;
+	padding: 12px;
+}
+.badge-success {
+	background-color: #5eb95e;
+}
+.badge-danger {
+	background-color: #dd514c;
+}
+.badge-warning {
+	background-color: #f37b1d;
+}
+.badge-secondary {
+	background-color: #3bb4f2;
+}
+/*三角形*/
+
+nav.header ul.nav > li > a:hover:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: -2px;
+	vertical-align: middle;
+	border-bottom: 4px solid #666;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+ul.dropdown-menu {
+	margin: 9px 0 0 !important;
+}
+ul.dropdown-menu:before {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 8px dashed transparent;
+	z-index: 1;
+	border-bottom-style: solid;
+	border-width: 0 8px 8px;
+	border-bottom-color: #ccc;
+	bottom: 0;
+	left: 10px;
+	top: -8px;
+	pointer-events: none;
+}
+ul.dropdown-menu:after {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 8px dashed transparent;
+	z-index: 1;
+	border-bottom-style: solid;
+	border-width: 0 8px 8px;
+	border-bottom-color: #fff;
+	bottom: -1px;
+	left: 10px;
+	top: -7px;
+	pointer-events: none;
+}

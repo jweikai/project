@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="common" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="CharacterEncodingInterceptor" class="com.interceptor.CharacterEncodingInterceptor" />
+			<interceptor name="LogInterceptor" class="com.interceptor.LogInterceptor" />
+			<interceptor name="SessionInterceptor" class="com.interceptor.SessionInterceptor" />
+			<interceptor name="InjectAdminDataInterceptor" class="com.interceptor.InjectAdminDataInterceptor" />
+			<interceptor-stack name="myInterceptorStack">
+				<interceptor-ref name="CharacterEncodingInterceptor" />
+				<interceptor-ref name="SessionInterceptor" />
+				<interceptor-ref name="InjectAdminDataInterceptor" />
+				<interceptor-ref name="LogInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myInterceptorStack" />
+		<global-results>
+			<result name="commonLogin">/frontpages/login.jsp</result>
+			<result name="adminLogin">/backpages/login.jsp</result>
+			<result name="errorInfo">/error/error.jsp</result>
+			<result name="down" type="stream">
+				<param name="allowCaching">true</param>
+				<param name="bufferSize">1024</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentLength">${size}</param>
+				<param name="contentType">${contentType}</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+			</result>
+			<result name="stream" type="stream">
+				<param name="allowCaching">true</param>
+				<param name="bufferSize">1024</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentType">${contentType}</param>
+			</result>
+		</global-results>
+	</package>	
+</struts>

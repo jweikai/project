@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#tabsContent > div { display: none; }
+			#tabsContent > div.active {
+				display: block;
+			}
+		</style>
+		<script type="text/javascript" src="../../extends/js/jquery-1.10.2.min.js" ></script>
+		<script>
+			$.fn.tabs = function(control) {
+				var element = $(this);
+				control = $(control);
+				element.on("click", "li", function() {
+					var tabName = $(this).data("tab");
+					element.trigger("change.tabs", tabName);
+				});
+				element.on({
+					"change.tabs": function(e, tabName) {
+						control.find(">[data-tab]").removeClass("active");
+						control.find(">[data-tab='"+ tabName +"']").addClass("active");
+					}
+				});
+				var firstName = element.find("li:first").data("tab");				
+				element.trigger("change.tabs", firstName);
+			}
+			$(function() {
+				$("ul#tabs").tabs("#tabsContent");
+			});
+		</script>
+	</head>
+	<body>
+		<ul id="tabs">
+		    <li data-tab="users">Users</li>
+		    <li data-tab="groups">Groups</li>
+		</ul>
+		<div id="tabsContent">
+		    <div data-tab="users">part1</div>
+		    <div data-tab="groups">part2</div>
+		</div>
+	</body>	
+</html>

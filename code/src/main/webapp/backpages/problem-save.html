@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>多梦后台管理</title>
+		<link rel="stylesheet" href="../extends/css/bootstrap.min.css" />     
+	    <link rel="stylesheet" href="../extends/css/font-awesome.min.css" />
+	    <link rel="stylesheet" href="../extends/css/nprogress.css" />
+	    <link rel="stylesheet" href="css/role/role-authority.css" />
+	    <link rel="stylesheet" href="css/global.css" />	   
+	    <script type="text/javascript" src="../extends/js/jquery-1.10.2.min.js" ></script>
+	    <script type="text/javascript" src="../extends/js/bootstrap.min.js" ></script>
+	    <script type="text/javascript" src="../extends/js/nprogress.js" ></script>
+	    <script type="text/javascript" src="../extends/js/bootstrap.autocomplete.js" ></script>	   
+	    <script type="text/javascript" src="js/global.js" ></script>
+	</head>
+	<body>
+		<!-- header start -->
+		<nav class="navbar navbar-default" role="navigation">
+	    	<div class="container">  
+	            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+	            	<!--响应时控制图标-->
+	            	<span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>                
+	            </button>    
+	            
+	        	<div class="navbar-header">
+	            	<a class="navbar-brand" href="#"><strong>Code</strong> <span class="hidden-xs">后台管理</span></a>
+	            </div>
+	            <div class="collapse navbar-collapse pull-right" id="navbar-main">	            	
+	                <ul class="nav navbar-nav">
+	                    <li role="presentation">	                    	
+	                    	<a href="index.html">
+	                    		<span class="fa fa-envelope-o"></span> 收件箱 
+	                    		<span class="label label-warning"></span>
+	                    	</a>	                    	
+	                    </li>
+	                    <li>
+	                        <a id="wordPress" href="#" data-toggle="dropdown" class="dropdown-toggle" itemprop="url">
+	                        	<span class="fa fa-group"></span> 管理员
+	                        	<span class="caret"></span>
+	                        </a>                        
+	                        <!--向下箭头-->                          
+	                        <ul class="dropdown-menu" id="word-list" role="menu">	                        	
+	                            <li><a href="#" itemprop="url"><span class="fa fa-user"></span> 资料</a></li>
+	                            <li><a href="#" itemprop="url"><span class="fa fa-cog"></span> 系统设置</a></li>
+	                            <li><a href="admin-login.html" itemprop="url"><span class="fa fa-power-off"></span> 退出</a></li>
+	                        </ul>
+	                    </li>                    
+	                   	<li><a href="javascript:void();" onclick="requestFullScreen()" itemprop="url"><span class="fa fa-arrows-alt"></span> 开启全屏</a></li>
+	                </ul>
+	            </div>
+	        </div>
+	    </nav>
+		<!-- header end -->
+		
+		<div class="container" id="main">
+			<div class="row">
+				<div id="sidebar" class="col-lg-2 col-md-2">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					 	<div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">					        
+					          	<a href="index.html"><span class="fa fa-home"></span>&nbsp;首页</a>					        
+						      </h4>
+						    </div>					    
+					  	</div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">					        
+				          	<a href="list.html"><span class="fa fa-user"></span>&nbsp;用户管理</a>					        
+					      </h4>
+					    </div>					    
+					  </div>					  
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="h-list-1">
+					      <h4 class="panel-title">
+					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#c-list-1" aria-expanded="false" aria-controls="c-list-1">
+					          	<span class="fa fa-file"></span>&nbsp;题目管理<span class="fa fa-angle-right pull-right"></span>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="c-list-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="h-list-1">
+					      <div class="panel-body">
+					        <ul class="nav navbar-default nav-stacked">
+							  <li role="presentation"><a href="#"><span class="fa fa-list-ol"></span>&nbsp;题目列表</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-plus"></span>&nbsp;创建新题目</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-retweet"></span>&nbsp;题目重判</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-plus"></span>&nbsp;添加竞赛&amp;专题</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-list-alt"></span>&nbsp;竞赛&amp;专题列表</a></li>							  
+							</ul>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="h-list-2">
+					      <h4 class="panel-title">
+					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#c-list-2" aria-expanded="false" aria-controls="c-list-2">
+					          	<span class="fa fa-info-circle"></span>&nbsp;消息管理<span class="fa fa-angle-right pull-right"></span>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="c-list-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="h-list-2">
+					      <div class="panel-body">
+					        <ul class="nav navbar-default nav-stacked">
+							  <li role="presentation"><a href="#"><span class="fa fa-list-ol"></span>&nbsp;广播列表</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-send-o"></span>&nbsp;发送广播</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-list-alt"></span>&nbsp;公告列表</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-plus"></span>&nbsp;添加公告</a></li>
+							</ul>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="h-list-3">
+					      <h4 class="panel-title">
+					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#c-list-3" aria-expanded="false" aria-controls="c-list-3">
+					          	<span class="fa fa-key"></span>&nbsp;权限管理<span class="fa fa-angle-right pull-right"></span>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="c-list-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h-list-3">
+					      <div class="panel-body">
+					        <ul class="nav navbar-default nav-stacked">
+							  <li class="active" role="presentation"><span class="fa fa-list-ol"></span>&nbsp;权限列表</li>
+							  <li role="presentation"><a href="#"><span class="fa fa-plus"></span>&nbsp;添加权限</a></li>
+							  <li role="presentation"><a href="#"><span class="fa fa-exchange fa-rotate-90"></span>&nbsp;权限备份/恢复</a></li>
+							</ul>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">					        
+				          	<a href="index.html"><span class="fa fa-exclamation-triangle import"></span>&nbsp;帮助</a>					        
+					      </h4>
+					    </div>					    
+					  </div>					  
+					 <div class="list-group">
+					  <a href="#" class="list-group-item">
+					    <h4 class="list-group-item-heading"><span class="fa fa-bookmark"></span>&nbsp;公告</h4>
+					    <p class="list-group-item-text">时光静好，与君语；细水流年，与君同。</p>
+					  </a>
+					  <a href="#" class="list-group-item">
+					    <h4 class="list-group-item-heading"><span class="fa fa-tag"></span>&nbsp;Tag</h4>
+					    <p class="list-group-item-text">Welcome to the Code Manage!</p>
+					  </a>
+					</div>
+				</div>											
+			</div>
+				<div id="content" class="col-lg-10 col-md-10">
+					<!-- nav breadcrumb start -->
+					<ol class="breadcrumb">
+					  <li><a href="#"><span class="fa fa-home"></span>&nbsp;权限管理</a></li>
+					  <li class="active">权限列表</li>
+					</ol>
+					<!-- nav breadcrumb end -->		
+					<div class="panel panel-default">
+						<div class="panel-heading">题目添加</div>
+						<div class="panel-body">
+							<form action="" class="form-horizontal" method="post">
+								<div class="form-group">
+									<label for="inputName" class="col-md-2 control-label">题目名</label>
+									<div class="col-md-10">
+										<input type="text" class="form-control" id="inputName" name="title" placeholder="请输入题目名称" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputLimitTime" class="col-md-2 control-label">时间限制</label>
+									<div class="col-md-4">
+										<div class="input-group">
+											<input type="text" class="form-control" value="1000" id="inputLimitTime" name="timeLimit" placeholder="Time Limit" />
+											<span class="input-group-addon">ms</span>
+										</div> 
+									</div>									
+								</div>
+								<div class="form-group">
+									<label for="inputMemoryLimit" class="col-md-2 control-label">内存限制</label>
+									<div class="col-md-4">
+										<div class="input-group">
+											<input type="text" class="form-control" value="128" id="inputMemoryLimit" name="memoryLimit" placeholder="Memory Limit" />
+											<span class="input-group-addon">MByte</span>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputType" class="col-md-2 control-label">题目类型</label>
+									<div class="col-md-3">
+										<select id="inputType" name="type" class="form-control">
+										  <option>选择题目类型</option>
+										  <option>Algorithm</option>
+										  <option>DataBase</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputDifficulty" class="col-md-2 control-label">题目难度</label>
+									<div class="col-md-3">
+										<select id="inputDifficulty" name="difficulty" class="form-control">
+											<option>请选择题目难度</option>
+											<option>Level Ⅰ</option>
+											<option>Level Ⅱ</option>
+											<option>Level Ⅲ</option>
+											<option>Level Ⅳ</option>
+											<option>Level Ⅴ</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="container" class="col-md-2 control-label">题目描述</label>
+									<div class="col-md-10">
+										<!-- 加载编辑器的容器 -->								 
+									    <script id="container" name="description" type="text/plain">
+									    </script>
+									    <!-- 配置文件 -->
+									    <script type="text/javascript" src="../extends/ueditor/ueditor.config.js"></script>
+									    <!-- 编辑器源码文件 -->
+									    <script type="text/javascript" src="../extends/ueditor/ueditor.all.min.js"></script>
+									    <!-- 实例化编辑器 -->
+									    <script type="text/javascript">
+									        var ue = g.createUE('container');
+									    </script>
+									    <!-- 提交comment -->
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputContainer" class="col-md-2 control-label">输入描述</label>
+									<div class="col-md-10">
+										<script id="inputContainer" name="inputDesc" type="text/plain"></script>
+										<script type="text/javascript">
+											var iue = g.createUE('inputContainer');
+										</script>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="outputContainer" class="col-md-2 control-label">输出描述</label>
+									<div class="col-md-10">
+										<script id="outputContainer" name="outputDesc" type="text/plain"></script>
+										<script type="text/javascript">
+											var oue = g.createUE('outputContainer');
+										</script>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="testInput" class="col-md-2 control-label">测试输入数据</label>
+									<div class="col-md-6">
+										<textarea class="form-control" id="testInput" name="testInput" rows="5" style="resize: none;" placeholder="请输入输入数据"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="testOutput" class="col-md-2 control-label">测试输出数据</label>
+									<div class="col-md-6">
+										<textarea class="form-control" id="testOutput" name="testOutput" rows="5" style="resize: none;" placeholder="请输入输出数据"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputHint" class="col-md-2 control-label">提示</label>
+									<div class="col-md-10">
+										<script id="hintContainer" name="hint" type="text/plain"></script>
+										<script type="text/javascript">
+											var hue = g.createUE('hintContainer', {
+												height: 180
+											});
+										</script>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputSource" class="col-md-2 control-label">来源</label>
+									<div class="col-md-6">
+										<input type="text" class="form-control" id="inputSource" name="source" placeholder="输入题目来源"></textarea>
+									</div>
+								</div>
+								
+								<!--如果是从比赛/竞赛中添加过来的
+								<div class="form-group">
+									<label for="inputSource" class="col-md-2 control-label">比赛</label>
+									<div class="col-md-3">
+										<input type="text" class="form-control" value="#Div 1" readonly></textarea>
+									</div>
+								</div>
+								-->
+								<div class="form-group text-center">
+								<button class="btn btn-success-outline" style="padding: 8px 60px;">提交</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</body>	
+</html>

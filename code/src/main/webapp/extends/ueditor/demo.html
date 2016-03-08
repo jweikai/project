@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ueditor demo</title>
+	</head>
+	<body>
+		 <!-- 加载编辑器的容器 -->
+	    <script id="container" name="content" type="text/plain">
+	    	<span style="color: #bbb; font-size: 14px;">写下你想说的</span>
+	    </script>
+	    <!-- 配置文件 -->
+	    <script type="text/javascript" src="ueditor.config.js"></script>
+	    <!-- 编辑器源码文件 -->
+	    <script type="text/javascript" src="ueditor.all.min.js"></script>
+	    <!-- 实例化编辑器 -->
+	    <script type="text/javascript">
+	        var ue = UE.getEditor('container', {
+			    toolbars: [
+			    	['emotion']
+			    ],
+			    initialFrameWidth: '100%',
+			    initialFrameHeight: 100,
+			    elementPathEnabled: false,
+			    wordCount: true,
+			    maximumWords: 300,
+			    wordCountMsg: '<span style="color:#ccc;">{#count}/{#leave}</span>',
+			    wordOverFlowMsg: '<span style="color:red;">字数超过限定</span>',
+			    
+			    //initialContent: '随便写',			    
+			    autoClearinitialContent: true
+			});	        
+			ue.editor.focus(function() {
+				
+			})
+	    </script>
+	</body>
+</html>
